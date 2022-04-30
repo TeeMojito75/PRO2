@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Laboratorio de PRO2. Ejercicio &#39;Gestión de Ranking de tenis&#39;.: Fichero Fuente Cjt_jugadores.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Laboratorio de PRO2. Ejercicio &#39;Gestión de Ranking de tenis&#39;.
+   &#160;<span id="projectnumber">version 1 17-abr-2022, Joan Carles Veny</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cjt_jugadores.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cjt__jugadores_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef CJT_JUG_HH</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define CJT_JUG_HH</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_jugador_8hh.html">Jugador.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_cjt__jugadores.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__jugadores.html">Cjt_jugadores</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    map&lt;string, Jugador&gt; jugadores;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    vector&lt;map&lt;string, Jugador&gt;::iterator&gt; ranking;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__jugadores.html#a06e6df2ac2ddbb9cdc21b7c127fa1132">nuevo_jugador</a>(<span class="keywordtype">string</span>&amp; nombre);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__jugadores.html#a0b5b1c8cedc5529a25f3d11ae9fa3695">eliminar_jugador</a>(<span class="keywordtype">string</span>&amp; nombre);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__jugadores.html#a12a21975f2ae944bd24c7a6722bad32c">listar_jugadores</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__jugadores.html#ac2b9b5e383120066310e98d880ac7fcd">listar_ranking</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_cjt__jugadores.html#a1e76b30fda52266093f139374b5aaef6">num_jugadores</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_cjt__jugadores.html#aaa376294996c85170b3ff500b91f61a0">existe_jugador</a>(<span class="keywordtype">string</span>&amp; nombre); </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__jugadores.html#a851ea612923389c48d25f31e0933eb16">lectura_ini_jug</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//consultores</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_cjt__jugadores.html#a23969ba6da580f24438765ed7fb047b3">consultar_jugador</a>(<span class="keywordtype">string</span>&amp; nombre);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_jugador_8hh_html"><div class="ttname"><a href="_jugador_8hh.html">Jugador.hh</a></div><div class="ttdoc">Especificación de la clase Jugador.</div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html"><div class="ttname"><a href="class_cjt__jugadores.html">Cjt_jugadores</a></div><div class="ttdoc">Representa el conjunto de jugadores del circuito.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8hh_source.html#l00022">Cjt_jugadores.hh:22</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a06e6df2ac2ddbb9cdc21b7c127fa1132"><div class="ttname"><a href="class_cjt__jugadores.html#a06e6df2ac2ddbb9cdc21b7c127fa1132">Cjt_jugadores::nuevo_jugador</a></div><div class="ttdeci">void nuevo_jugador(string &amp;nombre)</div><div class="ttdoc">Añade un nuevo jugador al conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00018">Cjt_jugadores.cc:18</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a0b5b1c8cedc5529a25f3d11ae9fa3695"><div class="ttname"><a href="class_cjt__jugadores.html#a0b5b1c8cedc5529a25f3d11ae9fa3695">Cjt_jugadores::eliminar_jugador</a></div><div class="ttdeci">void eliminar_jugador(string &amp;nombre)</div><div class="ttdoc">Elimina un jugador del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00028">Cjt_jugadores.cc:28</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a12a21975f2ae944bd24c7a6722bad32c"><div class="ttname"><a href="class_cjt__jugadores.html#a12a21975f2ae944bd24c7a6722bad32c">Cjt_jugadores::listar_jugadores</a></div><div class="ttdeci">void listar_jugadores()</div><div class="ttdoc">Lista por orden lexicográfico a los jugadores con sus estadísticas.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00041">Cjt_jugadores.cc:41</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a1e76b30fda52266093f139374b5aaef6"><div class="ttname"><a href="class_cjt__jugadores.html#a1e76b30fda52266093f139374b5aaef6">Cjt_jugadores::num_jugadores</a></div><div class="ttdeci">int num_jugadores()</div><div class="ttdoc">Devuelve la suma de jugadores del circuito.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00059">Cjt_jugadores.cc:59</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a23969ba6da580f24438765ed7fb047b3"><div class="ttname"><a href="class_cjt__jugadores.html#a23969ba6da580f24438765ed7fb047b3">Cjt_jugadores::consultar_jugador</a></div><div class="ttdeci">void consultar_jugador(string &amp;nombre)</div><div class="ttdoc">Escribe la información del jugador con el string nombre nombre</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00063">Cjt_jugadores.cc:63</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a851ea612923389c48d25f31e0933eb16"><div class="ttname"><a href="class_cjt__jugadores.html#a851ea612923389c48d25f31e0933eb16">Cjt_jugadores::lectura_ini_jug</a></div><div class="ttdeci">void lectura_ini_jug()</div><div class="ttdoc">Hace la lectura inicial del conjunto desde la consola.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00004">Cjt_jugadores.cc:4</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_aaa376294996c85170b3ff500b91f61a0"><div class="ttname"><a href="class_cjt__jugadores.html#aaa376294996c85170b3ff500b91f61a0">Cjt_jugadores::existe_jugador</a></div><div class="ttdeci">bool existe_jugador(string &amp;nombre)</div><div class="ttdoc">Comprueba si el jugador existe en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00054">Cjt_jugadores.cc:54</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_ac2b9b5e383120066310e98d880ac7fcd"><div class="ttname"><a href="class_cjt__jugadores.html#ac2b9b5e383120066310e98d880ac7fcd">Cjt_jugadores::listar_ranking</a></div><div class="ttdeci">void listar_ranking()</div><div class="ttdoc">Lista por orden de ranking a los jugadores con sus estadísticas.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00049">Cjt_jugadores.cc:49</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

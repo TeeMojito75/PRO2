@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Laboratorio de PRO2. Ejercicio &#39;Gestión de Ranking de tenis&#39;.: Fichero Fuente Cjt_torneos.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Laboratorio de PRO2. Ejercicio &#39;Gestión de Ranking de tenis&#39;.
+   &#160;<span id="projectnumber">version 1 17-abr-2022, Joan Carles Veny</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cjt_torneos.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cjt__torneos_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__torneos_8hh.html">Cjt_torneos.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_cjt__torneos.html#a1bc57bfbe9baa962f4502316629735e2">    4</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__torneos.html#a1bc57bfbe9baa962f4502316629735e2">Cjt_torneos::lectura_ini_tor</a>() {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">int</span> n;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    cin &gt;&gt; n;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">int</span> cat; <span class="keywordtype">string</span> nombre;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        cin &gt;&gt; nombre &gt;&gt; cat;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="class_torneo.html">Torneo</a> torn = <a class="code" href="class_torneo.html">Torneo</a>(nombre, cat);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        torneos.insert(make_pair(nombre, torn));</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_cjt__torneos.html#ae2f7998d6771a04591d226299966551b">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__torneos.html#ae2f7998d6771a04591d226299966551b">Cjt_torneos::listar_torneos</a>(<a class="code" href="class_cjt__categorias.html">Cjt_categorias</a>&amp; c) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> n = torneos.size();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    cout &lt;&lt; n &lt;&lt; endl;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">for</span> (map&lt;string, Torneo&gt;::iterator it = torneos.begin(); it != torneos.end(); ++it){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        cout &lt;&lt; it-&gt;first &lt;&lt; <span class="charliteral">&#39; &#39;</span>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        it-&gt;second.escribir_categoria(c);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">   25</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">Cjt_torneos::existe_torneo</a>(<span class="keywordtype">string</span> nombre)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (torneos.find(nombre) != torneos.end()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82">   30</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82">Cjt_torneos::num_torneos</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> torneos.size();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">Cjt_torneos::nuevo_torneo</a>(<span class="keywordtype">string</span> nombre, <span class="keywordtype">int</span> c) { </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_torneo.html">Torneo</a> t = <a class="code" href="class_torneo.html">Torneo</a>(nombre, c);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    torneos.insert(make_pair(nombre, t));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//Falta modificar per eliminar els punts necessaris</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_cjt__torneos.html#a532eeac74840116f304de3d3c7d291f9">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__torneos.html#a532eeac74840116f304de3d3c7d291f9">Cjt_torneos::baja_torneo</a>(<span class="keywordtype">string</span> nombre) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    torneos.erase(nombre);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="ttc" id="a_cjt__torneos_8hh_html"><div class="ttname"><a href="_cjt__torneos_8hh.html">Cjt_torneos.hh</a></div><div class="ttdoc">Especificación de la clase Cjt_torneos.</div></div>
+<div class="ttc" id="aclass_cjt__categorias_html"><div class="ttname"><a href="class_cjt__categorias.html">Cjt_categorias</a></div><div class="ttdoc">Representa el conjunto de categorías de los torneos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00029">Cjt_categorias.hh:29</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_a1bc57bfbe9baa962f4502316629735e2"><div class="ttname"><a href="class_cjt__torneos.html#a1bc57bfbe9baa962f4502316629735e2">Cjt_torneos::lectura_ini_tor</a></div><div class="ttdeci">void lectura_ini_tor()</div><div class="ttdoc">Actualiza la información del conjunto de jugadores una vez terminado o eliminado un torneo.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00004">Cjt_torneos.cc:4</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_a532eeac74840116f304de3d3c7d291f9"><div class="ttname"><a href="class_cjt__torneos.html#a532eeac74840116f304de3d3c7d291f9">Cjt_torneos::baja_torneo</a></div><div class="ttdeci">void baja_torneo(string nombre)</div><div class="ttdoc">Elimina un torneo del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00039">Cjt_torneos.cc:39</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_a7b24f0ba21e27803bbbe0839e55ff933"><div class="ttname"><a href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">Cjt_torneos::existe_torneo</a></div><div class="ttdeci">bool existe_torneo(string nombre) const</div><div class="ttdoc">Comprueba si existe el torneo en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00025">Cjt_torneos.cc:25</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_a8ccb9ab4b028ecc8333a3c56d5f24ac9"><div class="ttname"><a href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">Cjt_torneos::nuevo_torneo</a></div><div class="ttdeci">void nuevo_torneo(string nombre, int c)</div><div class="ttdoc">empieza un torneo</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00034">Cjt_torneos.cc:34</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_aba6d57df308bdbfa173578c108e19b82"><div class="ttname"><a href="class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82">Cjt_torneos::num_torneos</a></div><div class="ttdeci">int num_torneos() const</div><div class="ttdoc">Comprueba el nombre de torneos del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00030">Cjt_torneos.cc:30</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_ae2f7998d6771a04591d226299966551b"><div class="ttname"><a href="class_cjt__torneos.html#ae2f7998d6771a04591d226299966551b">Cjt_torneos::listar_torneos</a></div><div class="ttdeci">void listar_torneos(Cjt_categorias &amp;c)</div><div class="ttdoc">Consulta e imprime los torneos en orden creciente lexicográfico.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00016">Cjt_torneos.cc:16</a></div></div>
+<div class="ttc" id="aclass_torneo_html"><div class="ttname"><a href="class_torneo.html">Torneo</a></div><div class="ttdoc">Representa un torneo del circuito.</div><div class="ttdef"><b>Definition:</b> <a href="_torneo_8hh_source.html#l00031">Torneo.hh:31</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

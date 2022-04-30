@@ -1,0 +1,9 @@
+\hypertarget{_bin_tree_8hh}{}\doxysection{Referencia del Archivo Bin\+Tree.\+hh}
+\label{_bin_tree_8hh}\index{BinTree.hh@{BinTree.hh}}
+Dependencia gráfica adjunta para Bin\+Tree.\+hh\+:
+% FIG 0
+\doxysubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_bin_tree}{Bin\+Tree$<$ T $>$}}
+\end{DoxyCompactItemize}

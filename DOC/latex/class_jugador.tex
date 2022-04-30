@@ -1,0 +1,374 @@
+\hypertarget{class_jugador}{}\doxysection{Referencia de la Clase Jugador}
+\label{class_jugador}\index{Jugador@{Jugador}}
+
+
+Representa un jugador del Ranking.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jugador_a232c46f75691af6210096e5972535d71}{Jugador}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jugador_a5b49e4daecb46709edad0200420698bc}{Jugador}} (string nombre)
+\begin{DoxyCompactList}\small\item\em Creadora con valores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a0f1e0095d63371bfe04838d671e1a14f}{modificar\+\_\+torneosd}} (int td)
+\begin{DoxyCompactList}\small\item\em Modificadora atributo torneos disputados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a77d85fbd65a6c83cfc0cb08c1e0de255}{modificar\+\_\+partidos}} (pair$<$ int, int $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Modificadora atributo partidos G y P. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a585edabe7b5009fc1a8cff1c5b689778}{modificar\+\_\+sets}} (pair$<$ int, int $>$ \&s)
+\begin{DoxyCompactList}\small\item\em Modificadora atributo sets G y P. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a3a2baa9319934bc62792ec756c90a1f6}{modificar\+\_\+juegos}} (pair$<$ int, int $>$ \&j)
+\begin{DoxyCompactList}\small\item\em Modificadora atributo juegos G y P. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a5f21f458b30ed497c191884b3bdecb17}{modificar\+\_\+puntuacion}} (int punt)
+\begin{DoxyCompactList}\small\item\em Modificadora de los puntos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_aec10fcab3d358d1a903ef76dfde35c23}{modificar\+\_\+posicion}} (const int pos)
+\begin{DoxyCompactList}\small\item\em Modificadora de la posición. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a476fde15dba67689434a3961a8b8194b}{escriure\+\_\+jug}} ()
+\begin{DoxyCompactList}\small\item\em Función de escritura de parámetros. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a4f087f2d32977f5fa2670ea719378fe6}{escriure\+\_\+rank}} ()
+\begin{DoxyCompactList}\small\item\em Función de escritura para ranking. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_jugador_a69ab40db4a82c1b656895631b9949cbc}{consultar\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de la posición en ranking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un jugador del Ranking. 
+
+Dispone de atributos que definen cada jugador como su puntiación o ranking 
+
+Definición en la línea 21 del archivo Jugador.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_jugador_a232c46f75691af6210096e5972535d71}\label{class_jugador_a232c46f75691af6210096e5972535d71}} 
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta al declarar un jugador \begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+\mbox{\hyperlink{class_jugador}{Jugador}} creado es sin nombre y todos los atributos en 0 
+\end{DoxyPostcond}
+
+
+Definición en la línea 5 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                  \{}
+\DoxyCodeLine{6     nombre = \textcolor{stringliteral}{"{}null"{}};}
+\DoxyCodeLine{7     torneos\_disputados = 0;}
+\DoxyCodeLine{8     partidos.first = 0;}
+\DoxyCodeLine{9     partidos.second = 0;}
+\DoxyCodeLine{10     posicion = 0;}
+\DoxyCodeLine{11     puntos = 0;}
+\DoxyCodeLine{12     sets.first = 0;}
+\DoxyCodeLine{13     sets.second = 0;}
+\DoxyCodeLine{14     juegos.first = 0;}
+\DoxyCodeLine{15     juegos.second = 0;}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a5b49e4daecb46709edad0200420698bc}\label{class_jugador_a5b49e4daecb46709edad0200420698bc}} 
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}\item[{string}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Creadora con valores. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape nombre} es un nombre de jugador 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un jugador con nombre {\itshape nombre} y los atributos a 0 
+\end{DoxyPostcond}
+
+
+Definición en la línea 18 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                               \{}
+\DoxyCodeLine{19     this-\/>nombre = nombre;}
+\DoxyCodeLine{20     torneos\_disputados = 0;}
+\DoxyCodeLine{21     partidos.first = 0;}
+\DoxyCodeLine{22     partidos.second = 0;}
+\DoxyCodeLine{23     posicion = 0;}
+\DoxyCodeLine{24     puntos = 0;}
+\DoxyCodeLine{25     sets.first = 0;}
+\DoxyCodeLine{26     sets.second = 0;}
+\DoxyCodeLine{27     juegos.first = 0;}
+\DoxyCodeLine{28     juegos.second = 0;}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_jugador_a0f1e0095d63371bfe04838d671e1a14f}\label{class_jugador_a0f1e0095d63371bfe04838d671e1a14f}} 
+\index{Jugador@{Jugador}!modificar\_torneosd@{modificar\_torneosd}}
+\index{modificar\_torneosd@{modificar\_torneosd}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{modificar\_torneosd()}{modificar\_torneosd()}}
+{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+torneosd (\begin{DoxyParamCaption}\item[{int}]{td }\end{DoxyParamCaption})}
+
+
+
+Modificadora atributo torneos disputados. 
+
+\begin{DoxyPrecond}{Precondición}
+td $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a tener {\itshape td} modificado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 31 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                        \{}
+\DoxyCodeLine{32     this-\/>torneos\_disputados = td;}
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a77d85fbd65a6c83cfc0cb08c1e0de255}\label{class_jugador_a77d85fbd65a6c83cfc0cb08c1e0de255}} 
+\index{Jugador@{Jugador}!modificar\_partidos@{modificar\_partidos}}
+\index{modificar\_partidos@{modificar\_partidos}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{modificar\_partidos()}{modificar\_partidos()}}
+{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+partidos (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$ \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Modificadora atributo partidos G y P. 
+
+\begin{DoxyPrecond}{Precondición}
+partidos.\+first $>$= 0, partidos.\+second $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a tener {\itshape partidos} modificado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 35 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                   \{}
+\DoxyCodeLine{36     this-\/>partidos.first = p.first;}
+\DoxyCodeLine{37     this-\/>partidos.second = p.second;}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a585edabe7b5009fc1a8cff1c5b689778}\label{class_jugador_a585edabe7b5009fc1a8cff1c5b689778}} 
+\index{Jugador@{Jugador}!modificar\_sets@{modificar\_sets}}
+\index{modificar\_sets@{modificar\_sets}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{modificar\_sets()}{modificar\_sets()}}
+{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+sets (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$ \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Modificadora atributo sets G y P. 
+
+\begin{DoxyPrecond}{Precondición}
+sets.\+first $>$= 0, sets.\+second $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a tener {\itshape s} sets 
+\end{DoxyPostcond}
+
+
+Definición en la línea 40 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                               \{}
+\DoxyCodeLine{41     this-\/>sets.first = s.first;}
+\DoxyCodeLine{42     this-\/>sets.second = s.second;}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a3a2baa9319934bc62792ec756c90a1f6}\label{class_jugador_a3a2baa9319934bc62792ec756c90a1f6}} 
+\index{Jugador@{Jugador}!modificar\_juegos@{modificar\_juegos}}
+\index{modificar\_juegos@{modificar\_juegos}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{modificar\_juegos()}{modificar\_juegos()}}
+{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+juegos (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$ \&}]{j }\end{DoxyParamCaption})}
+
+
+
+Modificadora atributo juegos G y P. 
+
+\begin{DoxyPrecond}{Precondición}
+juegos.\+first $>$= 0, juegos.\+second $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a tener {\itshape j} juegos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 45 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                                 \{}
+\DoxyCodeLine{46     this-\/>juegos.first = j.first;}
+\DoxyCodeLine{47     this-\/>juegos.second = j.second;}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a5f21f458b30ed497c191884b3bdecb17}\label{class_jugador_a5f21f458b30ed497c191884b3bdecb17}} 
+\index{Jugador@{Jugador}!modificar\_puntuacion@{modificar\_puntuacion}}
+\index{modificar\_puntuacion@{modificar\_puntuacion}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{modificar\_puntuacion()}{modificar\_puntuacion()}}
+{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+puntuacion (\begin{DoxyParamCaption}\item[{int}]{punt }\end{DoxyParamCaption})}
+
+
+
+Modificadora de los puntos. 
+
+\begin{DoxyPrecond}{Precondición}
+punt $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a tener {\itshape punt} puntos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 50 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                            \{}
+\DoxyCodeLine{51     this-\/>puntos = punt;}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_aec10fcab3d358d1a903ef76dfde35c23}\label{class_jugador_aec10fcab3d358d1a903ef76dfde35c23}} 
+\index{Jugador@{Jugador}!modificar\_posicion@{modificar\_posicion}}
+\index{modificar\_posicion@{modificar\_posicion}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{modificar\_posicion()}{modificar\_posicion()}}
+{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+posicion (\begin{DoxyParamCaption}\item[{const int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Modificadora de la posición. 
+
+\begin{DoxyPrecond}{Precondición}
+pos $>$= 0; 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a tener {\itshape pos} posición 
+\end{DoxyPostcond}
+
+
+Definición en la línea 54 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                               \{}
+\DoxyCodeLine{55     this-\/>posicion = pos;}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a476fde15dba67689434a3961a8b8194b}\label{class_jugador_a476fde15dba67689434a3961a8b8194b}} 
+\index{Jugador@{Jugador}!escriure\_jug@{escriure\_jug}}
+\index{escriure\_jug@{escriure\_jug}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{escriure\_jug()}{escriure\_jug()}}
+{\footnotesize\ttfamily void Jugador\+::escriure\+\_\+jug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función de escritura de parámetros. 
+
+\begin{DoxyPrecond}{Precondición}
+Todos los parámetros del jugador $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han impreso todos los parámetros en orden 
+\end{DoxyPostcond}
+
+
+Definición en la línea 58 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                            \{}
+\DoxyCodeLine{59     cout << nombre << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}Rk:"{}} << posicion << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}Ps:"{}} << puntos << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}Ts:"{}} << torneos\_disputados << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{60     cout << \textcolor{stringliteral}{"{}WM:"{}} << partidos.first << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}LM:"{}} << partidos.second << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{61     cout << \textcolor{stringliteral}{"{}WS:"{}} << sets.first << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}LS:"{}} << sets.second << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{62     cout << \textcolor{stringliteral}{"{}WG:"{}} << juegos.first << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}LG:"{}} << juegos.second << endl;}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a4f087f2d32977f5fa2670ea719378fe6}\label{class_jugador_a4f087f2d32977f5fa2670ea719378fe6}} 
+\index{Jugador@{Jugador}!escriure\_rank@{escriure\_rank}}
+\index{escriure\_rank@{escriure\_rank}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{escriure\_rank()}{escriure\_rank()}}
+{\footnotesize\ttfamily void Jugador\+::escriure\+\_\+rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función de escritura para ranking. 
+
+\begin{DoxyPrecond}{Precondición}
+Todos los parámetros del jugador $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han impreso los parámetros deseados del jugador 
+\end{DoxyPostcond}
+
+
+Definición en la línea 65 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                             \{}
+\DoxyCodeLine{66     cout << posicion << \textcolor{charliteral}{' '} << nombre << \textcolor{charliteral}{' '} << puntos << endl;}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a69ab40db4a82c1b656895631b9949cbc}\label{class_jugador_a69ab40db4a82c1b656895631b9949cbc}} 
+\index{Jugador@{Jugador}!consultar\_pos@{consultar\_pos}}
+\index{consultar\_pos@{consultar\_pos}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{consultar\_pos()}{consultar\_pos()}}
+{\footnotesize\ttfamily int Jugador\+::consultar\+\_\+pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el valor de la posición en ranking. 
+
+\begin{DoxyPrecond}{Precondición}
+posicion $>$= 0; 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el valor posición del jugador 
+\end{DoxyPostcond}
+
+
+Definición en la línea 69 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                 \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} posicion;}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_jugador_8hh}{Jugador.\+hh}}\item 
+\mbox{\hyperlink{_jugador_8cc}{Jugador.\+cc}}\end{DoxyCompactItemize}

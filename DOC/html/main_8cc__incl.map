@@ -1,0 +1,8 @@
+<map id="main.cc" name="main.cc">
+<area shape="rect" id="node1" title="programa principal para la practica Circuito de torneos de tenis" alt="" coords="154,5,221,32"/>
+<area shape="rect" id="node2" href="$_cjt__jugadores_8hh.html" title="Especificación de la clase Cjt_jugadores." alt="" coords="5,155,124,181"/>
+<area shape="rect" id="node4" href="$_cjt__torneos_8hh.html" title="Especificación de la clase Cjt_torneos." alt="" coords="135,80,240,107"/>
+<area shape="rect" id="node6" href="$_cjt__categorias_8hh.html" title="Especificación de la clase Cjt_categorias." alt="" coords="251,155,374,181"/>
+<area shape="rect" id="node3" href="$_jugador_8hh.html" title="Especificación de la clase Jugador." alt="" coords="83,229,169,256"/>
+<area shape="rect" id="node5" href="$_torneo_8hh.html" title="Especificación de la clase Torneo." alt="" coords="148,155,227,181"/>
+</map>
