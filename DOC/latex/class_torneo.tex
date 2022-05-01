@@ -23,7 +23,13 @@ void \mbox{\hyperlink{class_torneo_a81bb004fe50926ddd504a995d8f72ad4}{modificar\
 void \mbox{\hyperlink{class_torneo_aae307bec20cfbc90fb252f5f22912e34}{modificar\+\_\+pts}} (int pos, int puntos)
 \begin{DoxyCompactList}\small\item\em Modifica los partidos del participante. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneo_af59ca01aafd56eb6ddb0b4174d8274e8}{escribir\+\_\+categoria}} (\mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} \&c)
-\begin{DoxyCompactList}\small\item\em Escribe el nombre de la categoría. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Escribe el nombre de la categoría. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneo_a8e6b0d35b348318bc05ff35f3f87a67b}{ampliar\+\_\+participantes}} (\mbox{\hyperlink{struct_participantes}{Participantes}} part)
+\item 
+\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\+\_\+t}} (int nodos, int n, int pos)
+\begin{DoxyCompactList}\small\item\em Crea el arbol de inscripciones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneo_abcd9605fb301989364fef836ef3069a9}{inscripciones}} (int n)
+\begin{DoxyCompactList}\small\item\em Carga los enfrentamientos al árbol implícito del torneo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
@@ -56,9 +62,9 @@ Definición en la línea 5 del archivo Torneo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{5                                      \{}
-\DoxyCodeLine{6     this-\/>nombre = nombre;}
-\DoxyCodeLine{7     this-\/>cat = cat;}
+\DoxyCodeLine{5                                 \{}
+\DoxyCodeLine{6     nombre = nom;}
+\DoxyCodeLine{7     cat = c;}
 \DoxyCodeLine{8     jug = vector<Participantes> (0);}
 \DoxyCodeLine{9     n\_participantes = 0;}
 \DoxyCodeLine{10 \}}
@@ -257,6 +263,99 @@ Definición en la línea 39 del archivo Torneo.\+cc.
 \DoxyCodeLine{39                                                  \{}
 \DoxyCodeLine{40     c.\mbox{\hyperlink{class_cjt__categorias_ae2edee3077dcf1c01e04416718ac3927}{consultar\_categoria}}(cat);}
 \DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_a8e6b0d35b348318bc05ff35f3f87a67b}\label{class_torneo_a8e6b0d35b348318bc05ff35f3f87a67b}} 
+\index{Torneo@{Torneo}!ampliar\_participantes@{ampliar\_participantes}}
+\index{ampliar\_participantes@{ampliar\_participantes}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{ampliar\_participantes()}{ampliar\_participantes()}}
+{\footnotesize\ttfamily void Torneo\+::ampliar\+\_\+participantes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_participantes}{Participantes}}}]{part }\end{DoxyParamCaption})}
+
+Función usada para añadir los participantes al vector jug desde el conjunto \begin{DoxyPrecond}{Precondición}
+{\itshape part} es uno de los participantes del torneo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha añadido al participante en el vector 
+\end{DoxyPostcond}
+
+
+Definición en la línea 43 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                      \{}
+\DoxyCodeLine{44     jug.push\_back(part);}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}\label{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}} 
+\index{Torneo@{Torneo}!inscripciones\_t@{inscripciones\_t}}
+\index{inscripciones\_t@{inscripciones\_t}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{inscripciones\_t()}{inscripciones\_t()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ Torneo\+::inscripciones\+\_\+t (\begin{DoxyParamCaption}\item[{int}]{nodos,  }\item[{int}]{n,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Crea el arbol de inscripciones. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha creado el árbol con los valores de los jugadores inscritos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 47 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                                               \{}
+\DoxyCodeLine{48     \textcolor{keywordflow}{if} (n <= nodos) \{}
+\DoxyCodeLine{49         cout << pos << \textcolor{charliteral}{'.'} << jug[pos -\/ 1].nombre;}
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(pos);}
+\DoxyCodeLine{51         }
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53     nodos *= 2;}
+\DoxyCodeLine{54     \textcolor{keywordflow}{if} ((nodos > n) and (nodos -\/ n >= pos)) \{}
+\DoxyCodeLine{55         cout << pos << \textcolor{charliteral}{'.'} << jug[pos -\/ 1].nombre;}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(pos);}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} iz, der;}
+\DoxyCodeLine{59     cout << \textcolor{stringliteral}{"{}("{}};}
+\DoxyCodeLine{60     iz = \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\_t}}(nodos, n, pos);}
+\DoxyCodeLine{61     cout << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{62     der = \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\_t}}(nodos, n, nodos + 1 -\/ pos);}
+\DoxyCodeLine{63     cout << \textcolor{charliteral}{')'};}
+\DoxyCodeLine{64     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(pos, iz, der);}
+\DoxyCodeLine{65 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_abcd9605fb301989364fef836ef3069a9}\label{class_torneo_abcd9605fb301989364fef836ef3069a9}} 
+\index{Torneo@{Torneo}!inscripciones@{inscripciones}}
+\index{inscripciones@{inscripciones}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{inscripciones()}{inscripciones()}}
+{\footnotesize\ttfamily void Torneo\+::inscripciones (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Carga los enfrentamientos al árbol implícito del torneo. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un torneo con un conjunto de participantes 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha creado el árbol con el orden de esos enfrentamientos y se ha impreso el mismo 
+\end{DoxyPostcond}
+
+
+Definición en la línea 67 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                 \{}
+\DoxyCodeLine{68     enfrentamientos = \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\_t}}(1, n, 1);}
+\DoxyCodeLine{69 \}}
 
 \end{DoxyCode}
 

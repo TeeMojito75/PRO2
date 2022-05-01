@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['nombre_58',['nombre',['../structcategoria.html#a7a146c6f2e3726627cee04f756647ae5',1,'categoria::nombre()'],['../struct_participantes.html#afc1711b503fdc2c45218e84cb5178f49',1,'Participantes::nombre()']]],
-  ['nuevo_5fjugador_59',['nuevo_jugador',['../class_cjt__jugadores.html#a06e6df2ac2ddbb9cdc21b7c127fa1132',1,'Cjt_jugadores']]],
-  ['nuevo_5ftorneo_60',['nuevo_torneo',['../class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9',1,'Cjt_torneos']]],
-  ['num_5fjugadores_61',['num_jugadores',['../class_cjt__jugadores.html#a1e76b30fda52266093f139374b5aaef6',1,'Cjt_jugadores::num_jugadores()'],['../class_torneo.html#a531716795208cd139642f599be82c6d9',1,'Torneo::num_jugadores()']]],
-  ['num_5ftorneos_62',['num_torneos',['../class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82',1,'Cjt_torneos']]]
+  ['lectura_5fini_5fcat_41',['lectura_ini_cat',['../class_cjt__categorias.html#abd4602a61de779b1185c40fb87865598',1,'Cjt_categorias']]],
+  ['lectura_5fini_5fjug_42',['lectura_ini_jug',['../class_cjt__jugadores.html#a851ea612923389c48d25f31e0933eb16',1,'Cjt_jugadores']]],
+  ['lectura_5fini_5ftor_43',['lectura_ini_tor',['../class_cjt__torneos.html#a1bc57bfbe9baa962f4502316629735e2',1,'Cjt_torneos']]],
+  ['left_44',['left',['../class_bin_tree.html#a82108db4c1b08d1f111027788c196d4e',1,'BinTree']]],
+  ['listar_5fcategorias_45',['listar_categorias',['../class_cjt__categorias.html#a14842f3c922d4dd130224f57ead4f3cb',1,'Cjt_categorias']]],
+  ['listar_5fjugadores_46',['listar_jugadores',['../class_cjt__jugadores.html#a12a21975f2ae944bd24c7a6722bad32c',1,'Cjt_jugadores']]],
+  ['listar_5franking_47',['listar_ranking',['../class_cjt__jugadores.html#ac2b9b5e383120066310e98d880ac7fcd',1,'Cjt_jugadores']]],
+  ['listar_5ftorneos_48',['listar_torneos',['../class_cjt__torneos.html#ae2f7998d6771a04591d226299966551b',1,'Cjt_torneos']]]
 ];

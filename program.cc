@@ -59,7 +59,7 @@ int main() {
 			cin >> nombre >> cat;
 			cout << '#' << cm << ' ' << nombre << ' ' << cat << endl;
 			if (not c.existe_categoria(cat)) cout << "error: la categoria no existe" << endl;
-			else if (c.existe_categoria(cat) and t.existe_torneo(nombre)) cout << " ya existe un torneo con ese nombre" << endl;
+			else if (c.existe_categoria(cat) and t.existe_torneo(nombre)) cout << "error: ya existe un torneo con ese nombre" << endl;
 			else {
 				t.nuevo_torneo(nombre, cat);
 				cout << t.num_torneos() << endl;

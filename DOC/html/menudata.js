@@ -24,14 +24,17 @@
 */
 var menudata={children:[
 {text:"Página principal",url:"index.html"},
+{text:"Páginas relacionadas",url:"pages.html"},
 {text:"Clases",url:"annotated.html",children:[
 {text:"Lista de clases",url:"annotated.html"},
 {text:"Miembros de las clases",url:"functions.html",children:[
 {text:"Todo",url:"functions.html",children:[
+{text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
 {text:"e",url:"functions.html#index_e"},
 {text:"g",url:"functions.html#index_g"},
+{text:"i",url:"functions.html#index_i"},
 {text:"j",url:"functions.html#index_j"},
 {text:"l",url:"functions.html#index_l"},
 {text:"m",url:"functions.html#index_m"},
@@ -42,9 +45,11 @@ var menudata={children:[
 {text:"t",url:"functions.html#index_t"},
 {text:"v",url:"functions.html#index_v"}]},
 {text:"Funciones",url:"functions_func.html",children:[
+{text:"a",url:"functions_func.html#index_a"},
 {text:"b",url:"functions_func.html#index_b"},
 {text:"c",url:"functions_func.html#index_c"},
 {text:"e",url:"functions_func.html#index_e"},
+{text:"i",url:"functions_func.html#index_i"},
 {text:"j",url:"functions_func.html#index_j"},
 {text:"l",url:"functions_func.html#index_l"},
 {text:"m",url:"functions_func.html#index_m"},

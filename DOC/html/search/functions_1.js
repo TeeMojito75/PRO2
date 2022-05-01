@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['cjt_5fcategorias_109',['Cjt_categorias',['../class_cjt__categorias.html#acb1bba449ac618047f1ac5f9f7756ec1',1,'Cjt_categorias']]],
-  ['consultar_5fcategoria_110',['consultar_categoria',['../class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927',1,'Cjt_categorias']]],
-  ['consultar_5fjugador_111',['consultar_jugador',['../class_cjt__jugadores.html#a23969ba6da580f24438765ed7fb047b3',1,'Cjt_jugadores']]],
-  ['consultar_5fpos_112',['consultar_pos',['../class_jugador.html#a69ab40db4a82c1b656895631b9949cbc',1,'Jugador']]]
+  ['baja_5ftorneo_116',['baja_torneo',['../class_cjt__torneos.html#a532eeac74840116f304de3d3c7d291f9',1,'Cjt_torneos']]],
+  ['bintree_117',['BinTree',['../class_bin_tree.html#a47eef22d29cd023449d97c073c08e5b6',1,'BinTree::BinTree()'],['../class_bin_tree.html#a1ab686e0bcf990093ff91fe71744c1a4',1,'BinTree::BinTree(const T &amp;x)'],['../class_bin_tree.html#adb7eeff76d08130c943b36af215eb521',1,'BinTree::BinTree(const T &amp;x, const BinTree &amp;left, const BinTree &amp;right)']]]
 ];

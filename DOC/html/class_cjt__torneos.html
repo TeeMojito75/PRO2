@@ -75,8 +75,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
+<tr class="memitem:a6e574667b3d7365e04f8b2d2697b27a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cjt__torneos.html#a6e574667b3d7365e04f8b2d2697b27a7">iniciar_torneo</a> (string nombre, <a class="el" href="class_cjt__jugadores.html">Cjt_jugadores</a> &amp;j)</td></tr>
+<tr class="memdesc:a6e574667b3d7365e04f8b2d2697b27a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">empieza un torneo  <a href="class_cjt__torneos.html#a6e574667b3d7365e04f8b2d2697b27a7">Más...</a><br /></td></tr>
+<tr class="separator:a6e574667b3d7365e04f8b2d2697b27a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ccb9ab4b028ecc8333a3c56d5f24ac9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">nuevo_torneo</a> (string nombre, int c)</td></tr>
-<tr class="memdesc:a8ccb9ab4b028ecc8333a3c56d5f24ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">empieza un torneo  <a href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">Más...</a><br /></td></tr>
+<tr class="memdesc:a8ccb9ab4b028ecc8333a3c56d5f24ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">finaliza un torneo  <a href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">Más...</a><br /></td></tr>
 <tr class="separator:a8ccb9ab4b028ecc8333a3c56d5f24ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a532eeac74840116f304de3d3c7d291f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cjt__torneos.html#a532eeac74840116f304de3d3c7d291f9">baja_torneo</a> (string nombre)</td></tr>
 <tr class="memdesc:a532eeac74840116f304de3d3c7d291f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina un torneo del conjunto.  <a href="class_cjt__torneos.html#a532eeac74840116f304de3d3c7d291f9">Más...</a><br /></td></tr>
@@ -97,8 +100,57 @@ Métodos públicos</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Representa el conjunto de torneos del ciruito. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cjt__torneos_8hh_source.html#l00022">22</a> del archivo <a class="el" href="_cjt__torneos_8hh_source.html">Cjt_torneos.hh</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cjt__torneos_8hh_source.html#l00023">23</a> del archivo <a class="el" href="_cjt__torneos_8hh_source.html">Cjt_torneos.hh</a>.</p>
 </div><h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a id="a6e574667b3d7365e04f8b2d2697b27a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e574667b3d7365e04f8b2d2697b27a7">&#9670;&nbsp;</a></span>iniciar_torneo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cjt_torneos::iniciar_torneo </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_cjt__jugadores.html">Cjt_jugadores</a> &amp;&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>empieza un torneo </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>nombre</em> es el nombre de un torneo existente </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se imprime el cuadro de emparejamientos del torneo con <em>nombre</em> </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_cjt__torneos_8cc_source.html#l00043">43</a> del archivo <a class="el" href="_cjt__torneos_8cc_source.html">Cjt_torneos.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                                             {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> n, p;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    cin &gt;&gt; n;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="struct_participantes.html">Participantes</a> part;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    map&lt;string, Torneo&gt;::iterator it = torneos.find(nom);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        cin &gt;&gt; p;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        part.<a class="code" href="struct_participantes.html#afc1711b503fdc2c45218e84cb5178f49">nombre</a> = j.<a class="code" href="class_cjt__jugadores.html#a2b4579a98852d95d40ca919ad3a234f3">consultar_nombre</a>(p);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        it-&gt;second.ampliar_participantes(part);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    it-&gt;second.inscripciones(n);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a2b4579a98852d95d40ca919ad3a234f3"><div class="ttname"><a href="class_cjt__jugadores.html#a2b4579a98852d95d40ca919ad3a234f3">Cjt_jugadores::consultar_nombre</a></div><div class="ttdeci">string consultar_nombre(int n)</div><div class="ttdoc">Devuelve el nombre del jugador en base a su posición.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00068">Cjt_jugadores.cc:68</a></div></div>
+<div class="ttc" id="astruct_participantes_html"><div class="ttname"><a href="struct_participantes.html">Participantes</a></div><div class="ttdef"><b>Definition:</b> <a href="_torneo_8hh_source.html#l00018">Torneo.hh:18</a></div></div>
+<div class="ttc" id="astruct_participantes_html_afc1711b503fdc2c45218e84cb5178f49"><div class="ttname"><a href="struct_participantes.html#afc1711b503fdc2c45218e84cb5178f49">Participantes::nombre</a></div><div class="ttdeci">string nombre</div><div class="ttdef"><b>Definition:</b> <a href="_torneo_8hh_source.html#l00019">Torneo.hh:19</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a8ccb9ab4b028ecc8333a3c56d5f24ac9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ccb9ab4b028ecc8333a3c56d5f24ac9">&#9670;&nbsp;</a></span>nuevo_torneo()</h2>
 
@@ -125,11 +177,8 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>empieza un torneo </p>
+<p>finaliza un torneo </p>
 <dl class="section pre"><dt>Precondición</dt><dd><em>nombre</em> es el nombre de un torneo existente </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Se imprime el cuadro de emparejamientos del torneo con <em>nombre</em></dd></dl>
-<p>void iniciar_torneo(string nombre);</p>
-<p>finaliza un torneo </p><dl class="section pre"><dt>Precondición</dt><dd><em>nombre</em> es el nombre de un torneo existente </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Se imprime el cuadro de resultados del torneo con las puntuaciones</dd></dl>
 <p>void finalizar_torneo(string nombre);</p>
 <p>Añade un nuevo torneo en el conjunto </p><dl class="section pre"><dt>Precondición</dt><dd>c &gt;= -1, <em>t</em> es el nombre de un torneo </dd></dl>

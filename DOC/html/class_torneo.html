@@ -99,6 +99,14 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:af59ca01aafd56eb6ddb0b4174d8274e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneo.html#af59ca01aafd56eb6ddb0b4174d8274e8">escribir_categoria</a> (<a class="el" href="class_cjt__categorias.html">Cjt_categorias</a> &amp;c)</td></tr>
 <tr class="memdesc:af59ca01aafd56eb6ddb0b4174d8274e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe el nombre de la categoría.  <a href="class_torneo.html#af59ca01aafd56eb6ddb0b4174d8274e8">Más...</a><br /></td></tr>
 <tr class="separator:af59ca01aafd56eb6ddb0b4174d8274e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6b0d35b348318bc05ff35f3f87a67b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneo.html#a8e6b0d35b348318bc05ff35f3f87a67b">ampliar_participantes</a> (<a class="el" href="struct_participantes.html">Participantes</a> part)</td></tr>
+<tr class="separator:a8e6b0d35b348318bc05ff35f3f87a67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9032a395eece6293cfb1902fcdbe73c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bin_tree.html">BinTree</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneo.html#a9032a395eece6293cfb1902fcdbe73c7">inscripciones_t</a> (int nodos, int n, int pos)</td></tr>
+<tr class="memdesc:a9032a395eece6293cfb1902fcdbe73c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea el arbol de inscripciones.  <a href="class_torneo.html#a9032a395eece6293cfb1902fcdbe73c7">Más...</a><br /></td></tr>
+<tr class="separator:a9032a395eece6293cfb1902fcdbe73c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd9605fb301989364fef836ef3069a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneo.html#abcd9605fb301989364fef836ef3069a9">inscripciones</a> (int n)</td></tr>
+<tr class="memdesc:abcd9605fb301989364fef836ef3069a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga los enfrentamientos al árbol implícito del torneo.  <a href="class_torneo.html#abcd9605fb301989364fef836ef3069a9">Más...</a><br /></td></tr>
+<tr class="separator:abcd9605fb301989364fef836ef3069a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Representa un torneo del circuito. </p>
@@ -136,9 +144,9 @@ Métodos públicos</h2></td></tr>
 <dl class="section post"><dt>Postcondición</dt><dd><a class="el" href="class_torneo.html" title="Representa un torneo del circuito.">Torneo</a> creado con nombre y categoría </dd></dl>
 
 <p class="definition">Definición en la línea <a class="el" href="_torneo_8cc_source.html#l00005">5</a> del archivo <a class="el" href="_torneo_8cc_source.html">Torneo.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                     {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    this-&gt;nombre = nombre;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    this-&gt;cat = cat;</div>
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    nombre = nom;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    cat = c;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    jug = vector&lt;Participantes&gt; (0);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    n_participantes = 0;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
@@ -393,6 +401,119 @@ Métodos públicos</h2></td></tr>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    c.<a class="code" href="class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927">consultar_categoria</a>(cat);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="ttc" id="aclass_cjt__categorias_html_ae2edee3077dcf1c01e04416718ac3927"><div class="ttname"><a href="class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927">Cjt_categorias::consultar_categoria</a></div><div class="ttdeci">void consultar_categoria(int cat)</div><div class="ttdoc">Consulta la categoría pasando su posición.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00040">Cjt_categorias.cc:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8e6b0d35b348318bc05ff35f3f87a67b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6b0d35b348318bc05ff35f3f87a67b">&#9670;&nbsp;</a></span>ampliar_participantes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Torneo::ampliar_participantes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_participantes.html">Participantes</a>&#160;</td>
+          <td class="paramname"><em>part</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Función usada para añadir los participantes al vector jug desde el conjunto </p><dl class="section pre"><dt>Precondición</dt><dd><em>part</em> es uno de los participantes del torneo </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha añadido al participante en el vector </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_torneo_8cc_source.html#l00043">43</a> del archivo <a class="el" href="_torneo_8cc_source.html">Torneo.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                                     {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    jug.push_back(part);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9032a395eece6293cfb1902fcdbe73c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9032a395eece6293cfb1902fcdbe73c7">&#9670;&nbsp;</a></span>inscripciones_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bin_tree.html">BinTree</a>&lt; int &gt; Torneo::inscripciones_t </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea el arbol de inscripciones. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha creado el árbol con los valores de los jugadores inscritos </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_torneo_8cc_source.html#l00047">47</a> del archivo <a class="el" href="_torneo_8cc_source.html">Torneo.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                              {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (n &lt;= nodos) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        cout &lt;&lt; pos &lt;&lt; <span class="charliteral">&#39;.&#39;</span> &lt;&lt; jug[pos - 1].nombre;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_bin_tree.html">BinTree&lt;int&gt;</a>(pos);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    nodos *= 2;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> ((nodos &gt; n) and (nodos - n &gt;= pos)) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        cout &lt;&lt; pos &lt;&lt; <span class="charliteral">&#39;.&#39;</span> &lt;&lt; jug[pos - 1].nombre;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_bin_tree.html">BinTree&lt;int&gt;</a>(pos);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_bin_tree.html">BinTree&lt;int&gt;</a> iz, der;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;(&quot;</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    iz = <a class="code" href="class_torneo.html#a9032a395eece6293cfb1902fcdbe73c7">inscripciones_t</a>(nodos, n, pos);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    der = <a class="code" href="class_torneo.html#a9032a395eece6293cfb1902fcdbe73c7">inscripciones_t</a>(nodos, n, nodos + 1 - pos);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    cout &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_bin_tree.html">BinTree&lt;int&gt;</a>(pos, iz, der);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="ttc" id="aclass_bin_tree_html"><div class="ttname"><a href="class_bin_tree.html">BinTree&lt; int &gt;</a></div></div>
+<div class="ttc" id="aclass_torneo_html_a9032a395eece6293cfb1902fcdbe73c7"><div class="ttname"><a href="class_torneo.html#a9032a395eece6293cfb1902fcdbe73c7">Torneo::inscripciones_t</a></div><div class="ttdeci">BinTree&lt; int &gt; inscripciones_t(int nodos, int n, int pos)</div><div class="ttdoc">Crea el arbol de inscripciones.</div><div class="ttdef"><b>Definition:</b> <a href="_torneo_8cc_source.html#l00047">Torneo.cc:47</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abcd9605fb301989364fef836ef3069a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd9605fb301989364fef836ef3069a9">&#9670;&nbsp;</a></span>inscripciones()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Torneo::inscripciones </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga los enfrentamientos al árbol implícito del torneo. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Existe un torneo con un conjunto de participantes </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha creado el árbol con el orden de esos enfrentamientos y se ha impreso el mismo </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_torneo_8cc_source.html#l00067">67</a> del archivo <a class="el" href="_torneo_8cc_source.html">Torneo.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    enfrentamientos = <a class="code" href="class_torneo.html#a9032a395eece6293cfb1902fcdbe73c7">inscripciones_t</a>(1, n, 1);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

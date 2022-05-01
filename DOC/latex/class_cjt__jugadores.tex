@@ -23,7 +23,9 @@ bool \mbox{\hyperlink{class_cjt__jugadores_aaa376294996c85170b3ff500b91f61a0}{ex
 void \mbox{\hyperlink{class_cjt__jugadores_a851ea612923389c48d25f31e0933eb16}{lectura\+\_\+ini\+\_\+jug}} ()
 \begin{DoxyCompactList}\small\item\em Hace la lectura inicial del conjunto desde la consola. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__jugadores_a23969ba6da580f24438765ed7fb047b3}{consultar\+\_\+jugador}} (string \&nombre)
-\begin{DoxyCompactList}\small\item\em Escribe la información del jugador con el string nombre {\itshape nombre} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Escribe la información del jugador con el string nombre {\itshape nombre} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_cjt__jugadores_a2b4579a98852d95d40ca919ad3a234f3}{consultar\+\_\+nombre}} (int n)
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre del jugador en base a su posición. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
@@ -282,6 +284,33 @@ Definición en la línea 63 del archivo Cjt\+\_\+jugadores.\+cc.
 \DoxyCodeLine{64     map<string, Jugador>::iterator it = jugadores.find(nombre);}
 \DoxyCodeLine{65     it-\/>second.escriure\_jug();}
 \DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__jugadores_a2b4579a98852d95d40ca919ad3a234f3}\label{class_cjt__jugadores_a2b4579a98852d95d40ca919ad3a234f3}} 
+\index{Cjt\_jugadores@{Cjt\_jugadores}!consultar\_nombre@{consultar\_nombre}}
+\index{consultar\_nombre@{consultar\_nombre}!Cjt\_jugadores@{Cjt\_jugadores}}
+\doxysubsubsection{\texorpdfstring{consultar\_nombre()}{consultar\_nombre()}}
+{\footnotesize\ttfamily string Cjt\+\_\+jugadores\+::consultar\+\_\+nombre (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Devuelve el nombre del jugador en base a su posición. 
+
+\begin{DoxyPrecond}{Precondición}
+n es un entero n $>$= 1 que simboliza la posición en ranking 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el nombre del jugador deseado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 68 del archivo Cjt\+\_\+jugadores.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                             \{}
+\DoxyCodeLine{69     \textcolor{keywordflow}{return} ranking[n-\/1]-\/>first;}
+\DoxyCodeLine{70 \}}
 
 \end{DoxyCode}
 

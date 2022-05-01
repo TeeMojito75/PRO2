@@ -99,6 +99,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:a23969ba6da580f24438765ed7fb047b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cjt__jugadores.html#a23969ba6da580f24438765ed7fb047b3">consultar_jugador</a> (string &amp;nombre)</td></tr>
 <tr class="memdesc:a23969ba6da580f24438765ed7fb047b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe la información del jugador con el string nombre <em>nombre</em>  <a href="class_cjt__jugadores.html#a23969ba6da580f24438765ed7fb047b3">Más...</a><br /></td></tr>
 <tr class="separator:a23969ba6da580f24438765ed7fb047b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4579a98852d95d40ca919ad3a234f3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cjt__jugadores.html#a2b4579a98852d95d40ca919ad3a234f3">consultar_nombre</a> (int n)</td></tr>
+<tr class="memdesc:a2b4579a98852d95d40ca919ad3a234f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre del jugador en base a su posición.  <a href="class_cjt__jugadores.html#a2b4579a98852d95d40ca919ad3a234f3">Más...</a><br /></td></tr>
+<tr class="separator:a2b4579a98852d95d40ca919ad3a234f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Representa el conjunto de jugadores del circuito. </p>
@@ -349,6 +352,33 @@ Métodos públicos</h2></td></tr>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    map&lt;string, Jugador&gt;::iterator it = jugadores.find(nombre);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    it-&gt;second.escriure_jug();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2b4579a98852d95d40ca919ad3a234f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4579a98852d95d40ca919ad3a234f3">&#9670;&nbsp;</a></span>consultar_nombre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Cjt_jugadores::consultar_nombre </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el nombre del jugador en base a su posición. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>n es un entero n &gt;= 1 que simboliza la posición en ranking </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha devuelto el nombre del jugador deseado </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_cjt__jugadores_8cc_source.html#l00068">68</a> del archivo <a class="el" href="_cjt__jugadores_8cc_source.html">Cjt_jugadores.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> ranking[n-1]-&gt;first;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

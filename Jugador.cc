@@ -52,7 +52,7 @@ void Jugador::modificar_puntuacion(int punt) {
 }
 
 void Jugador::modificar_posicion(const int pos) {
-    this->posicion = pos;
+    posicion = pos;
 }
 
 void Jugador::escriure_jug() {

@@ -8,8 +8,10 @@ Representa el conjunto de torneos del ciruito.
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_cjt__torneos_a8ccb9ab4b028ecc8333a3c56d5f24ac9}{nuevo\+\_\+torneo}} (string nombre, int c)
+void \mbox{\hyperlink{class_cjt__torneos_a6e574667b3d7365e04f8b2d2697b27a7}{iniciar\+\_\+torneo}} (string nombre, \mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}} \&j)
 \begin{DoxyCompactList}\small\item\em empieza un torneo \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__torneos_a8ccb9ab4b028ecc8333a3c56d5f24ac9}{nuevo\+\_\+torneo}} (string nombre, int c)
+\begin{DoxyCompactList}\small\item\em finaliza un torneo \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__torneos_a532eeac74840116f304de3d3c7d291f9}{baja\+\_\+torneo}} (string nombre)
 \begin{DoxyCompactList}\small\item\em Elimina un torneo del conjunto. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_cjt__torneos_aba6d57df308bdbfa173578c108e19b82}{num\+\_\+torneos}} () const
@@ -25,16 +27,16 @@ void \mbox{\hyperlink{class_cjt__torneos_a1bc57bfbe9baa962f4502316629735e2}{lect
 \doxysubsection{Descripción detallada}
 Representa el conjunto de torneos del ciruito. 
 
-Definición en la línea 22 del archivo Cjt\+\_\+torneos.\+hh.
+Definición en la línea 23 del archivo Cjt\+\_\+torneos.\+hh.
 
 
 
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{class_cjt__torneos_a8ccb9ab4b028ecc8333a3c56d5f24ac9}\label{class_cjt__torneos_a8ccb9ab4b028ecc8333a3c56d5f24ac9}} 
-\index{Cjt\_torneos@{Cjt\_torneos}!nuevo\_torneo@{nuevo\_torneo}}
-\index{nuevo\_torneo@{nuevo\_torneo}!Cjt\_torneos@{Cjt\_torneos}}
-\doxysubsubsection{\texorpdfstring{nuevo\_torneo()}{nuevo\_torneo()}}
-{\footnotesize\ttfamily void Cjt\+\_\+torneos\+::nuevo\+\_\+torneo (\begin{DoxyParamCaption}\item[{string}]{nombre,  }\item[{int}]{c }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_cjt__torneos_a6e574667b3d7365e04f8b2d2697b27a7}\label{class_cjt__torneos_a6e574667b3d7365e04f8b2d2697b27a7}} 
+\index{Cjt\_torneos@{Cjt\_torneos}!iniciar\_torneo@{iniciar\_torneo}}
+\index{iniciar\_torneo@{iniciar\_torneo}!Cjt\_torneos@{Cjt\_torneos}}
+\doxysubsubsection{\texorpdfstring{iniciar\_torneo()}{iniciar\_torneo()}}
+{\footnotesize\ttfamily void Cjt\+\_\+torneos\+::iniciar\+\_\+torneo (\begin{DoxyParamCaption}\item[{string}]{nombre,  }\item[{\mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}} \&}]{j }\end{DoxyParamCaption})}
 
 
 
@@ -44,11 +46,39 @@ empieza un torneo
 {\itshape nombre} es el nombre de un torneo existente 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Se imprime el cuadro de emparejamientos del torneo con {\itshape nombre}
+Se imprime el cuadro de emparejamientos del torneo con {\itshape nombre} 
 \end{DoxyPostcond}
-void iniciar\+\_\+torneo(string nombre);
 
-finaliza un torneo \begin{DoxyPrecond}{Precondición}
+
+Definición en la línea 43 del archivo Cjt\+\_\+torneos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                              \{}
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} n, p;}
+\DoxyCodeLine{45     cin >> n;}
+\DoxyCodeLine{46     \mbox{\hyperlink{struct_participantes}{Participantes}} part;}
+\DoxyCodeLine{47     map<string, Torneo>::iterator it = torneos.find(nom);}
+\DoxyCodeLine{48     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{49         cin >> p;}
+\DoxyCodeLine{50         part.\mbox{\hyperlink{struct_participantes_afc1711b503fdc2c45218e84cb5178f49}{nombre}} = j.\mbox{\hyperlink{class_cjt__jugadores_a2b4579a98852d95d40ca919ad3a234f3}{consultar\_nombre}}(p);}
+\DoxyCodeLine{51         it-\/>second.ampliar\_participantes(part);}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53     it-\/>second.inscripciones(n);}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__torneos_a8ccb9ab4b028ecc8333a3c56d5f24ac9}\label{class_cjt__torneos_a8ccb9ab4b028ecc8333a3c56d5f24ac9}} 
+\index{Cjt\_torneos@{Cjt\_torneos}!nuevo\_torneo@{nuevo\_torneo}}
+\index{nuevo\_torneo@{nuevo\_torneo}!Cjt\_torneos@{Cjt\_torneos}}
+\doxysubsubsection{\texorpdfstring{nuevo\_torneo()}{nuevo\_torneo()}}
+{\footnotesize\ttfamily void Cjt\+\_\+torneos\+::nuevo\+\_\+torneo (\begin{DoxyParamCaption}\item[{string}]{nombre,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+finaliza un torneo 
+
+\begin{DoxyPrecond}{Precondición}
 {\itshape nombre} es el nombre de un torneo existente 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}

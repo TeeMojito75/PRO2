@@ -17,21 +17,25 @@ void Cjt_jugadores::lectura_ini_jug() {
 
 void Cjt_jugadores::nuevo_jugador(string& nombre) {
     Jugador jug = Jugador(nombre); 
-    int p = ranking.size();
+    int p = ranking.size() + 1;
     jug.modificar_posicion(p);
     pair<map<string, Jugador>::iterator, bool> it;
     it = jugadores.insert(make_pair(nombre, jug));
     ranking.push_back(it.first);
     cout << jugadores.size() << endl;
 }
+
 //Actualitzar per eliminar el jugador de tots els torneigs
 void Cjt_jugadores::eliminar_jugador(string& nombre) {
     pair<map<string, Jugador>::iterator, bool> it;
     it.first = jugadores.find(nombre);
     int pos_v = it.first->second.consultar_pos();
     int n = ranking.size();
+    int aux;
     for (int i = pos_v; i < n; ++i) {
-        ranking[i-1]->second.modificar_posicion(ranking[i]->second.consultar_pos());
+        aux = ranking[i]->second.consultar_pos();
+        ranking[i]->second.modificar_posicion(ranking[i-1]->second.consultar_pos());
+        ranking[i-1]->second.modificar_posicion(aux);
         swap(ranking[i-1], ranking[i]);
     }
     ranking.pop_back();

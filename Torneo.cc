@@ -66,4 +66,5 @@ BinTree<int> Torneo::inscripciones_t(int nodos, int n, int pos) {
 
 void Torneo::inscripciones(int n) {
     enfrentamientos = inscripciones_t(1, n, 1);
+    cout << endl;
 }
