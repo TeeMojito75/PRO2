@@ -32,6 +32,7 @@ class Cjt_categorias {
 	/** @brief Vector de categorias, usado para trabajar con el conjunto de estas
 	 */	
 	vector<categoria> categorias;
+	int k;
 
     public:
 	//constructor

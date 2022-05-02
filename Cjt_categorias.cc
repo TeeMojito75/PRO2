@@ -9,8 +9,8 @@ Cjt_categorias::Cjt_categorias() {
 void Cjt_categorias::lectura_ini_cat() {
     int cats, puntos;
     cin >> cats >> puntos;
+    k = puntos;
     categorias = vector<categoria> (cats);
-    
     
     for (int i = 0; i < cats; ++i) {
         categorias[i].puntuaciones = vector<int> (puntos);
@@ -22,17 +22,16 @@ void Cjt_categorias::lectura_ini_cat() {
 }
 
 bool Cjt_categorias::existe_categoria(int cat) {
-    if (cat > categorias.size()) return false;
+    if (cat > categorias.size() or cat <= 0) return false;
     else return true;
 }
 
 void Cjt_categorias::listar_categorias() {
     int n = categorias.size();
-    int p = categorias[0].puntuaciones.size();
-    cout << n << ' ' << p << endl;
+    cout << n << ' ' << k << endl;
     for (int i = 0; i < n; ++i) {
         cout << categorias[i].nombre;
-        for (int j = 0; j < p; ++j) cout << ' ' <<  categorias[i].puntuaciones[j];
+        for (int j = 0; j < k; ++j) cout << ' ' <<  categorias[i].puntuaciones[j];
         cout << endl;
     }
 }
