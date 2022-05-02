@@ -27,19 +27,16 @@ void Cjt_jugadores::nuevo_jugador(string& nombre) {
 
 //Actualitzar per eliminar el jugador de tots els torneigs
 void Cjt_jugadores::eliminar_jugador(string& nombre) {
-    pair<map<string, Jugador>::iterator, bool> it;
-    it.first = jugadores.find(nombre);
-    int pos_v = it.first->second.consultar_pos();
+    map<string, Jugador>::const_iterator it;
+    it = jugadores.find(nombre);
+    int pos_v = it->second.consultar_pos();
     int n = ranking.size();
-    int aux;
     for (int i = pos_v; i < n; ++i) {
-        aux = ranking[i]->second.consultar_pos();
-        ranking[i]->second.modificar_posicion(ranking[i-1]->second.consultar_pos());
-        ranking[i-1]->second.modificar_posicion(aux);
-        swap(ranking[i-1], ranking[i]);
+        ranking[i]->second.modificar_posicion(i);
+        ranking[i-1] = ranking [i];
     }
     ranking.pop_back();
-    jugadores.erase(nombre);
+    jugadores.erase(it);
 }
 
 void Cjt_jugadores::listar_jugadores() {
