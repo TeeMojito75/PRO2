@@ -28,27 +28,15 @@ Jugador::Jugador(string nombre) {
     juegos.second = 0;
 }
 
-void Jugador::modificar_torneosd(int td) {
-    this->torneos_disputados = td;
-}
-
-void Jugador::modificar_partidos(pair<int, int>& p) {
-    this->partidos.first = p.first;
-    this->partidos.second = p.second;
-}
-
-void Jugador::modificar_sets(pair<int, int>& s) {
-    this->sets.first = s.first;
-    this->sets.second = s.second;
-}
-
-void Jugador::modificar_juegos(pair<int, int>& j) {
+void Jugador::actu_stats(pair<int, int>& j, pair<int, int>& s, pair<int, int>& p, int punt) {
     this->juegos.first = j.first;
     this->juegos.second = j.second;
-}
-
-void Jugador::modificar_puntuacion(int punt) {
+    this->partidos.first = p.first;
+    this->partidos.second = p.second;
+    this->sets.first = s.first;
+    this->sets.second = s.second;
     this->puntos = punt;
+    this->torneos_disputados += 1;
 }
 
 void Jugador::modificar_posicion(const int pos) {

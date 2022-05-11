@@ -2,11 +2,14 @@
     @brief Especificación de la clase Torneo
   */
 
+
+
 #ifndef TORNEO_HH
 #define TORNEO_HH
 
 #include "Jugador.hh"
 #include "Cjt_categorias.hh"
+#include "Cjt_jugadores.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>
@@ -16,6 +19,10 @@
 #endif
 
 
+/** @class Torneo
+    @brief Representa un torneo del circuito
+*/ 
+
 struct Participantes {
 	string nombre;
 	int puntos;
@@ -24,11 +31,6 @@ struct Participantes {
 	pair<int, int> game;
 };
 
-
-/** @class Torneo
-    @brief Representa un torneo del circuito
-*/ 
-
 class Torneo {
 
     private:
@@ -36,7 +38,7 @@ class Torneo {
 	int cat;
 	int n_participantes;
 	vector<Participantes> jug;
-	map<string, Participantes> ultima_ed;
+	map<string, int> ultima_ed;
 	BinTree<int> enfrentamientos;
 	BinTree<string> resultados;
 
@@ -115,7 +117,7 @@ class Torneo {
 	 * 	\pre Existe un torneo ya iniciado
 	 * 	\post Se han modificado los arboles y printeado los resultados
 	*/
-	void results();
+	void results(const Cjt_categorias& c, Cjt_jugadores& j);
 
 	/** @brief Crea el arbol de resultados
 	 * 	\pre <em>Cierto</em>
@@ -129,14 +131,25 @@ class Torneo {
     */
     void escribir_resultados(const BinTree<string>& R, const BinTree<int>& T);  
 	
+	/** @brief Se imprimen los jugadores con los puntos ganados y se añaden al map de última edición
+	 * 	\pre Se ha finalizado un torneo
+	 * 	\post Se han impreso los jugadores con sus puntuajes y se han añadido a la última edición
+	*/
+	void escribir_puntos();
+
 	/**
 	@brief Actualiza el BinTree de enfrnetamientos
 	\pre Existe un torneo iniciado con un arbol de enfrentamientos
 	\post Se han actualizado los nodos del arbol de la forma solicitada
     */
-    void actualizar_enfrentamientos(const BinTree<string>& R, BinTree<int>& T);
+    void actualizar_enfrentamientos(const BinTree<string>& R, BinTree<int>& T, int nivel, const Cjt_categorias& c);
    
-
+   /** @brief Actualiza los jugadores con los puntos ganados
+	* 	\pre <em>j</em> es un conjunto no vacio de jugadores y <em>jug</em> es el vector de participantes del torneo
+		\post Se han actualizado los parámetros del conjunto de jugadores
+	*/
+	void actualizar_jugadores(const vector<Participantes>& v, Cjt_jugadores& j);
+	
 
 };		
 #endif

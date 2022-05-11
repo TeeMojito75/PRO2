@@ -1,7 +1,7 @@
 /**  @mainpage Circuito de Torneos de Tenis con Ranking.
 
 El programa principal se encuentra en el modulo <em>main.cc</em>
-Las clases diseñadas para realizar la práctica a partir de la especificación son las siguiente:
+Las clases diseñadas para realizar la práctica a partir de la especificación son las siguientes:
 <ul>
    <li>Torneo</li>
    <li>Cjt_torneos</li>
@@ -15,8 +15,8 @@ Las clases diseñadas para realizar la práctica a partir de la especificación 
 #include "Cjt_torneos.hh"
 #include "Cjt_categorias.hh"
 
-/** @file main.cc
-    @brief programa principal para la practica <em>Circuito de torneos de tenis</em>
+/** @file program.cc
+    @brief programa principal para la práctica <em>Gestión de torneos de tenis</em>
  */ 
 
 // inclusion de clases (redundantes, únicamente para la mejor visualización del diagrama modular)
@@ -99,8 +99,7 @@ int main() {
 			string nombre;
 			cin >> nombre;
 			cout << '#' << cm << ' ' << nombre << endl;
-			t.finalizar_torneo(nombre); 
-		    //t.actualizar_jugadores(j, nombre);
+			t.finalizar_torneo(nombre, c, j); 
 		}
 	
 		else if (cm == "listar_ranking" or cm == "lr") {

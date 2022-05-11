@@ -77,8 +77,8 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html#abd4602a61de779b1185c40fb87865598">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__categorias.html#abd4602a61de779b1185c40fb87865598">Cjt_categorias::lectura_ini_cat</a>() {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> cats, puntos;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    cin &gt;&gt; cats &gt;&gt; puntos;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    categorias = vector&lt;categoria&gt; (cats);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    k = puntos;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    categorias = vector&lt;categoria&gt; (cats);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cats; ++i) {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        categorias[i].puntuaciones = vector&lt;int&gt; (puntos);</div>
@@ -90,30 +90,29 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html#a9bad7f93c577ec23524e41a8f39e5277">   24</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_cjt__categorias.html#a9bad7f93c577ec23524e41a8f39e5277">Cjt_categorias::existe_categoria</a>(<span class="keywordtype">int</span> cat) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (cat &gt; categorias.size()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (cat &gt; categorias.size() or cat &lt;= 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html#a14842f3c922d4dd130224f57ead4f3cb">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__categorias.html#a14842f3c922d4dd130224f57ead4f3cb">Cjt_categorias::listar_categorias</a>() {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> n = categorias.size();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> p = categorias[0].puntuaciones.size();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    cout &lt;&lt; n &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; p &lt;&lt; endl;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        cout &lt;&lt; categorias[i].nombre;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; p; ++j) cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt;  categorias[i].puntuaciones[j];</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927">Cjt_categorias::consultar_categoria</a>(<span class="keywordtype">int</span> cat) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    cout &lt;&lt; categorias[cat-1].nombre &lt;&lt; endl;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    cout &lt;&lt; n &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; k &lt;&lt; endl;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        cout &lt;&lt; categorias[i].nombre;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; k; ++j) cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt;  categorias[i].puntuaciones[j];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927">Cjt_categorias::consultar_categoria</a>(<span class="keywordtype">int</span> cat) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    cout &lt;&lt; categorias[cat-1].nombre &lt;&lt; endl;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="ttc" id="a_cjt__categorias_8hh_html"><div class="ttname"><a href="_cjt__categorias_8hh.html">Cjt_categorias.hh</a></div><div class="ttdoc">Especificación de la clase Cjt_categorias.</div></div>
 <div class="ttc" id="aclass_cjt__categorias_html_a14842f3c922d4dd130224f57ead4f3cb"><div class="ttname"><a href="class_cjt__categorias.html#a14842f3c922d4dd130224f57ead4f3cb">Cjt_categorias::listar_categorias</a></div><div class="ttdeci">void listar_categorias()</div><div class="ttdoc">Imprime las categorías en orden creciente de identificador.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00029">Cjt_categorias.cc:29</a></div></div>
 <div class="ttc" id="aclass_cjt__categorias_html_a9bad7f93c577ec23524e41a8f39e5277"><div class="ttname"><a href="class_cjt__categorias.html#a9bad7f93c577ec23524e41a8f39e5277">Cjt_categorias::existe_categoria</a></div><div class="ttdeci">bool existe_categoria(int cat)</div><div class="ttdoc">Comprueba si la categoría existe ya en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00024">Cjt_categorias.cc:24</a></div></div>
 <div class="ttc" id="aclass_cjt__categorias_html_abd4602a61de779b1185c40fb87865598"><div class="ttname"><a href="class_cjt__categorias.html#abd4602a61de779b1185c40fb87865598">Cjt_categorias::lectura_ini_cat</a></div><div class="ttdeci">void lectura_ini_cat()</div><div class="ttdoc">Lee por consola los datos iniciales de las categorías y los almacena en un vector&lt;categoria&gt; categori...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00009">Cjt_categorias.cc:9</a></div></div>
 <div class="ttc" id="aclass_cjt__categorias_html_acb1bba449ac618047f1ac5f9f7756ec1"><div class="ttname"><a href="class_cjt__categorias.html#acb1bba449ac618047f1ac5f9f7756ec1">Cjt_categorias::Cjt_categorias</a></div><div class="ttdeci">Cjt_categorias()</div><div class="ttdoc">Constructora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00004">Cjt_categorias.cc:4</a></div></div>
-<div class="ttc" id="aclass_cjt__categorias_html_ae2edee3077dcf1c01e04416718ac3927"><div class="ttname"><a href="class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927">Cjt_categorias::consultar_categoria</a></div><div class="ttdeci">void consultar_categoria(int cat)</div><div class="ttdoc">Consulta la categoría pasando su posición.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00040">Cjt_categorias.cc:40</a></div></div>
+<div class="ttc" id="aclass_cjt__categorias_html_ae2edee3077dcf1c01e04416718ac3927"><div class="ttname"><a href="class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927">Cjt_categorias::consultar_categoria</a></div><div class="ttdeci">void consultar_categoria(int cat)</div><div class="ttdoc">Consulta la categoría pasando su posición.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00039">Cjt_categorias.cc:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

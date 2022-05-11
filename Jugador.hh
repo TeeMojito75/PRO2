@@ -47,35 +47,11 @@ class Jugador {
     Jugador(string nombre);
     
     //modificadoras
-    /** @brief Modificadora atributo torneos disputados
-	\pre td >= 0
-	\post El parámetro implícito pasa a tener <em>td</em> modificado
-    */
-    void modificar_torneosd(int td);
-
-    /** @brief Modificadora atributo partidos G y P
+    /** @brief Modificadora de los atributos ganados en un torneo
 	\pre partidos.first >= 0, partidos.second >= 0
 	\post El parámetro implícito pasa a tener <em>partidos</em> modificado
     */
-    void modificar_partidos(pair<int, int>& p);
-
-    /** @brief Modificadora atributo sets G y P
-	\pre sets.first >= 0, sets.second >= 0
-	\post El parámetro implícito pasa a tener <em>s</em> sets
-    */
-    void modificar_sets(pair<int, int>& s);
-
-    /** @brief Modificadora atributo juegos G y P
-	\pre juegos.first >= 0, juegos.second >= 0
-	\post El parámetro implícito pasa a tener <em>j</em> juegos
-    */
-    void modificar_juegos(pair<int, int>& j);
-
-    /** @brief Modificadora de los puntos
-	\pre punt >= 0
-	\post El parámetro implícito pasa a tener <em>punt</em> puntos
-     */ 
-    void modificar_puntuacion(int punt);
+    void actu_stats(pair<int, int>& j, pair<int, int>& s, pair<int, int>& p, int punt);
 
     /** @brief Modificadora de la posición
 	\pre pos >= 0;

@@ -10,7 +10,7 @@ Representa un jugador del Ranking.
 \item 
 \mbox{\hyperlink{class_jugador_a232c46f75691af6210096e5972535d71}{Jugador}} ()
 \begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_jugador_a5b49e4daecb46709edad0200420698bc}{Jugador}} (string nombre)
+\mbox{\hyperlink{class_jugador_a5b49e4daecb46709edad0200420698bc}{Jugador}} (string \mbox{\hyperlink{class_jugador_ae173555c513c4267f92c915e94c7e524}{nombre}})
 \begin{DoxyCompactList}\small\item\em Creadora con valores. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jugador_a0f1e0095d63371bfe04838d671e1a14f}{modificar\+\_\+torneosd}} (int td)
 \begin{DoxyCompactList}\small\item\em Modificadora atributo torneos disputados. \end{DoxyCompactList}\item 
@@ -30,6 +30,23 @@ void \mbox{\hyperlink{class_jugador_a4f087f2d32977f5fa2670ea719378fe6}{escriure\
 \begin{DoxyCompactList}\small\item\em Función de escritura para ranking. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_jugador_a69ab40db4a82c1b656895631b9949cbc}{consultar\+\_\+pos}} () const
 \begin{DoxyCompactList}\small\item\em Devuelve el valor de la posición en ranking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_jugador_ae173555c513c4267f92c915e94c7e524}{nombre}}
+\item 
+int \mbox{\hyperlink{class_jugador_a1fb5771e4831c35b18cdc2ddf6dac2fc}{torneos\+\_\+disputados}}
+\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_jugador_ad22751abd0143014747f559dcfa63d49}{partidos}}
+\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}{sets}}
+\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_jugador_ab8ea358b14201e7fad986174d0b04f16}{juegos}}
+\item 
+int \mbox{\hyperlink{class_jugador_a0c0f3be497388acec0e2c890dcd46850}{posicion}}
+\item 
+int \mbox{\hyperlink{class_jugador_a4e264d857d5a3f1a68cbb13e4b88930f}{puntos}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
@@ -65,16 +82,16 @@ Definición en la línea 5 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{5                  \{}
-\DoxyCodeLine{6     nombre = \textcolor{stringliteral}{"{}null"{}};}
-\DoxyCodeLine{7     torneos\_disputados = 0;}
-\DoxyCodeLine{8     partidos.first = 0;}
-\DoxyCodeLine{9     partidos.second = 0;}
-\DoxyCodeLine{10     posicion = 0;}
-\DoxyCodeLine{11     puntos = 0;}
-\DoxyCodeLine{12     sets.first = 0;}
-\DoxyCodeLine{13     sets.second = 0;}
-\DoxyCodeLine{14     juegos.first = 0;}
-\DoxyCodeLine{15     juegos.second = 0;}
+\DoxyCodeLine{6     \mbox{\hyperlink{class_jugador_ae173555c513c4267f92c915e94c7e524}{nombre}} = \textcolor{stringliteral}{"{}null"{}};}
+\DoxyCodeLine{7     \mbox{\hyperlink{class_jugador_a1fb5771e4831c35b18cdc2ddf6dac2fc}{torneos\_disputados}} = 0;}
+\DoxyCodeLine{8     \mbox{\hyperlink{class_jugador_ad22751abd0143014747f559dcfa63d49}{partidos}}.first = 0;}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_jugador_ad22751abd0143014747f559dcfa63d49}{partidos}}.second = 0;}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_jugador_a0c0f3be497388acec0e2c890dcd46850}{posicion}} = 0;}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_jugador_a4e264d857d5a3f1a68cbb13e4b88930f}{puntos}} = 0;}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}{sets}}.first = 0;}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}{sets}}.second = 0;}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_jugador_ab8ea358b14201e7fad986174d0b04f16}{juegos}}.first = 0;}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_jugador_ab8ea358b14201e7fad986174d0b04f16}{juegos}}.second = 0;}
 \DoxyCodeLine{16 \}}
 
 \end{DoxyCode}
@@ -101,16 +118,16 @@ Definición en la línea 18 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{18                               \{}
-\DoxyCodeLine{19     this-\/>nombre = nombre;}
-\DoxyCodeLine{20     torneos\_disputados = 0;}
-\DoxyCodeLine{21     partidos.first = 0;}
-\DoxyCodeLine{22     partidos.second = 0;}
-\DoxyCodeLine{23     posicion = 0;}
-\DoxyCodeLine{24     puntos = 0;}
-\DoxyCodeLine{25     sets.first = 0;}
-\DoxyCodeLine{26     sets.second = 0;}
-\DoxyCodeLine{27     juegos.first = 0;}
-\DoxyCodeLine{28     juegos.second = 0;}
+\DoxyCodeLine{19     this-\/>\mbox{\hyperlink{class_jugador_ae173555c513c4267f92c915e94c7e524}{nombre}} = \mbox{\hyperlink{class_jugador_ae173555c513c4267f92c915e94c7e524}{nombre}};}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_jugador_a1fb5771e4831c35b18cdc2ddf6dac2fc}{torneos\_disputados}} = 0;}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_jugador_ad22751abd0143014747f559dcfa63d49}{partidos}}.first = 0;}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_jugador_ad22751abd0143014747f559dcfa63d49}{partidos}}.second = 0;}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_jugador_a0c0f3be497388acec0e2c890dcd46850}{posicion}} = 0;}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_jugador_a4e264d857d5a3f1a68cbb13e4b88930f}{puntos}} = 0;}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}{sets}}.first = 0;}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}{sets}}.second = 0;}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_jugador_ab8ea358b14201e7fad986174d0b04f16}{juegos}}.first = 0;}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_jugador_ab8ea358b14201e7fad986174d0b04f16}{juegos}}.second = 0;}
 \DoxyCodeLine{29 \}}
 
 \end{DoxyCode}
@@ -140,7 +157,7 @@ Definición en la línea 31 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{31                                        \{}
-\DoxyCodeLine{32     this-\/>torneos\_disputados = td;}
+\DoxyCodeLine{32     this-\/>\mbox{\hyperlink{class_jugador_a1fb5771e4831c35b18cdc2ddf6dac2fc}{torneos\_disputados}} = td;}
 \DoxyCodeLine{33 \}}
 
 \end{DoxyCode}
@@ -167,8 +184,8 @@ Definición en la línea 35 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{35                                                   \{}
-\DoxyCodeLine{36     this-\/>partidos.first = p.first;}
-\DoxyCodeLine{37     this-\/>partidos.second = p.second;}
+\DoxyCodeLine{36     this-\/>\mbox{\hyperlink{class_jugador_ad22751abd0143014747f559dcfa63d49}{partidos}}.first = p.first;}
+\DoxyCodeLine{37     this-\/>\mbox{\hyperlink{class_jugador_ad22751abd0143014747f559dcfa63d49}{partidos}}.second = p.second;}
 \DoxyCodeLine{38 \}}
 
 \end{DoxyCode}
@@ -195,8 +212,8 @@ Definición en la línea 40 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{40                                               \{}
-\DoxyCodeLine{41     this-\/>sets.first = s.first;}
-\DoxyCodeLine{42     this-\/>sets.second = s.second;}
+\DoxyCodeLine{41     this-\/>\mbox{\hyperlink{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}{sets}}.first = s.first;}
+\DoxyCodeLine{42     this-\/>\mbox{\hyperlink{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}{sets}}.second = s.second;}
 \DoxyCodeLine{43 \}}
 
 \end{DoxyCode}
@@ -223,8 +240,8 @@ Definición en la línea 45 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{45                                                 \{}
-\DoxyCodeLine{46     this-\/>juegos.first = j.first;}
-\DoxyCodeLine{47     this-\/>juegos.second = j.second;}
+\DoxyCodeLine{46     this-\/>\mbox{\hyperlink{class_jugador_ab8ea358b14201e7fad986174d0b04f16}{juegos}}.first = j.first;}
+\DoxyCodeLine{47     this-\/>\mbox{\hyperlink{class_jugador_ab8ea358b14201e7fad986174d0b04f16}{juegos}}.second = j.second;}
 \DoxyCodeLine{48 \}}
 
 \end{DoxyCode}
@@ -251,7 +268,7 @@ Definición en la línea 50 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{50                                            \{}
-\DoxyCodeLine{51     this-\/>puntos = punt;}
+\DoxyCodeLine{51     this-\/>\mbox{\hyperlink{class_jugador_a4e264d857d5a3f1a68cbb13e4b88930f}{puntos}} = punt;}
 \DoxyCodeLine{52 \}}
 
 \end{DoxyCode}
@@ -278,7 +295,7 @@ Definición en la línea 54 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{54                                               \{}
-\DoxyCodeLine{55     this-\/>posicion = pos;}
+\DoxyCodeLine{55     \mbox{\hyperlink{class_jugador_a0c0f3be497388acec0e2c890dcd46850}{posicion}} = pos;}
 \DoxyCodeLine{56 \}}
 
 \end{DoxyCode}
@@ -305,10 +322,10 @@ Definición en la línea 58 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{58                            \{}
-\DoxyCodeLine{59     cout << nombre << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}Rk:"{}} << posicion << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}Ps:"{}} << puntos << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}Ts:"{}} << torneos\_disputados << \textcolor{charliteral}{' '};}
-\DoxyCodeLine{60     cout << \textcolor{stringliteral}{"{}WM:"{}} << partidos.first << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}LM:"{}} << partidos.second << \textcolor{charliteral}{' '};}
-\DoxyCodeLine{61     cout << \textcolor{stringliteral}{"{}WS:"{}} << sets.first << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}LS:"{}} << sets.second << \textcolor{charliteral}{' '};}
-\DoxyCodeLine{62     cout << \textcolor{stringliteral}{"{}WG:"{}} << juegos.first << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}LG:"{}} << juegos.second << endl;}
+\DoxyCodeLine{59     cout << \mbox{\hyperlink{class_jugador_ae173555c513c4267f92c915e94c7e524}{nombre}} << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}Rk:"{}} << \mbox{\hyperlink{class_jugador_a0c0f3be497388acec0e2c890dcd46850}{posicion}} << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}Ps:"{}} << \mbox{\hyperlink{class_jugador_a4e264d857d5a3f1a68cbb13e4b88930f}{puntos}} << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}Ts:"{}} << \mbox{\hyperlink{class_jugador_a1fb5771e4831c35b18cdc2ddf6dac2fc}{torneos\_disputados}} << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{60     cout << \textcolor{stringliteral}{"{}WM:"{}} << \mbox{\hyperlink{class_jugador_ad22751abd0143014747f559dcfa63d49}{partidos}}.first << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}LM:"{}} << \mbox{\hyperlink{class_jugador_ad22751abd0143014747f559dcfa63d49}{partidos}}.second << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{61     cout << \textcolor{stringliteral}{"{}WS:"{}} << \mbox{\hyperlink{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}{sets}}.first << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}LS:"{}} << \mbox{\hyperlink{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}{sets}}.second << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{62     cout << \textcolor{stringliteral}{"{}WG:"{}} << \mbox{\hyperlink{class_jugador_ab8ea358b14201e7fad986174d0b04f16}{juegos}}.first << \textcolor{charliteral}{' '} << \textcolor{stringliteral}{"{}LG:"{}} << \mbox{\hyperlink{class_jugador_ab8ea358b14201e7fad986174d0b04f16}{juegos}}.second << endl;}
 \DoxyCodeLine{63 \}}
 
 \end{DoxyCode}
@@ -335,7 +352,7 @@ Definición en la línea 65 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{65                             \{}
-\DoxyCodeLine{66     cout << posicion << \textcolor{charliteral}{' '} << nombre << \textcolor{charliteral}{' '} << puntos << endl;}
+\DoxyCodeLine{66     cout << \mbox{\hyperlink{class_jugador_a0c0f3be497388acec0e2c890dcd46850}{posicion}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_jugador_ae173555c513c4267f92c915e94c7e524}{nombre}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_jugador_a4e264d857d5a3f1a68cbb13e4b88930f}{puntos}} << endl;}
 \DoxyCodeLine{67 \}}
 
 \end{DoxyCode}
@@ -362,10 +379,83 @@ Definición en la línea 69 del archivo Jugador.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{69                                 \{}
-\DoxyCodeLine{70     \textcolor{keywordflow}{return} posicion;}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_jugador_a0c0f3be497388acec0e2c890dcd46850}{posicion}};}
 \DoxyCodeLine{71 \}}
 
 \end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_jugador_ae173555c513c4267f92c915e94c7e524}\label{class_jugador_ae173555c513c4267f92c915e94c7e524}} 
+\index{Jugador@{Jugador}!nombre@{nombre}}
+\index{nombre@{nombre}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{nombre}{nombre}}
+{\footnotesize\ttfamily string Jugador\+::nombre\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 24 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a1fb5771e4831c35b18cdc2ddf6dac2fc}\label{class_jugador_a1fb5771e4831c35b18cdc2ddf6dac2fc}} 
+\index{Jugador@{Jugador}!torneos\_disputados@{torneos\_disputados}}
+\index{torneos\_disputados@{torneos\_disputados}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{torneos\_disputados}{torneos\_disputados}}
+{\footnotesize\ttfamily int Jugador\+::torneos\+\_\+disputados\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 25 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_ad22751abd0143014747f559dcfa63d49}\label{class_jugador_ad22751abd0143014747f559dcfa63d49}} 
+\index{Jugador@{Jugador}!partidos@{partidos}}
+\index{partidos@{partidos}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{partidos}{partidos}}
+{\footnotesize\ttfamily pair$<$int, int$>$ Jugador\+::partidos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 26 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}\label{class_jugador_a0f820a9a62c75c9104ac759c48a2219b}} 
+\index{Jugador@{Jugador}!sets@{sets}}
+\index{sets@{sets}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{sets}{sets}}
+{\footnotesize\ttfamily pair$<$int, int$>$ Jugador\+::sets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 27 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_ab8ea358b14201e7fad986174d0b04f16}\label{class_jugador_ab8ea358b14201e7fad986174d0b04f16}} 
+\index{Jugador@{Jugador}!juegos@{juegos}}
+\index{juegos@{juegos}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{juegos}{juegos}}
+{\footnotesize\ttfamily pair$<$int, int$>$ Jugador\+::juegos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 28 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a0c0f3be497388acec0e2c890dcd46850}\label{class_jugador_a0c0f3be497388acec0e2c890dcd46850}} 
+\index{Jugador@{Jugador}!posicion@{posicion}}
+\index{posicion@{posicion}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{posicion}{posicion}}
+{\footnotesize\ttfamily int Jugador\+::posicion\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 29 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a4e264d857d5a3f1a68cbb13e4b88930f}\label{class_jugador_a4e264d857d5a3f1a68cbb13e4b88930f}} 
+\index{Jugador@{Jugador}!puntos@{puntos}}
+\index{puntos@{puntos}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{puntos}{puntos}}
+{\footnotesize\ttfamily int Jugador\+::puntos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 30 del archivo Jugador.\+hh.
+
 
 
 La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}

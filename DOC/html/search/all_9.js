@@ -1,17 +1,10 @@
 var searchData=
 [
-  ['main_49',['main',['../program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'program.cc']]],
-  ['makefile_50',['Makefile',['../_makefile.html',1,'']]],
-  ['match_51',['match',['../struct_participantes.html#a7498e1fe34a6cd1e1b3f6f252c2020ec',1,'Participantes']]],
-  ['modificar_5fgame_52',['modificar_game',['../class_torneo.html#a81bb004fe50926ddd504a995d8f72ad4',1,'Torneo']]],
-  ['modificar_5fjuegos_53',['modificar_juegos',['../class_jugador.html#a3a2baa9319934bc62792ec756c90a1f6',1,'Jugador']]],
-  ['modificar_5fmatch_54',['modificar_match',['../class_torneo.html#ae406914159af62f2dc61631a02293169',1,'Torneo']]],
-  ['modificar_5fnpart_55',['modificar_npart',['../class_torneo.html#a27ff3b8789d67d2044b2fb8174c3c8b9',1,'Torneo']]],
-  ['modificar_5fpartidos_56',['modificar_partidos',['../class_jugador.html#a77d85fbd65a6c83cfc0cb08c1e0de255',1,'Jugador']]],
-  ['modificar_5fposicion_57',['modificar_posicion',['../class_jugador.html#aec10fcab3d358d1a903ef76dfde35c23',1,'Jugador']]],
-  ['modificar_5fpts_58',['modificar_pts',['../class_torneo.html#aae307bec20cfbc90fb252f5f22912e34',1,'Torneo']]],
-  ['modificar_5fpuntuacion_59',['modificar_puntuacion',['../class_jugador.html#a5f21f458b30ed497c191884b3bdecb17',1,'Jugador']]],
-  ['modificar_5fset_60',['modificar_set',['../class_torneo.html#a07764365cf31526c1349d3f89eee1ee0',1,'Torneo']]],
-  ['modificar_5fsets_61',['modificar_sets',['../class_jugador.html#a585edabe7b5009fc1a8cff1c5b689778',1,'Jugador']]],
-  ['modificar_5ftorneosd_62',['modificar_torneosd',['../class_jugador.html#a0f1e0095d63371bfe04838d671e1a14f',1,'Jugador']]]
+  ['lectura_5fini_5fcat_42',['lectura_ini_cat',['../class_cjt__categorias.html#abd4602a61de779b1185c40fb87865598',1,'Cjt_categorias']]],
+  ['lectura_5fini_5fjug_43',['lectura_ini_jug',['../class_cjt__jugadores.html#a851ea612923389c48d25f31e0933eb16',1,'Cjt_jugadores']]],
+  ['lectura_5fini_5ftor_44',['lectura_ini_tor',['../class_cjt__torneos.html#a1bc57bfbe9baa962f4502316629735e2',1,'Cjt_torneos']]],
+  ['listar_5fcategorias_45',['listar_categorias',['../class_cjt__categorias.html#a14842f3c922d4dd130224f57ead4f3cb',1,'Cjt_categorias']]],
+  ['listar_5fjugadores_46',['listar_jugadores',['../class_cjt__jugadores.html#a12a21975f2ae944bd24c7a6722bad32c',1,'Cjt_jugadores']]],
+  ['listar_5franking_47',['listar_ranking',['../class_cjt__jugadores.html#ac2b9b5e383120066310e98d880ac7fcd',1,'Cjt_jugadores']]],
+  ['listar_5ftorneos_48',['listar_torneos',['../class_cjt__torneos.html#ae2f7998d6771a04591d226299966551b',1,'Cjt_torneos']]]
 ];

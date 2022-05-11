@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['participantes_90',['Participantes',['../struct_participantes.html',1,'']]]
+  ['torneo_91',['Torneo',['../class_torneo.html',1,'']]]
 ];

@@ -15,8 +15,8 @@ Cjt_jugadores.o: Cjt_jugadores.cc Cjt_jugadores.hh Jugador.hh
 Cjt_torneos.o: Cjt_torneos.cc Cjt_torneos.hh Torneo.hh
 	g++ -c Cjt_torneos.cc $(OPCIONS)
 	
-Jugador.o: Jugador.cc Jugador.hh
-	g++ -c Jugador $(OPCIONS)
+Jugador.o: Jugador.cc Jugador.hh 
+	g++ -c Jugador.cc $(OPCIONS)
 	
 Torneo.o: Torneo.cc Torneo.hh Cjt_categorias.hh Cjt_jugadores.hh
 	g++ -c Torneo.cc $(OPCIONS)

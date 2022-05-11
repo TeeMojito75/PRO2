@@ -67,6 +67,12 @@ class Cjt_categorias {
 	 * 	\post Se ha devuelto el nombre de la categoría
 	*/
 	void consultar_categoria(int cat);
+
+	/** @brief Retorna la puntuación por nivel
+	 * 	\pre c<em>cat</em> identificador de una categoria
+	 * 	\post Se ha devuelto la puntuación correspondiente
+	*/
+	int puntos(int cat, int nivel) const;
 };
 #endif
 

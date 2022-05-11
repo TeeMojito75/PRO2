@@ -39,3 +39,7 @@ void Cjt_categorias::listar_categorias() {
 void Cjt_categorias::consultar_categoria(int cat) {
     cout << categorias[cat-1].nombre << endl;
 }
+
+int Cjt_categorias::puntos(int cat, int nivel) const {
+    return categorias[cat-1].puntuaciones[nivel];
+}

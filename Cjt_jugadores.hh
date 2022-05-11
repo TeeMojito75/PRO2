@@ -38,6 +38,12 @@ class Cjt_jugadores {
      */ 
     void eliminar_jugador(string& nombre);
 
+    /** @brief Función para acceder al map de Jugadores
+     * \pre El conjunto de jugadores no está vacio
+     * \post Se da
+    */
+    map<string, Jugador>::iterator consultar_conjunto(string s);
+
     /** @brief Lista por orden lexicográfico a los jugadores con sus estadísticas
 	\pre Existe un conjunto no vacío de jugadores con sus atributos
 	\post Se ha escrito por el canal de salida el listado de jugadores

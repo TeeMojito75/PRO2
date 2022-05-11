@@ -26,12 +26,9 @@ class Cjt_torneos{
     map<string, Torneo> torneos;
 
     public:
-    
-    //modificadoras
-	//Las siguientes dos funciones presentan un arbol como retorno, esto es solo una idea inicial
 	/** @brief empieza un torneo
 	    \pre <em>nombre</em> es el nombre de un torneo existente
-	    \post Se imprime el cuadro de emparejamientos del torneo con <em>nombre</em>
+	    \post Se imprime el cuadro de emparejamientos del torneo con nombre <em>nombre</em>
     */
 	void iniciar_torneo(string nombre, Cjt_jugadores& j);
 	
@@ -40,17 +37,17 @@ class Cjt_torneos{
 	    \pre <em>nombre</em> es el nombre de un torneo existente
 	    \post Se imprime el cuadro de resultados del torneo con las puntuaciones
     */
-    void finalizar_torneo(string nombre);
+    void finalizar_torneo(string nombre, const Cjt_categorias& c, Cjt_jugadores& j);
     
 
-      /** @brief Añade un nuevo torneo en el conjunto
-	\pre c >= -1, <em>t</em> es el nombre de un torneo
+    /** @brief Añade un nuevo torneo en el conjunto
+	\pre c >= 1, <em>nombre</em> es el nombre de un torneo
 	\post Se ha añadido un torneo al conjunto
     */
     void nuevo_torneo(string nombre, int c);
     
     /** @brief Elimina un torneo del conjunto
-	\pre <em>t</em> es el nombre de un torneo
+	\pre <em>nombre</em> es el nombre de un torneo
 	\post se ha eliminado un torneo del conjunto
      */ 
     void baja_torneo(string nombre);
@@ -68,7 +65,7 @@ class Cjt_torneos{
      */ 
     bool existe_torneo(string nombre) const;
 
-    //escritura
+    //escritura y lectura inicial
     /** @brief Consulta e imprime los torneos en orden creciente lexicográfico
 	\pre Existe un conjunto de torneos ordenados en orden lexicográfico
 	\post Se ha impreso el conjunto de torneos de forma creciente y con su categoría
@@ -76,11 +73,10 @@ class Cjt_torneos{
     void listar_torneos(Cjt_categorias& c);
 
     /** @brief Hace la lectura inicial del conjunto torneos
-       \pre <em>cierto</em>
+       \pre <em>Cierto</em>
        \post Se ha leido el conjunto inicial de torneos con su categoria correspondiente
     */
     void lectura_ini_tor();
 
 };
-
 #endif

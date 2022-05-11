@@ -69,3 +69,8 @@ void Cjt_jugadores::consultar_jugador(string& nombre) {
 string Cjt_jugadores::consultar_nombre(int n) {
     return ranking[n-1]->first;
 }
+
+map<string, Jugador>::iterator Cjt_jugadores::consultar_conjunto(string s) {
+    map<string, Jugador>::iterator it = jugadores.find(s);
+    return it;
+}

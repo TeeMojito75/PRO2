@@ -26,6 +26,13 @@ void \mbox{\hyperlink{class_cjt__jugadores_a23969ba6da580f24438765ed7fb047b3}{co
 \begin{DoxyCompactList}\small\item\em Escribe la información del jugador con el string nombre {\itshape nombre} \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_cjt__jugadores_a2b4579a98852d95d40ca919ad3a234f3}{consultar\+\_\+nombre}} (int n)
 \begin{DoxyCompactList}\small\item\em Devuelve el nombre del jugador en base a su posición. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$ \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}
+\item 
+vector$<$ map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$\+::iterator $>$ \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
@@ -62,12 +69,12 @@ Definición en la línea 18 del archivo Cjt\+\_\+jugadores.\+cc.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{18                                                 \{}
 \DoxyCodeLine{19     \mbox{\hyperlink{class_jugador}{Jugador}} jug = \mbox{\hyperlink{class_jugador}{Jugador}}(nombre); }
-\DoxyCodeLine{20     \textcolor{keywordtype}{int} p = ranking.size();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} p = \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}.size() + 1;}
 \DoxyCodeLine{21     jug.\mbox{\hyperlink{class_jugador_aec10fcab3d358d1a903ef76dfde35c23}{modificar\_posicion}}(p);}
 \DoxyCodeLine{22     pair<map<string, Jugador>::iterator, \textcolor{keywordtype}{bool}> it;}
-\DoxyCodeLine{23     it = jugadores.insert(make\_pair(nombre, jug));}
-\DoxyCodeLine{24     ranking.push\_back(it.first);}
-\DoxyCodeLine{25     cout << jugadores.size() << endl;}
+\DoxyCodeLine{23     it = \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.insert(make\_pair(nombre, jug));}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}.push\_back(it.first);}
+\DoxyCodeLine{25     cout << \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.size() << endl;}
 \DoxyCodeLine{26 \}}
 
 \end{DoxyCode}
@@ -89,22 +96,22 @@ El conjunto tiene n-\/1 jugadores, se ha actualizado el orden de la struct
 \end{DoxyPostcond}
 
 
-Definición en la línea 28 del archivo Cjt\+\_\+jugadores.\+cc.
+Definición en la línea 29 del archivo Cjt\+\_\+jugadores.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{28                                                    \{}
-\DoxyCodeLine{29     pair<map<string, Jugador>::iterator, \textcolor{keywordtype}{bool}> it;}
-\DoxyCodeLine{30     it.first = jugadores.find(nombre);}
-\DoxyCodeLine{31     \textcolor{keywordtype}{int} pos\_v = it.first-\/>second.consultar\_pos();}
-\DoxyCodeLine{32     \textcolor{keywordtype}{int} n = ranking.size();}
-\DoxyCodeLine{33     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = pos\_v; i < n; ++i) \{}
-\DoxyCodeLine{34         ranking[i-\/1]-\/>second.modificar\_posicion(ranking[i]-\/>second.consultar\_pos());}
-\DoxyCodeLine{35         swap(ranking[i-\/1], ranking[i]);}
-\DoxyCodeLine{36     \}}
-\DoxyCodeLine{37     ranking.pop\_back();}
-\DoxyCodeLine{38     jugadores.erase(nombre);}
-\DoxyCodeLine{39 \}}
+\DoxyCodeLine{29                                                    \{}
+\DoxyCodeLine{30     map<string, Jugador>::const\_iterator it;}
+\DoxyCodeLine{31     it = \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.find(nombre);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} pos\_v = it-\/>second.consultar\_pos();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}.size();}
+\DoxyCodeLine{34     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = pos\_v; i < n; ++i) \{}
+\DoxyCodeLine{35         \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}[i]-\/>second.modificar\_posicion(i);}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}[i-\/1] = \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}} [i];}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}.pop\_back();}
+\DoxyCodeLine{39     \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.erase(it);}
+\DoxyCodeLine{40 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadores_a12a21975f2ae944bd24c7a6722bad32c}\label{class_cjt__jugadores_a12a21975f2ae944bd24c7a6722bad32c}} 
@@ -125,17 +132,17 @@ Se ha escrito por el canal de salida el listado de jugadores
 \end{DoxyPostcond}
 
 
-Definición en la línea 41 del archivo Cjt\+\_\+jugadores.\+cc.
+Definición en la línea 42 del archivo Cjt\+\_\+jugadores.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{41                                      \{}
-\DoxyCodeLine{42     \textcolor{keywordtype}{int} n = jugadores.size();}
-\DoxyCodeLine{43     cout << n << endl;}
-\DoxyCodeLine{44     \textcolor{keywordflow}{for} (map<string, Jugador>::iterator it = jugadores.begin(); it != jugadores.end(); ++it) \{}
-\DoxyCodeLine{45         it-\/>second.escriure\_jug();}
-\DoxyCodeLine{46     \}}
-\DoxyCodeLine{47 \}}
+\DoxyCodeLine{42                                      \{}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.size();}
+\DoxyCodeLine{44     cout << n << endl;}
+\DoxyCodeLine{45     \textcolor{keywordflow}{for} (map<string, Jugador>::iterator it = \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.begin(); it != \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.end(); ++it) \{}
+\DoxyCodeLine{46         it-\/>second.escriure\_jug();}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadores_ac2b9b5e383120066310e98d880ac7fcd}\label{class_cjt__jugadores_ac2b9b5e383120066310e98d880ac7fcd}} 
@@ -156,14 +163,14 @@ Se ha escrito por el canal de salida el listado de jugadores
 \end{DoxyPostcond}
 
 
-Definición en la línea 49 del archivo Cjt\+\_\+jugadores.\+cc.
+Definición en la línea 50 del archivo Cjt\+\_\+jugadores.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{49                                    \{}
-\DoxyCodeLine{50     \textcolor{keywordtype}{int} n = ranking.size();}
-\DoxyCodeLine{51     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) ranking[i]-\/>second.escriure\_rank();}
-\DoxyCodeLine{52 \}}
+\DoxyCodeLine{50                                    \{}
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}.size();}
+\DoxyCodeLine{52     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}[i]-\/>second.escriure\_rank();}
+\DoxyCodeLine{53 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadores_a1e76b30fda52266093f139374b5aaef6}\label{class_cjt__jugadores_a1e76b30fda52266093f139374b5aaef6}} 
@@ -184,13 +191,13 @@ Existe un conjunto no vacío de jugadores
 \end{DoxyPostcond}
 
 
-Definición en la línea 59 del archivo Cjt\+\_\+jugadores.\+cc.
+Definición en la línea 60 del archivo Cjt\+\_\+jugadores.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{59                                  \{}
-\DoxyCodeLine{60     \textcolor{keywordflow}{return} jugadores.size();}
-\DoxyCodeLine{61 \}}
+\DoxyCodeLine{60                                  \{}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.size();}
+\DoxyCodeLine{62 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadores_aaa376294996c85170b3ff500b91f61a0}\label{class_cjt__jugadores_aaa376294996c85170b3ff500b91f61a0}} 
@@ -211,14 +218,14 @@ Devuelve 1 si el jugador ya existía en el conjunto, 0 en otro caso
 \end{DoxyPostcond}
 
 
-Definición en la línea 54 del archivo Cjt\+\_\+jugadores.\+cc.
+Definición en la línea 55 del archivo Cjt\+\_\+jugadores.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{54                                                  \{}
-\DoxyCodeLine{55     \textcolor{keywordflow}{if} (jugadores.find(nombre) != jugadores.end()) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{56     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{57 \}}
+\DoxyCodeLine{55                                                  \{}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.find(nombre) != \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.end()) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{58 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadores_a851ea612923389c48d25f31e0933eb16}\label{class_cjt__jugadores_a851ea612923389c48d25f31e0933eb16}} 
@@ -252,8 +259,8 @@ Definición en la línea 4 del archivo Cjt\+\_\+jugadores.\+cc.
 \DoxyCodeLine{10         cin >> nombre;}
 \DoxyCodeLine{11         \mbox{\hyperlink{class_jugador}{Jugador}} jug = \mbox{\hyperlink{class_jugador}{Jugador}}(nombre);}
 \DoxyCodeLine{12         jug.\mbox{\hyperlink{class_jugador_aec10fcab3d358d1a903ef76dfde35c23}{modificar\_posicion}}(i);}
-\DoxyCodeLine{13         it = jugadores.insert(make\_pair(nombre, jug));}
-\DoxyCodeLine{14         ranking.push\_back(it.first);}
+\DoxyCodeLine{13         it = \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.insert(make\_pair(nombre, jug));}
+\DoxyCodeLine{14         \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}.push\_back(it.first);}
 \DoxyCodeLine{15     \}}
 \DoxyCodeLine{16 \} }
 
@@ -276,14 +283,14 @@ Se ha escrito el {\itshape nombre} nombre, la {\itshape pos} posición y el rest
 \end{DoxyPostcond}
 
 
-Definición en la línea 63 del archivo Cjt\+\_\+jugadores.\+cc.
+Definición en la línea 64 del archivo Cjt\+\_\+jugadores.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{63                                                     \{}
-\DoxyCodeLine{64     map<string, Jugador>::iterator it = jugadores.find(nombre);}
-\DoxyCodeLine{65     it-\/>second.escriure\_jug();}
-\DoxyCodeLine{66 \}}
+\DoxyCodeLine{64                                                     \{}
+\DoxyCodeLine{65     map<string, Jugador>::iterator it = \mbox{\hyperlink{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}{jugadores}}.find(nombre);}
+\DoxyCodeLine{66     it-\/>second.escriure\_jug();}
+\DoxyCodeLine{67 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadores_a2b4579a98852d95d40ca919ad3a234f3}\label{class_cjt__jugadores_a2b4579a98852d95d40ca919ad3a234f3}} 
@@ -304,15 +311,38 @@ Se ha devuelto el nombre del jugador deseado
 \end{DoxyPostcond}
 
 
-Definición en la línea 68 del archivo Cjt\+\_\+jugadores.\+cc.
+Definición en la línea 69 del archivo Cjt\+\_\+jugadores.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{68                                             \{}
-\DoxyCodeLine{69     \textcolor{keywordflow}{return} ranking[n-\/1]-\/>first;}
-\DoxyCodeLine{70 \}}
+\DoxyCodeLine{69                                             \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}{ranking}}[n-\/1]-\/>first;}
+\DoxyCodeLine{71 \}}
 
 \end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}\label{class_cjt__jugadores_ae3fc5f98e0f343b039bd7dff0e616ecc}} 
+\index{Cjt\_jugadores@{Cjt\_jugadores}!jugadores@{jugadores}}
+\index{jugadores@{jugadores}!Cjt\_jugadores@{Cjt\_jugadores}}
+\doxysubsubsection{\texorpdfstring{jugadores}{jugadores}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_jugador}{Jugador}}$>$ Cjt\+\_\+jugadores\+::jugadores\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 25 del archivo Cjt\+\_\+jugadores.\+hh.
+
+\mbox{\Hypertarget{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}\label{class_cjt__jugadores_a94d661595d074adf3b6ff6db8e6ee143}} 
+\index{Cjt\_jugadores@{Cjt\_jugadores}!ranking@{ranking}}
+\index{ranking@{ranking}!Cjt\_jugadores@{Cjt\_jugadores}}
+\doxysubsubsection{\texorpdfstring{ranking}{ranking}}
+{\footnotesize\ttfamily vector$<$map$<$string, \mbox{\hyperlink{class_jugador}{Jugador}}$>$\+::iterator$>$ Cjt\+\_\+jugadores\+::ranking\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 26 del archivo Cjt\+\_\+jugadores.\+hh.
+
 
 
 La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}

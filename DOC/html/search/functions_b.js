@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_161',['value',['../class_bin_tree.html#a734e785b089c87b49187ee7c58edf5f3',1,'BinTree']]]
+  ['torneo_149',['Torneo',['../class_torneo.html#a46afb7e6cb5dd3b827b9b5dcb6453266',1,'Torneo']]]
 ];

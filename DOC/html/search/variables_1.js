@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['match_163',['match',['../struct_participantes.html#a7498e1fe34a6cd1e1b3f6f252c2020ec',1,'Participantes']]]
+  ['enfrentamientos_152',['enfrentamientos',['../class_torneo.html#abb8a79a6205d5e7ff35f59bf285a49ab',1,'Torneo']]]
 ];

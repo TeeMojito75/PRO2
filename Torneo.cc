@@ -1,5 +1,6 @@
 #include "Torneo.hh"
 #include "Cjt_categorias.hh"
+#include "Cjt_jugadores.hh"
 using namespace std;
 
 Torneo::Torneo(string nom, int c) {
@@ -68,11 +69,13 @@ void Torneo::inscripciones(int n) {
     cout << endl;
 }
 
-void Torneo::results() {
+void Torneo::results(const Cjt_categorias& c, Cjt_jugadores& j) {
     resultados = i_results();
-    actualizar_enfrentamientos(resultados, enfrentamientos);
+    actualizar_enfrentamientos(resultados, enfrentamientos, 1, c);
     escribir_resultados(resultados, enfrentamientos);
     cout << endl;
+    escribir_puntos();
+    actualizar_jugadores(jug, j);
 }
 
 BinTree<string> Torneo::i_results() {
@@ -97,19 +100,26 @@ void Torneo::escribir_resultados(const BinTree<string>& R, const BinTree<int>& T
         cout << T.right().value() << '.' << jug[T.right().value()-1].nombre;
         cout << ' ' << R.value();
         escribir_resultados(R.left(), T.left());
-        cout << ')';
         escribir_resultados(R.right(), T.right());
+        cout << ')';
     }
 }
 
-void Torneo::actualizar_enfrentamientos(const BinTree<string>& R, BinTree<int>& T) {
+void Torneo::escribir_puntos() {
+    for (int i = 0; i < jug.size(); ++i) {
+        cout << i+1 << '.' << jug[i].nombre << ' ' << jug[i].puntos << endl;
+        ultima_ed.insert(make_pair(jug[i].nombre, jug[i].puntos));
+    }
+}
+
+void Torneo::actualizar_enfrentamientos(const BinTree<string>& R, BinTree<int>& T, int nivel, const Cjt_categorias& c) {
     if (T.empty()) return;
     BinTree<int> e, d;
     e = T.left();
     d = T.right();
-
-    if (not R.left().empty()) actualizar_enfrentamientos(R.left(), e);
-    if (not R.right().empty()) actualizar_enfrentamientos(R.right(), d);
+    
+    if (not R.left().empty()) actualizar_enfrentamientos(R.left(), e, nivel+1, c);
+    if (not R.right().empty()) actualizar_enfrentamientos(R.right(), d, nivel+1, c);
 
     int win;
     int jleft = 0; int jright = 0;
@@ -154,15 +164,34 @@ void Torneo::actualizar_enfrentamientos(const BinTree<string>& R, BinTree<int>& 
             mright += 1;
         }
     }
+    
     T = BinTree<int>(win, e, d);
 
+    //Actualización de las estadísticas de participantes
     jug[e.value()-1].game.first += jleft;
     jug[e.value()-1].game.second += jright; 
-    jug[d.value()-1].set.first += sleft;
+    jug[d.value()-1].game.first += jright;
+    jug[d.value()-1].game.second += jleft; 
+   
+    jug[e.value()-1].set.first += sleft;
+    jug[e.value()-1].set.second += sright;
     jug[d.value()-1].set.first += sright;
+    jug[d.value()-1].set.second += sleft;
+    
     jug[e.value()-1].match.first += mleft;
+    jug[e.value()-1].match.second += mright;
     jug[d.value()-1].match.first += mright;
+    jug[d.value()-1].match.second += mleft;
 
+    if (e.value() != win) jug[e.value()-1].puntos =  c.puntos(cat, nivel);
+    else if (d.value() != win) jug[d.value()-1].puntos = c.puntos(cat, nivel);
+    jug[T.value()-1].puntos = c.puntos(cat, 0);
 }
 
-
+void Torneo::actualizar_jugadores(const vector<Participantes>& v, Cjt_jugadores& j) {
+    map<string, Jugador>::iterator it;
+    for (int i = 0; i < v.size(); ++i) {
+        it = j.consultar_conjunto(jug[i].nombre);
+        it->second.actu_stats(jug[i].game, jug[i].set, jug[i].match, jug[i].puntos);
+    }
+}

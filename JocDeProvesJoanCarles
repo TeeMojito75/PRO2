@@ -1,0 +1,463 @@
+Joc de Proves, Competència Transversal
+
+//////////////////////////////
+///// #input_comentat ///////
+////////////////////////////
+
+
+/////////////////////
+//entrada conjunts//
+/////////////////////
+//Categorias 
+(Amb un nombre elevat de 0 per comprovar que s'imprimeixen només els jugadors amb punts)
+4 8
+Grand_Slam
+Masters_1000
+Masters_500
+Masters_250
+2000 1500 750 500 250 125 75  0 
+1000  500 350 200 100  75  0  0
+ 500  400 300 200 100   0  0  0
+ 200  100  50   0   0   0  0  0
+ 
+ //Torneigs  
+ (Només n'he posat un parell, per després comprovar funcionament fucnions d'inserció i baixa)
+ 4
+ Roland_Garros 1
+ Montecarlo 2
+ Hamburg 3
+ Mallorca 4
+ 
+//Jugadors (Agafats d'un ranking online) 
+60 
+Djokovic	
+Medvedev
+Zverev	
+Nadal	
+Tsitsipas		
+Alcaraz		
+Rublev		
+Berrettini	
+Auger_Aliassime	
+Ruud		
+Norrie		
+Hurkacz		
+Sinner		
+Fritz
+Schwartzman		
+Shapovalov		
+Opelka		
+Carreno 	
+Bautista 	
+Dimitrov		
+Monfils		
+De_Minaur	
+Marin	
+Khachanov	
+Basilashvili	
+Tiafoe	
+Isner	
+Sonego	
+Davidovich	
+Korda	
+Kecmanovic	
+Van_De_Zandschulp	
+Evans	
+Paul	
+Karatsev	
+Harris	
+Baez	
+Brooksby	
+Delbonis	
+Portero	
+Bublik	
+Nodskov_Rune	
+Ramos_Vinolas		
+Humbert		
+Garin	
+Federer	
+Molcan		
+Goffin	
+Cerundolo	
+Ivashka		
+Musetti		
+Fucsovics	
+McDonald		
+Krajinovic	
+Coria		
+Fognini		
+Otte	
+Djere		
+Giron	
+Bonzi
+ 
+/////////////////////
+/// instruccions ////
+/////////////////////
+
+//Primero comprueba que se ha leido todo correctamente
+listar_categorias
+listar_ranking
+listar_jugadores
+
+//Ahora se juega un torneo y luego se comprueban las estadísticas
+it Mallorca
+32
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+21 22 23 24 25 26 27 28 29 30 31 32 
+
+finalizar_torneo Mallorca
+6-0,6-0
+6-7,7-6,7-6
+6-2,6-4
+6-3,6-1
+6-0,6-1
+0 0
+0-1
+0 0
+6-3,6-7,6-7
+6-4,6-4
+0 0
+6-7,6-2,6-2
+0 0
+1-0
+7-5,7-5
+6-1,6-2
+0 0
+5-7,3-6
+0 0
+7-5,3-6,6-3
+4-6,5-7
+0 0
+5-7,3-6
+0 0
+7-6,7-6
+6-3,5-7,6-3
+1-0
+6-2,5-7,4-6
+0 0
+0-1
+0 0
+6-0,6-4
+6-1,6-1
+0 0
+5-7,3-6
+0 0
+5-7,6-3,6-0
+6-4,7-6
+6-0,6-0
+0 0
+6-4,5-7,3-6
+0 0
+6-0,7-6
+0-1
+0 0
+6-4,6-1
+0 0
+
+cj Bublik
+consultar_jugador Nadal
+cj Paco
+
+//Ahora añadimos un par de torneos, eliminamos otros y añadimos y eliminamos algún jugador
+nuevo_jugador Ornstein
+nj Smough
+baja_jugador Nadal
+bj McDonald
+
+nuevo_torneo Manacor 4
+nt Las_Palmas -8
+nt Mallorca 4
+baja_torneo Roland_Garros
+bt Hamburg
+nt Wimbeldon 1 
+
+//Ahora comprobamos que los cambios se han efectuado
+lj
+lr
+lt
+
+//Como último caso especial, se iniciará un torneo, finalizará, se eliminarán los jugadores, se volveran a añadir los mismos, comprobaremos que se reiniciado y jugaran el mismo torneo, que igualmente serà borrado y vuelto añadir
+
+it Wimbeldon
+8
+2 4 8 10 12 14 16 18 
+
+ft Wimbeldon
+6-0,0-6,6-0
+0-1
+4-6,4-6
+0 0
+7-5,6-7,7-6
+0 0
+7-6,7-6
+0-1
+0 0
+4-6,6-4,7-6
+0 0
+
+(añadir los jugadores)
+bj
+bj
+bj
+bj 
+bj
+bj 
+bj
+bj
+
+bt Wimbeldon
+nt Wimbeldon 1
+
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+
+lr (para ver en que posición estan ahora los jugadores)
+
+it Wimbeldon 
+8 (cambiar los valores a los adecuados)
+2 4 8 10 12 14 16 18 
+
+ft Wimbeldon
+6-0,0-6,6-0
+0-1
+4-6,4-6
+0 0
+7-5,6-7,7-6
+0 0
+7-6,7-6
+0-1
+0 0
+4-6,6-4,7-6
+0 0
+
+lt
+lj 
+lr
+lc
+
+fin
+
+
+////////////////////////////
+/ entrada sin comentarios /
+///////////////////////////
+
+4 8
+Grand_Slam
+Masters_1000
+Masters_500
+Masters_250
+2000 1500 750 500 250 125 75  0 
+1000  500 350 200 100  75  0  0
+ 500  400 300 200 100   0  0  0
+ 200  100  50   0   0   0  0  0
+
+4
+Roland_Garros 1
+Montecarlo 2
+Hamburg 3 
+Mallorca 4
+
+60 
+Djokovic	
+Medvedev
+Zverev	
+Nadal	
+Tsitsipas		
+Alcaraz		
+Rublev		
+Berrettini	
+Auger_Aliassime	
+Ruud		
+Norrie		
+Hurkacz		
+Sinner		
+Fritz
+Schwartzman		
+Shapovalov		
+Opelka		
+Carreno 	
+Bautista 	
+Dimitrov		
+Monfils		
+De_Minaur	
+Marin	
+Khachanov	
+Basilashvili	
+Tiafoe	
+Isner	
+Sonego	
+Davidovich	
+Korda	
+Kecmanovic	
+Van_De_Zandschulp	
+Evans	
+Paul	
+Karatsev	
+Harris	
+Baez	
+Brooksby	
+Delbonis	
+Portero	
+Bublik	
+Nodskov_Rune	
+Ramos_Vinolas		
+Humbert		
+Garin	
+Federer	
+Molcan		
+Goffin	
+Cerundolo	
+Ivashka		
+Musetti		
+Fucsovics	
+McDonald		
+Krajinovic	
+Coria		
+Fognini		
+Otte	
+Djere		
+Giron	
+Bonzi
+
+listar_categorias
+listar_ranking
+listar_jugadores
+
+it Mallorca
+32
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 
+17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 
+
+finalizar_torneo Mallorca
+6-0,6-0
+6-7,7-6,7-6
+6-2,6-4
+6-3,6-1
+6-0,6-1
+0 0
+0-1
+0 0
+6-3,6-7,6-7
+6-4,6-4
+0 0
+6-7,6-2,6-2
+0 0
+1-0
+7-5,7-5
+6-1,6-2
+0 0
+5-7,3-6
+0 0
+7-5,3-6,6-3
+4-6,5-7
+0 0
+5-7,3-6
+0 0
+7-6,7-6
+6-3,5-7,6-3
+1-0
+6-2,5-7,4-6
+0 0
+0-1
+0 0
+6-0,6-4
+6-1,6-1
+0 0
+5-7,3-6
+0 0
+5-7,6-3,6-0
+6-4,7-6
+6-0,6-0
+0 0
+6-4,5-7,3-6
+0 0
+6-0,7-6
+0-1
+0 0
+6-4,6-1
+0 0
+
+cj Bublik
+consultar_jugador Nadal
+cj Paco
+nuevo_jugador Ornstein
+nj Smough
+baja_jugador Nadal
+bj McDonald
+
+lj
+lr
+lt
+
+it Wimbeldon
+8
+2 4 8 10 12 14 16 18 
+
+ft Wimbeldon
+6-0,0-6,6-0
+0-1
+4-6,4-6
+0 0
+7-5,6-7,7-6
+0 0
+7-6,7-6
+0-1
+0 0
+4-6,6-4,7-6
+0 0
+
+bj
+bj
+bj
+bj 
+bj
+bj 
+bj
+bj
+
+bt Wimbeldon
+nt Wimbeldon 1
+
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+
+lr
+
+it Wimbeldon 
+8 (cambiar los valores a los adecuados)
+2 4 8 10 12 14 16 18 
+
+ft Wimbeldon
+6-0,0-6,6-0
+0-1
+4-6,4-6
+0 0
+7-5,6-7,7-6
+0 0
+7-6,7-6
+0-1
+0 0
+4-6,6-4,7-6
+0 0
+
+lt
+lj 
+lr
+lc
+
+fin
+
