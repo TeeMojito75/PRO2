@@ -52,7 +52,7 @@ void Cjt_jugadores::listar_ranking() {
     for (int i = 0; i < n; ++i) ranking[i]->second.escriure_rank();
 }
 
-bool Cjt_jugadores::existe_jugador(string& nombre) {
+bool Cjt_jugadores::existe_jugador(const string& nombre) {
     if (jugadores.find(nombre) != jugadores.end()) return true;
     return false;
 }

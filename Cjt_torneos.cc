@@ -36,9 +36,10 @@ void Cjt_torneos::nuevo_torneo(string nombre, int c) {
 }
 
 void Cjt_torneos::baja_torneo(string nombre, Cjt_jugadores& j) {
-    borrado_puntos(nombre, j);
-    torneos.erase(nombre); 
+    map<string, Torneo>::iterator it = torneos.find(nombre);
+    it->second.quitar_puntos(j);
     j.actualizar_ranking();
+    torneos.erase(nombre); 
 }
 
 void Cjt_torneos::iniciar_torneo(string nom, Cjt_jugadores& j) {
@@ -49,7 +50,6 @@ void Cjt_torneos::iniciar_torneo(string nom, Cjt_jugadores& j) {
     for (int i = 0; i < n; ++i) {
         cin >> p;
         part.nombre = j.consultar_nombre(p);
-        if (not it->second.ultima_ed.empty() and j.existe_jugador(part.nombre)) borrado_puntos(nom, j);
         it->second.ampliar_participantes(part);
     } 
     it->second.inscripciones(n);
@@ -61,20 +61,6 @@ void Cjt_torneos::finalizar_torneo(string nom, const Cjt_categorias& c, Cjt_juga
     j.actualizar_ranking();
 }
 
-void Cjt_torneos::borrado_puntos(string nombre, Cjt_jugadores& j) {
-    map<string, Torneo>::iterator a = torneos.find(nombre);
-    map<string, Jugador>::iterator it;
-    for (map<string, int>::iterator b = a->second.ultima_ed.begin(); b != a->second.ultima_ed.end(); ++b) {
-        it = j.consultar_conjunto(b->first);
-        it->second.modificar_puntos(b->second);
-    }
-}
 
-void Cjt_torneos::baja_ediciones(string nombre) {
-     for (map<string, Torneo>::iterator it = torneos.begin(); it != torneos.end(); ++it) {
-         map<string, int>::iterator it2 = it->second.ultima_ed.find(nombre);
-         if (it2 != it->second.ultima_ed.end()) it->second.ultima_ed.erase(nombre);
-    }
-}
 
      

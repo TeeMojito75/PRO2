@@ -55,6 +55,8 @@ void Torneo::results(const Cjt_categorias& c, Cjt_jugadores& j) {
     actualizar_enfrentamientos(resultados, enfrentamientos, 1, c);
     escribir_resultados(resultados, enfrentamientos);
     cout << endl;
+    quitar_puntos(j);
+    ultima_ed.clear();
     escribir_puntos();
     actualizar_jugadores(jug, j);
 }
@@ -180,6 +182,16 @@ void Torneo::actualizar_jugadores(const vector<Participantes>& v, Cjt_jugadores&
     for (int i = 0; i < v.size(); ++i) {
         it = j.consultar_conjunto(jug[i].nombre);
         it->second.actu_stats(jug[i].game, jug[i].set, jug[i].match, jug[i].puntos);
+    }
+}
+
+void Torneo::quitar_puntos(Cjt_jugadores& j) {
+    if (ultima_ed.empty()) return;
+    for (map<string, int>::iterator it = ultima_ed.begin(); it != ultima_ed.end(); ++it) {
+        if (j.existe_jugador(it->first)) {
+        map<string, Jugador>::iterator it2 = j.consultar_conjunto(it->first);
+        it2->second.modificar_puntos(it->second);
+        }
     }
 }
 

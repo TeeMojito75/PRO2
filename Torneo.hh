@@ -66,6 +66,12 @@ class Torneo {
 	 */
 	void modificar_npart(int n);
 
+	/** @brief Elimina los puntos de la edición anterior
+	 * 	\pre <em>Cierto</em>
+	 * 	\post Se han eliminado los puntos de la edición de la edición anterior
+	*/
+	void quitar_puntos(Cjt_jugadores& j);
+
 	/** @brief Escribe el nombre de la categoría
 	 *	\pre Cjt_categorias es un conjunto no vacío
 	 	\post Se ha escrito el nombre de la categoría

@@ -72,7 +72,7 @@ class Cjt_jugadores {
 	\pre <em>nombre</em> es el nombre de un jugador
 	\post Devuelve 1 si el jugador ya existía en el conjunto, 0 en otro 	    caso
     */
-    bool existe_jugador(string& nombre); 
+    bool existe_jugador(const string& nombre); 
 
     /** @brief Hace la lectura inicial del conjunto desde la consola
         \pre <em>cierto</em>

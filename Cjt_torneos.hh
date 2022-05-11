@@ -65,12 +65,6 @@ class Cjt_torneos{
      */ 
     bool existe_torneo(string nombre) const;
 
-    /** @brief Borra los puntos de la última edición del torneo indicado
-     *  \pre <em>nombre</em> es el nombre de un torneo acabado
-     *  \post Se han eliminado los puntos a los jugadores del torneo
-    */
-    void borrado_puntos(string nombre, Cjt_jugadores& j);
-
     //escritura y lectura inicial
     /** @brief Consulta e imprime los torneos en orden creciente lexicográfico
 	\pre Existe un conjunto de torneos ordenados en orden lexicográfico
@@ -83,12 +77,6 @@ class Cjt_torneos{
        \post Se ha leido el conjunto inicial de torneos con su categoria correspondiente
     */
     void lectura_ini_tor();
-
-    /** @brief Quita al jugador de los maps de últimas ediciones
-     *  \pre <em>nombre</em> es el nombre de un jugador
-     *  \post Se ha eliminado el jugador de los maps
-    */
-    void baja_ediciones(string nombre);
 
 
 };
