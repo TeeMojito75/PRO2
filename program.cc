@@ -73,6 +73,7 @@ int main() {
 			cout << '#' << cm << ' ' << nombre << endl;
 	 		if (not j.existe_jugador(nombre)) cout << "error: el jugador no existe" << endl;
 	 		else {
+				t.baja_ediciones(nombre);
 				j.eliminar_jugador(nombre);
 				cout << j.num_jugadores() << endl;
 	 	   }
@@ -84,7 +85,7 @@ int main() {
 			cout << '#' << cm << ' ' << nombre << endl;
 		    if (not t.existe_torneo(nombre)) cout << "error: el torneo no existe" << endl;
 	   	 	else {
-			t.baja_torneo(nombre);
+			t.baja_torneo(nombre, j);
 			cout << t.num_torneos() << endl;
 	    	}
 		}

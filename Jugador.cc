@@ -43,6 +43,11 @@ void Jugador::modificar_posicion(const int pos) {
     posicion = pos;
 }
 
+void Jugador::modificar_puntos(const int punt) {
+    puntos = puntos - punt;
+}
+
+
 void Jugador::escriure_jug() {
     cout << nombre << ' ' << "Rk:" << posicion << ' ' << "Ps:" << puntos << ' ' << "Ts:" << torneos_disputados << ' ';
     cout << "WM:" << partidos.first << ' ' << "LM:" << partidos.second << ' ';
@@ -56,4 +61,8 @@ void Jugador::escriure_rank() {
 
 int Jugador::consultar_pos() const{
     return posicion;
+}
+
+int Jugador::consultar_puntos() const {
+    return puntos;
 }

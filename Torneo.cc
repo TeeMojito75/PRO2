@@ -17,25 +17,6 @@ void Torneo::modificar_npart(int n) {
     n_participantes = n;
 }
 
-void Torneo::modificar_match(int pos, int win, int lose) {
-    jug[pos].match.first = win;
-    jug[pos].match.second = lose;
-}
-
-void Torneo::modificar_set(int pos, int win, int lose) {
-    jug[pos].set.first = win;
-    jug[pos].set.second = lose;
-}
-
-void Torneo::modificar_game(int pos, int win, int lose) {
-    jug[pos].game.first = win;
-    jug[pos].game.second = lose;
-}
-
-void Torneo::modificar_pts(int pos, int pts) {
-    jug[pos].puntos = pts;
-}
-
 void Torneo::escribir_categoria(Cjt_categorias& c) {
     c.consultar_categoria(cat);
 }
@@ -107,7 +88,7 @@ void Torneo::escribir_resultados(const BinTree<string>& R, const BinTree<int>& T
 
 void Torneo::escribir_puntos() {
     for (int i = 0; i < jug.size(); ++i) {
-        cout << i+1 << '.' << jug[i].nombre << ' ' << jug[i].puntos << endl;
+        if (jug[i].puntos != 0) cout << i+1 << '.' << jug[i].nombre << ' ' << jug[i].puntos << endl;
         ultima_ed.insert(make_pair(jug[i].nombre, jug[i].puntos));
     }
 }
@@ -127,8 +108,14 @@ void Torneo::actualizar_enfrentamientos(const BinTree<string>& R, BinTree<int>& 
     int mleft = 0; int mright = 0;
 
     if (R.value().size() == 3) {
-        if (R.value()[0] == '1') win = e.value();
-        else win = d.value(); 
+        if (R.value()[0] == '1') {
+            win = e.value();
+            mleft += 1;
+        }
+        else {
+            win = d.value();
+            mright += 1;
+        } 
     }
     else if (R.value().size() == 7) {
         if (R.value()[4] > R.value()[6]) {
@@ -195,3 +182,5 @@ void Torneo::actualizar_jugadores(const vector<Participantes>& v, Cjt_jugadores&
         it->second.actu_stats(jug[i].game, jug[i].set, jug[i].match, jug[i].puntos);
     }
 }
+
+

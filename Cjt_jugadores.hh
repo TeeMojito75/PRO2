@@ -44,6 +44,12 @@ class Cjt_jugadores {
     */
     map<string, Jugador>::iterator consultar_conjunto(string s);
 
+    /** @brief Actualiza las posiciones del ranking de jugadores
+     *  \pre Existe un vector de iteradores no vacios
+     *  \post Se han actualizado las posiciones del ranking de acuerdo a la puntuación de los jugadores
+    */
+    void actualizar_ranking();
+
     /** @brief Lista por orden lexicográfico a los jugadores con sus estadísticas
 	\pre Existe un conjunto no vacío de jugadores con sus atributos
 	\post Se ha escrito por el canal de salida el listado de jugadores

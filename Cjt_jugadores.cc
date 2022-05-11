@@ -1,4 +1,5 @@
 #include "Cjt_jugadores.hh"
+#include <algorithm>
 using namespace std;
 
 void Cjt_jugadores::lectura_ini_jug() {
@@ -25,7 +26,6 @@ void Cjt_jugadores::nuevo_jugador(string& nombre) {
     cout << jugadores.size() << endl;
 }
 
-//Actualitzar per eliminar el jugador de tots els torneigs
 void Cjt_jugadores::eliminar_jugador(string& nombre) {
     map<string, Jugador>::const_iterator it;
     it = jugadores.find(nombre);
@@ -74,3 +74,16 @@ map<string, Jugador>::iterator Cjt_jugadores::consultar_conjunto(string s) {
     map<string, Jugador>::iterator it = jugadores.find(s);
     return it;
 }
+
+bool cmp(map<string, Jugador>::iterator& it, map<string, Jugador>::iterator& it2 ) {
+    if (it->second.consultar_puntos() == it2->second.consultar_puntos()) return it->second.consultar_pos() < it2->second.consultar_pos();
+    else return  it->second.consultar_puntos() > it2->second.consultar_puntos();
+}
+
+void Cjt_jugadores::actualizar_ranking() {
+    sort(ranking.begin(), ranking.end(), cmp);
+    for (int i = 0; i < ranking.size(); ++i) {
+        ranking[i]->second.modificar_posicion(i+1);
+    }
+}
+

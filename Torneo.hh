@@ -38,12 +38,13 @@ class Torneo {
 	int cat;
 	int n_participantes;
 	vector<Participantes> jug;
-	map<string, int> ultima_ed;
 	BinTree<int> enfrentamientos;
 	BinTree<string> resultados;
 
     public:
-
+	//Map que guarda el nombre y los puntos de la última edición del torneo
+	map<string, int> ultima_ed;
+	
 	//constructor 
 	/** @brief Creadora por defecto
 	    \pre <em>cierto</em>
@@ -64,30 +65,6 @@ class Torneo {
 	 * 	\post Se ha modificado el parámetro implícito
 	 */
 	void modificar_npart(int n);
-
-	/** @brief Modifica los partidos del participante
-	 *	\pre pair.first >= 0, pair.second >= 0
-	 	\post Los valores del parámetro implícito han sido modificados
-	*/
-	void modificar_match(int pos, int win, int lose);
-
-	/** @brief Modifica los partidos del participante
-	 *	\pre pair.first >= 0, pair.second >= 0
-	 	\post Los valores del parámetro implícito han sido modificados
-	*/
-	void modificar_set(int pos, int win, int lose);
-
-	/** @brief Modifica los partidos del participante
-	 *	\pre pair.first >= 0, pair.second >= 0
-	 	\post Los valores del parámetro implícito han sido modificados
-	*/
-	void modificar_game(int pos, int win, int lose);
-
-	/** @brief Modifica los partidos del participante
-	 *	\pre pair.first >= 0, pair.second >= 0
-	 	\post Los valores del parámetro implícito han sido modificados
-	*/
-	void modificar_pts(int pos, int puntos);
 
 	/** @brief Escribe el nombre de la categoría
 	 *	\pre Cjt_categorias es un conjunto no vacío

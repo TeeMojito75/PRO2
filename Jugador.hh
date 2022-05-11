@@ -47,7 +47,7 @@ class Jugador {
     Jugador(string nombre);
     
     //modificadoras
-    /** @brief Modificadora de los atributos ganados en un torneo
+	/** @brief Modificadora de los atributos ganados en un torneo
 	\pre partidos.first >= 0, partidos.second >= 0
 	\post El parámetro implícito pasa a tener <em>partidos</em> modificado
     */
@@ -58,6 +58,12 @@ class Jugador {
 	\post El parámetro implícito pasa a tener <em>pos</em> posición
      */ 
     void modificar_posicion(const int pos);
+
+    /** @brief Actualiza los puntos del jugador
+     *  \pre <em>punto</em> son los puntos del jugador
+     *  \post Se han actualizado los puntos del jugador
+    */
+    void modificar_puntos(const int punt);
 
     /** @brief Función de escritura de parámetros
         \pre Todos los parámetros del jugador >= 0
@@ -76,6 +82,12 @@ class Jugador {
      *  \post Se ha devuelto el valor posición del jugador
     */
     int consultar_pos() const;
+
+    /** @brief Devuelve el valor de puntos del Jugador
+     *  \pre <em>puntos</em> son los puntos del jugador
+     *  \post Se ha devuelto el valor de la puntuación
+    */
+    int consultar_puntos() const;
 
 };
 
