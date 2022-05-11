@@ -29,7 +29,7 @@ using namespace std;
 /** @brief programa principal para la practica <em>Circuito de torneos de tenis</em>
  */
 
-int main() {
+int main() {	
 	Cjt_categorias c;
     Cjt_torneos t;
     Cjt_jugadores j;
@@ -95,16 +95,13 @@ int main() {
 		 	cout << '#' << cm << ' ' << nombre << endl; 
 			t.iniciar_torneo(nombre, j);
 		}
-		
-		/**
 		else if (cm == "finalizar_torneo" or cm == "ft") {
-			cout << '#' << cm << endl;
 			string nombre;
 			cin >> nombre;
-			t.baja_torneo(nombre); 
-		    t.actualizar_jugadores(j, nombre);
+			cout << '#' << cm << ' ' << nombre << endl;
+			t.finalizar_torneo(nombre); 
+		    //t.actualizar_jugadores(j, nombre);
 		}
-		*/
 	
 		else if (cm == "listar_ranking" or cm == "lr") {
 			cout << '#' << cm << endl;
@@ -135,4 +132,6 @@ int main() {
 		}
 		cin >> cm;
     }
+
+	
 }

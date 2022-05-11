@@ -39,9 +39,9 @@ class Cjt_torneos{
 	/** @brief finaliza un torneo
 	    \pre <em>nombre</em> es el nombre de un torneo existente
 	    \post Se imprime el cuadro de resultados del torneo con las puntuaciones
-	
-    void finalizar_torneo(string nombre);
     */
+    void finalizar_torneo(string nombre);
+    
 
       /** @brief Añade un nuevo torneo en el conjunto
 	\pre c >= -1, <em>t</em> es el nombre de un torneo
@@ -74,14 +74,6 @@ class Cjt_torneos{
 	\post Se ha impreso el conjunto de torneos de forma creciente y con su categoría
     */
     void listar_torneos(Cjt_categorias& c);
-
-    /** @brief Actualiza la información del conjunto de jugadores una vez terminado o eliminado 
-	un torneo
-	\pre j es el conjunto de jugadores del torneo t, <em>nombre</em> es el nombre de un torneo
-	\post Se han actualizado las estadísticas pertinentes a los jugadores del torneo
-    
-    void actualizar_jugadores(Cjt_jugadores& j, string nombre);
-    */
 
     /** @brief Hace la lectura inicial del conjunto torneos
        \pre <em>cierto</em>

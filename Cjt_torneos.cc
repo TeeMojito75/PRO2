@@ -52,3 +52,15 @@ void Cjt_torneos::iniciar_torneo(string nom, Cjt_jugadores& j) {
     }
     it->second.inscripciones(n);
 }
+
+void Cjt_torneos::finalizar_torneo(string nom) {
+    map<string, Torneo>::iterator it = torneos.find(nom);
+    it->second.results();
+
+
+}
+
+
+
+
+     
