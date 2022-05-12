@@ -61,6 +61,11 @@ void Cjt_torneos::finalizar_torneo(string nom, const Cjt_categorias& c, Cjt_juga
     j.actualizar_ranking();
 }
 
+void Cjt_torneos::eliminar_ediciones(string nombre) {
+    for (map<string, Torneo>::iterator it = torneos.begin(); it != torneos.end(); ++it) {
+        it->second.puntos_0(nombre);
+    }
+}
 
 
      

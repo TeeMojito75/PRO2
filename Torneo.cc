@@ -58,7 +58,8 @@ void Torneo::results(const Cjt_categorias& c, Cjt_jugadores& j) {
     quitar_puntos(j);
     ultima_ed.clear();
     escribir_puntos();
-    actualizar_jugadores(jug, j);
+    actualizar_jugadores(jug, j); 
+    jug = vector<Participantes>(0);
 }
 
 BinTree<string> Torneo::i_results() {
@@ -193,6 +194,11 @@ void Torneo::quitar_puntos(Cjt_jugadores& j) {
         it2->second.modificar_puntos(it->second);
         }
     }
+}
+
+void Torneo::puntos_0(const string& nombre) {
+    map<string, int>::iterator it = ultima_ed.find(nombre);
+    if (it != ultima_ed.end()) it->second = 0;
 }
 
 

@@ -52,6 +52,12 @@ class Cjt_torneos{
      */ 
     void baja_torneo(string nombre, Cjt_jugadores& j);
 
+    /** @brief Elimina al jugador de todas las últimas ediciones
+     *  \pre <em>cierto</em>
+     *  \post Se ha eliminado al jugador de todas las últimas ediciones de los torneos
+    */
+    void eliminar_ediciones(string nombre);
+
     //consultora
     /** @brief Comprueba el nombre de torneos del conjunto
 	\pre Existe un conjunto de torneos

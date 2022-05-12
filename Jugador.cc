@@ -29,13 +29,13 @@ Jugador::Jugador(string nombre) {
 }
 
 void Jugador::actu_stats(pair<int, int>& j, pair<int, int>& s, pair<int, int>& p, int punt) {
-    this->juegos.first = j.first;
-    this->juegos.second = j.second;
-    this->partidos.first = p.first;
-    this->partidos.second = p.second;
-    this->sets.first = s.first;
-    this->sets.second = s.second;
-    this->puntos = punt;
+    this->juegos.first += j.first;
+    this->juegos.second += j.second;
+    this->partidos.first += p.first;
+    this->partidos.second += p.second;
+    this->sets.first += s.first;
+    this->sets.second += s.second;
+    this->puntos += punt;
     this->torneos_disputados += 1;
 }
 

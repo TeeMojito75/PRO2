@@ -37,14 +37,12 @@ class Torneo {
 	string nombre;
 	int cat;
 	int n_participantes;
-	vector<Participantes> jug;
+	vector<Participantes> jug;	
+	map<string, int> ultima_ed;
 	BinTree<int> enfrentamientos;
 	BinTree<string> resultados;
 
     public:
-	//Map que guarda el nombre y los puntos de la última edición del torneo
-	map<string, int> ultima_ed;
-	
 	//constructor 
 	/** @brief Creadora por defecto
 	    \pre <em>cierto</em>
@@ -71,6 +69,12 @@ class Torneo {
 	 * 	\post Se han eliminado los puntos de la edición de la edición anterior
 	*/
 	void quitar_puntos(Cjt_jugadores& j);
+
+	/** @brief Pone los puntos a 0 en caso de eliminar jugadores
+	 * 	\pre <em>nombre</em> es el nombre de un presunto jugador
+	 * 	\post Se han puesto los puntos a cero del jugador (en caso de que existe)
+	*/
+	void puntos_0(const string& nombre);
 
 	/** @brief Escribe el nombre de la categoría
 	 *	\pre Cjt_categorias es un conjunto no vacío

@@ -73,7 +73,7 @@ int main() {
 			cout << '#' << cm << ' ' << nombre << endl;
 	 		if (not j.existe_jugador(nombre)) cout << "error: el jugador no existe" << endl;
 	 		else {
-				//t.baja_ediciones(nombre);
+				t.eliminar_ediciones(nombre);
 				j.eliminar_jugador(nombre);
 				cout << j.num_jugadores() << endl;
 	 	   }
