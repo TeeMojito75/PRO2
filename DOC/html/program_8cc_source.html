@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Laboratorio de PRO2. Ejercicio &#39;Gestión de Ranking de tenis&#39;.
-   &#160;<span id="projectnumber">version 1 17-abr-2022, Joan Carles Veny</span>
+   &#160;<span id="projectnumber">version 12.0 13-mayo-2022, Joan Carles Veny</span>
    </div>
   </td>
  </tr>
@@ -67,149 +67,153 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="program_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__jugadores_8hh.html">Cjt_jugadores.hh</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__torneos_8hh.html">Cjt_torneos.hh</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__categorias_8hh.html">Cjt_categorias.hh</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// inclusion de clases (redundantes, únicamente para la mejor visualización del diagrama modular)</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   32</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {  </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="class_cjt__categorias.html">Cjt_categorias</a> c;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_cjt__torneos.html">Cjt_torneos</a> t;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_cjt__jugadores.html">Cjt_jugadores</a> j;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    c.<a class="code" href="class_cjt__categorias.html#abd4602a61de779b1185c40fb87865598">lectura_ini_cat</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    t.<a class="code" href="class_cjt__torneos.html#a1bc57bfbe9baa962f4502316629735e2">lectura_ini_tor</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    j.<a class="code" href="class_cjt__jugadores.html#a851ea612923389c48d25f31e0933eb16">lectura_ini_jug</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">string</span> cm;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    cin &gt;&gt; cm;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">while</span> (cm != <span class="stringliteral">&quot;fin&quot;</span>) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;nuevo_jugador&quot;</span> or cm == <span class="stringliteral">&quot;nj&quot;</span>) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      cin &gt;&gt; nombre;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (j.<a class="code" href="class_cjt__jugadores.html#aaa376294996c85170b3ff500b91f61a0">existe_jugador</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: ya existe un jugador con ese nombre&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        j.<a class="code" href="class_cjt__jugadores.html#a06e6df2ac2ddbb9cdc21b7c127fa1132">nuevo_jugador</a>(nombre);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    } </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;nuevo_torneo&quot;</span> or cm == <span class="stringliteral">&quot;nt&quot;</span>) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordtype">int</span> cat;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      cin &gt;&gt; nombre &gt;&gt; cat;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; cat &lt;&lt; endl;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">if</span> (not c.<a class="code" href="class_cjt__categorias.html#a9bad7f93c577ec23524e41a8f39e5277">existe_categoria</a>(cat)) cout &lt;&lt; <span class="stringliteral">&quot;error: la categoria no existe&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c.<a class="code" href="class_cjt__categorias.html#a9bad7f93c577ec23524e41a8f39e5277">existe_categoria</a>(cat) and t.<a class="code" href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">existe_torneo</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: ya existe un torneo con ese nombre&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        t.<a class="code" href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">nuevo_torneo</a>(nombre, cat);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        cout &lt;&lt; t.<a class="code" href="class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82">num_torneos</a>() &lt;&lt; endl;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;baja_jugador&quot;</span> or cm == <span class="stringliteral">&quot;bj&quot;</span>) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      cin &gt;&gt; nombre;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">if</span> (not j.<a class="code" href="class_cjt__jugadores.html#aaa376294996c85170b3ff500b91f61a0">existe_jugador</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: el jugador no existe&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        j.<a class="code" href="class_cjt__jugadores.html#a0b5b1c8cedc5529a25f3d11ae9fa3695">eliminar_jugador</a>(nombre);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cout &lt;&lt; j.<a class="code" href="class_cjt__jugadores.html#a1e76b30fda52266093f139374b5aaef6">num_jugadores</a>() &lt;&lt; endl;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;       }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;baja_torneo&quot;</span> or cm == <span class="stringliteral">&quot;bt&quot;</span>) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      cin &gt;&gt; nombre;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> (not t.<a class="code" href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">existe_torneo</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: el torneo no existe&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      t.<a class="code" href="class_cjt__torneos.html#a532eeac74840116f304de3d3c7d291f9">baja_torneo</a>(nombre);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      cout &lt;&lt; t.<a class="code" href="class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82">num_torneos</a>() &lt;&lt; endl;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;iniciar_torneo&quot;</span> or cm == <span class="stringliteral">&quot;it&quot;</span>) { </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      cin &gt;&gt; nombre;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      t.<a class="code" href="class_cjt__torneos.html#a6e574667b3d7365e04f8b2d2697b27a7">iniciar_torneo</a>(nombre, j);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;finalizar_torneo&quot;</span> or cm == <span class="stringliteral">&quot;ft&quot;</span>) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      cin &gt;&gt; nombre;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      t.<a class="code" href="class_cjt__torneos.html#ab4588af14860837599d5121108ab61b2">finalizar_torneo</a>(nombre); </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">//t.actualizar_jugadores(j, nombre);</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;listar_ranking&quot;</span> or cm == <span class="stringliteral">&quot;lr&quot;</span>) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; endl;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        j.<a class="code" href="class_cjt__jugadores.html#ac2b9b5e383120066310e98d880ac7fcd">listar_ranking</a>();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;listar_jugadores&quot;</span> or cm == <span class="stringliteral">&quot;lj&quot;</span>) {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; endl;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        j.<a class="code" href="class_cjt__jugadores.html#a12a21975f2ae944bd24c7a6722bad32c">listar_jugadores</a>();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;consultar_jugador&quot;</span> or cm == <span class="stringliteral">&quot;cj&quot;</span>) {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      cin &gt;&gt; nombre;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keywordflow">if</span> (not j.<a class="code" href="class_cjt__jugadores.html#aaa376294996c85170b3ff500b91f61a0">existe_jugador</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: el jugador no existe&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordflow">else</span> j.<a class="code" href="class_cjt__jugadores.html#a23969ba6da580f24438765ed7fb047b3">consultar_jugador</a>(nombre);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;listar_torneos&quot;</span> or cm == <span class="stringliteral">&quot;lt&quot;</span>) {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; endl;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        t.<a class="code" href="class_cjt__torneos.html#ae2f7998d6771a04591d226299966551b">listar_torneos</a>(c);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;listar_categorias&quot;</span> or cm == <span class="stringliteral">&quot;lc&quot;</span>) {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; endl;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        c.<a class="code" href="class_cjt__categorias.html#a14842f3c922d4dd130224f57ead4f3cb">listar_categorias</a>();</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    cin &gt;&gt; cm;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__jugadores_8hh.html">Cjt_jugadores.hh</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__torneos_8hh.html">Cjt_torneos.hh</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__categorias_8hh.html">Cjt_categorias.hh</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   39</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {  </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_cjt__categorias.html">Cjt_categorias</a> c;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_cjt__torneos.html">Cjt_torneos</a> t;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_cjt__jugadores.html">Cjt_jugadores</a> j;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    c.<a class="code" href="class_cjt__categorias.html#abd4602a61de779b1185c40fb87865598">lectura_ini_cat</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    t.<a class="code" href="class_cjt__torneos.html#a1bc57bfbe9baa962f4502316629735e2">lectura_ini_tor</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    j.<a class="code" href="class_cjt__jugadores.html#a851ea612923389c48d25f31e0933eb16">lectura_ini_jug</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">string</span> cm;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    cin &gt;&gt; cm;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">while</span> (cm != <span class="stringliteral">&quot;fin&quot;</span>) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;nuevo_jugador&quot;</span> or cm == <span class="stringliteral">&quot;nj&quot;</span>) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      cin &gt;&gt; nombre;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (j.<a class="code" href="class_cjt__jugadores.html#a43fba38b9205ac64c778aa0a8d8e8180">existe_jugador</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: ya existe un jugador con ese nombre&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        j.<a class="code" href="class_cjt__jugadores.html#a06e6df2ac2ddbb9cdc21b7c127fa1132">nuevo_jugador</a>(nombre);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    } </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;nuevo_torneo&quot;</span> or cm == <span class="stringliteral">&quot;nt&quot;</span>) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordtype">int</span> cat;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      cin &gt;&gt; nombre &gt;&gt; cat;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; cat &lt;&lt; endl;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">if</span> (not c.<a class="code" href="class_cjt__categorias.html#a9bad7f93c577ec23524e41a8f39e5277">existe_categoria</a>(cat)) cout &lt;&lt; <span class="stringliteral">&quot;error: la categoria no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c.<a class="code" href="class_cjt__categorias.html#a9bad7f93c577ec23524e41a8f39e5277">existe_categoria</a>(cat) and t.<a class="code" href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">existe_torneo</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: ya existe un torneo con ese nombre&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        t.<a class="code" href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">nuevo_torneo</a>(nombre, cat);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        cout &lt;&lt; t.<a class="code" href="class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82">num_torneos</a>() &lt;&lt; endl;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;          </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;baja_jugador&quot;</span> or cm == <span class="stringliteral">&quot;bj&quot;</span>) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      cin &gt;&gt; nombre;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">if</span> (not j.<a class="code" href="class_cjt__jugadores.html#a43fba38b9205ac64c778aa0a8d8e8180">existe_jugador</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: el jugador no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        t.<a class="code" href="class_cjt__torneos.html#a27f53c81cfcd2f366e034d808e966577">eliminar_ediciones</a>(nombre);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        j.<a class="code" href="class_cjt__jugadores.html#a0b5b1c8cedc5529a25f3d11ae9fa3695">eliminar_jugador</a>(nombre);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        cout &lt;&lt; j.<a class="code" href="class_cjt__jugadores.html#a1e76b30fda52266093f139374b5aaef6">num_jugadores</a>() &lt;&lt; endl;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;       }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;baja_torneo&quot;</span> or cm == <span class="stringliteral">&quot;bt&quot;</span>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      cin &gt;&gt; nombre;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> (not t.<a class="code" href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">existe_torneo</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: el torneo no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      t.<a class="code" href="class_cjt__torneos.html#aa6e15e879932fdb8da263e9769cecfcf">baja_torneo</a>(nombre, j);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      cout &lt;&lt; t.<a class="code" href="class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82">num_torneos</a>() &lt;&lt; endl;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;iniciar_torneo&quot;</span> or cm == <span class="stringliteral">&quot;it&quot;</span>) { </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      cin &gt;&gt; nombre;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      t.<a class="code" href="class_cjt__torneos.html#a6e574667b3d7365e04f8b2d2697b27a7">iniciar_torneo</a>(nombre, j);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;finalizar_torneo&quot;</span> or cm == <span class="stringliteral">&quot;ft&quot;</span>) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      cin &gt;&gt; nombre;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      t.<a class="code" href="class_cjt__torneos.html#ae576ba30f80d7492a8a13c7ab25b6823">finalizar_torneo</a>(nombre, c, j); </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;listar_ranking&quot;</span> or cm == <span class="stringliteral">&quot;lr&quot;</span>) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; endl;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        j.<a class="code" href="class_cjt__jugadores.html#ac2b9b5e383120066310e98d880ac7fcd">listar_ranking</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;listar_jugadores&quot;</span> or cm == <span class="stringliteral">&quot;lj&quot;</span>) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; endl;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        j.<a class="code" href="class_cjt__jugadores.html#a12a21975f2ae944bd24c7a6722bad32c">listar_jugadores</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;consultar_jugador&quot;</span> or cm == <span class="stringliteral">&quot;cj&quot;</span>) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordtype">string</span> nombre;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      cin &gt;&gt; nombre;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; nombre &lt;&lt; endl;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">if</span> (not j.<a class="code" href="class_cjt__jugadores.html#a43fba38b9205ac64c778aa0a8d8e8180">existe_jugador</a>(nombre)) cout &lt;&lt; <span class="stringliteral">&quot;error: el jugador no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordflow">else</span> j.<a class="code" href="class_cjt__jugadores.html#a23969ba6da580f24438765ed7fb047b3">consultar_jugador</a>(nombre);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;listar_torneos&quot;</span> or cm == <span class="stringliteral">&quot;lt&quot;</span>) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; endl;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        t.<a class="code" href="class_cjt__torneos.html#ae2f7998d6771a04591d226299966551b">listar_torneos</a>(c);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;listar_categorias&quot;</span> or cm == <span class="stringliteral">&quot;lc&quot;</span>) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; cm &lt;&lt; endl;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        c.<a class="code" href="class_cjt__categorias.html#a14842f3c922d4dd130224f57ead4f3cb">listar_categorias</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    cin &gt;&gt; cm;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
 <div class="ttc" id="a_cjt__categorias_8hh_html"><div class="ttname"><a href="_cjt__categorias_8hh.html">Cjt_categorias.hh</a></div><div class="ttdoc">Especificación de la clase Cjt_categorias.</div></div>
 <div class="ttc" id="a_cjt__jugadores_8hh_html"><div class="ttname"><a href="_cjt__jugadores_8hh.html">Cjt_jugadores.hh</a></div><div class="ttdoc">Especificación de la clase Cjt_jugadores.</div></div>
 <div class="ttc" id="a_cjt__torneos_8hh_html"><div class="ttname"><a href="_cjt__torneos_8hh.html">Cjt_torneos.hh</a></div><div class="ttdoc">Especificación de la clase Cjt_torneos.</div></div>
-<div class="ttc" id="aclass_cjt__categorias_html"><div class="ttname"><a href="class_cjt__categorias.html">Cjt_categorias</a></div><div class="ttdoc">Representa el conjunto de categorías de los torneos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00029">Cjt_categorias.hh:29</a></div></div>
+<div class="ttc" id="aclass_cjt__categorias_html"><div class="ttname"><a href="class_cjt__categorias.html">Cjt_categorias</a></div><div class="ttdoc">Representa el conjunto de categorías de los torneos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00027">Cjt_categorias.hh:27</a></div></div>
 <div class="ttc" id="aclass_cjt__categorias_html_a14842f3c922d4dd130224f57ead4f3cb"><div class="ttname"><a href="class_cjt__categorias.html#a14842f3c922d4dd130224f57ead4f3cb">Cjt_categorias::listar_categorias</a></div><div class="ttdeci">void listar_categorias()</div><div class="ttdoc">Imprime las categorías en orden creciente de identificador.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00029">Cjt_categorias.cc:29</a></div></div>
 <div class="ttc" id="aclass_cjt__categorias_html_a9bad7f93c577ec23524e41a8f39e5277"><div class="ttname"><a href="class_cjt__categorias.html#a9bad7f93c577ec23524e41a8f39e5277">Cjt_categorias::existe_categoria</a></div><div class="ttdeci">bool existe_categoria(int cat)</div><div class="ttdoc">Comprueba si la categoría existe ya en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00024">Cjt_categorias.cc:24</a></div></div>
 <div class="ttc" id="aclass_cjt__categorias_html_abd4602a61de779b1185c40fb87865598"><div class="ttname"><a href="class_cjt__categorias.html#abd4602a61de779b1185c40fb87865598">Cjt_categorias::lectura_ini_cat</a></div><div class="ttdeci">void lectura_ini_cat()</div><div class="ttdoc">Lee por consola los datos iniciales de las categorías y los almacena en un vector&lt;categoria&gt; categori...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8cc_source.html#l00009">Cjt_categorias.cc:9</a></div></div>
-<div class="ttc" id="aclass_cjt__jugadores_html"><div class="ttname"><a href="class_cjt__jugadores.html">Cjt_jugadores</a></div><div class="ttdoc">Representa el conjunto de jugadores del circuito.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8hh_source.html#l00022">Cjt_jugadores.hh:22</a></div></div>
-<div class="ttc" id="aclass_cjt__jugadores_html_a06e6df2ac2ddbb9cdc21b7c127fa1132"><div class="ttname"><a href="class_cjt__jugadores.html#a06e6df2ac2ddbb9cdc21b7c127fa1132">Cjt_jugadores::nuevo_jugador</a></div><div class="ttdeci">void nuevo_jugador(string &amp;nombre)</div><div class="ttdoc">Añade un nuevo jugador al conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00018">Cjt_jugadores.cc:18</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html"><div class="ttname"><a href="class_cjt__jugadores.html">Cjt_jugadores</a></div><div class="ttdoc">Representa el conjunto de jugadores del circuito.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8hh_source.html#l00020">Cjt_jugadores.hh:20</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a06e6df2ac2ddbb9cdc21b7c127fa1132"><div class="ttname"><a href="class_cjt__jugadores.html#a06e6df2ac2ddbb9cdc21b7c127fa1132">Cjt_jugadores::nuevo_jugador</a></div><div class="ttdeci">void nuevo_jugador(string &amp;nombre)</div><div class="ttdoc">Añade un nuevo jugador al conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00019">Cjt_jugadores.cc:19</a></div></div>
 <div class="ttc" id="aclass_cjt__jugadores_html_a0b5b1c8cedc5529a25f3d11ae9fa3695"><div class="ttname"><a href="class_cjt__jugadores.html#a0b5b1c8cedc5529a25f3d11ae9fa3695">Cjt_jugadores::eliminar_jugador</a></div><div class="ttdeci">void eliminar_jugador(string &amp;nombre)</div><div class="ttdoc">Elimina un jugador del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00029">Cjt_jugadores.cc:29</a></div></div>
 <div class="ttc" id="aclass_cjt__jugadores_html_a12a21975f2ae944bd24c7a6722bad32c"><div class="ttname"><a href="class_cjt__jugadores.html#a12a21975f2ae944bd24c7a6722bad32c">Cjt_jugadores::listar_jugadores</a></div><div class="ttdeci">void listar_jugadores()</div><div class="ttdoc">Lista por orden lexicográfico a los jugadores con sus estadísticas.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00042">Cjt_jugadores.cc:42</a></div></div>
 <div class="ttc" id="aclass_cjt__jugadores_html_a1e76b30fda52266093f139374b5aaef6"><div class="ttname"><a href="class_cjt__jugadores.html#a1e76b30fda52266093f139374b5aaef6">Cjt_jugadores::num_jugadores</a></div><div class="ttdeci">int num_jugadores()</div><div class="ttdoc">Devuelve la suma de jugadores del circuito.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00060">Cjt_jugadores.cc:60</a></div></div>
 <div class="ttc" id="aclass_cjt__jugadores_html_a23969ba6da580f24438765ed7fb047b3"><div class="ttname"><a href="class_cjt__jugadores.html#a23969ba6da580f24438765ed7fb047b3">Cjt_jugadores::consultar_jugador</a></div><div class="ttdeci">void consultar_jugador(string &amp;nombre)</div><div class="ttdoc">Escribe la información del jugador con el string nombre nombre</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00064">Cjt_jugadores.cc:64</a></div></div>
-<div class="ttc" id="aclass_cjt__jugadores_html_a851ea612923389c48d25f31e0933eb16"><div class="ttname"><a href="class_cjt__jugadores.html#a851ea612923389c48d25f31e0933eb16">Cjt_jugadores::lectura_ini_jug</a></div><div class="ttdeci">void lectura_ini_jug()</div><div class="ttdoc">Hace la lectura inicial del conjunto desde la consola.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00004">Cjt_jugadores.cc:4</a></div></div>
-<div class="ttc" id="aclass_cjt__jugadores_html_aaa376294996c85170b3ff500b91f61a0"><div class="ttname"><a href="class_cjt__jugadores.html#aaa376294996c85170b3ff500b91f61a0">Cjt_jugadores::existe_jugador</a></div><div class="ttdeci">bool existe_jugador(string &amp;nombre)</div><div class="ttdoc">Comprueba si el jugador existe en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00055">Cjt_jugadores.cc:55</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a43fba38b9205ac64c778aa0a8d8e8180"><div class="ttname"><a href="class_cjt__jugadores.html#a43fba38b9205ac64c778aa0a8d8e8180">Cjt_jugadores::existe_jugador</a></div><div class="ttdeci">bool existe_jugador(const string &amp;nombre)</div><div class="ttdoc">Comprueba si el jugador existe en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00055">Cjt_jugadores.cc:55</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadores_html_a851ea612923389c48d25f31e0933eb16"><div class="ttname"><a href="class_cjt__jugadores.html#a851ea612923389c48d25f31e0933eb16">Cjt_jugadores::lectura_ini_jug</a></div><div class="ttdeci">void lectura_ini_jug()</div><div class="ttdoc">Hace la lectura inicial del conjunto desde la consola.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00005">Cjt_jugadores.cc:5</a></div></div>
 <div class="ttc" id="aclass_cjt__jugadores_html_ac2b9b5e383120066310e98d880ac7fcd"><div class="ttname"><a href="class_cjt__jugadores.html#ac2b9b5e383120066310e98d880ac7fcd">Cjt_jugadores::listar_ranking</a></div><div class="ttdeci">void listar_ranking()</div><div class="ttdoc">Lista por orden de ranking a los jugadores con sus estadísticas.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadores_8cc_source.html#l00050">Cjt_jugadores.cc:50</a></div></div>
 <div class="ttc" id="aclass_cjt__torneos_html"><div class="ttname"><a href="class_cjt__torneos.html">Cjt_torneos</a></div><div class="ttdoc">Representa el conjunto de torneos del ciruito.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8hh_source.html#l00023">Cjt_torneos.hh:23</a></div></div>
 <div class="ttc" id="aclass_cjt__torneos_html_a1bc57bfbe9baa962f4502316629735e2"><div class="ttname"><a href="class_cjt__torneos.html#a1bc57bfbe9baa962f4502316629735e2">Cjt_torneos::lectura_ini_tor</a></div><div class="ttdeci">void lectura_ini_tor()</div><div class="ttdoc">Hace la lectura inicial del conjunto torneos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00004">Cjt_torneos.cc:4</a></div></div>
-<div class="ttc" id="aclass_cjt__torneos_html_a532eeac74840116f304de3d3c7d291f9"><div class="ttname"><a href="class_cjt__torneos.html#a532eeac74840116f304de3d3c7d291f9">Cjt_torneos::baja_torneo</a></div><div class="ttdeci">void baja_torneo(string nombre)</div><div class="ttdoc">Elimina un torneo del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00039">Cjt_torneos.cc:39</a></div></div>
-<div class="ttc" id="aclass_cjt__torneos_html_a6e574667b3d7365e04f8b2d2697b27a7"><div class="ttname"><a href="class_cjt__torneos.html#a6e574667b3d7365e04f8b2d2697b27a7">Cjt_torneos::iniciar_torneo</a></div><div class="ttdeci">void iniciar_torneo(string nombre, Cjt_jugadores &amp;j)</div><div class="ttdoc">empieza un torneo</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00043">Cjt_torneos.cc:43</a></div></div>
-<div class="ttc" id="aclass_cjt__torneos_html_a7b24f0ba21e27803bbbe0839e55ff933"><div class="ttname"><a href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">Cjt_torneos::existe_torneo</a></div><div class="ttdeci">bool existe_torneo(string nombre) const</div><div class="ttdoc">Comprueba si existe el torneo en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00025">Cjt_torneos.cc:25</a></div></div>
-<div class="ttc" id="aclass_cjt__torneos_html_a8ccb9ab4b028ecc8333a3c56d5f24ac9"><div class="ttname"><a href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">Cjt_torneos::nuevo_torneo</a></div><div class="ttdeci">void nuevo_torneo(string nombre, int c)</div><div class="ttdoc">Añade un nuevo torneo en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00034">Cjt_torneos.cc:34</a></div></div>
-<div class="ttc" id="aclass_cjt__torneos_html_ab4588af14860837599d5121108ab61b2"><div class="ttname"><a href="class_cjt__torneos.html#ab4588af14860837599d5121108ab61b2">Cjt_torneos::finalizar_torneo</a></div><div class="ttdeci">void finalizar_torneo(string nombre)</div><div class="ttdoc">finaliza un torneo</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00056">Cjt_torneos.cc:56</a></div></div>
-<div class="ttc" id="aclass_cjt__torneos_html_aba6d57df308bdbfa173578c108e19b82"><div class="ttname"><a href="class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82">Cjt_torneos::num_torneos</a></div><div class="ttdeci">int num_torneos() const</div><div class="ttdoc">Comprueba el nombre de torneos del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00030">Cjt_torneos.cc:30</a></div></div>
-<div class="ttc" id="aclass_cjt__torneos_html_ae2f7998d6771a04591d226299966551b"><div class="ttname"><a href="class_cjt__torneos.html#ae2f7998d6771a04591d226299966551b">Cjt_torneos::listar_torneos</a></div><div class="ttdeci">void listar_torneos(Cjt_categorias &amp;c)</div><div class="ttdoc">Consulta e imprime los torneos en orden creciente lexicográfico.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00016">Cjt_torneos.cc:16</a></div></div>
-<div class="ttc" id="aprogram_8cc_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">programa principal para la practica Circuito de torneos de tenis</div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00032">program.cc:32</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_a27f53c81cfcd2f366e034d808e966577"><div class="ttname"><a href="class_cjt__torneos.html#a27f53c81cfcd2f366e034d808e966577">Cjt_torneos::eliminar_ediciones</a></div><div class="ttdeci">void eliminar_ediciones(string nombre)</div><div class="ttdoc">Elimina al jugador de todas las últimas ediciones.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00064">Cjt_torneos.cc:64</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_a6e574667b3d7365e04f8b2d2697b27a7"><div class="ttname"><a href="class_cjt__torneos.html#a6e574667b3d7365e04f8b2d2697b27a7">Cjt_torneos::iniciar_torneo</a></div><div class="ttdeci">void iniciar_torneo(string nombre, Cjt_jugadores &amp;j)</div><div class="ttdoc">empieza un torneo</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00045">Cjt_torneos.cc:45</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_a7b24f0ba21e27803bbbe0839e55ff933"><div class="ttname"><a href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">Cjt_torneos::existe_torneo</a></div><div class="ttdeci">bool existe_torneo(string nombre) const</div><div class="ttdoc">Comprueba si existe el torneo en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00024">Cjt_torneos.cc:24</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_a8ccb9ab4b028ecc8333a3c56d5f24ac9"><div class="ttname"><a href="class_cjt__torneos.html#a8ccb9ab4b028ecc8333a3c56d5f24ac9">Cjt_torneos::nuevo_torneo</a></div><div class="ttdeci">void nuevo_torneo(string nombre, int c)</div><div class="ttdoc">Añade un nuevo torneo en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00033">Cjt_torneos.cc:33</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_aa6e15e879932fdb8da263e9769cecfcf"><div class="ttname"><a href="class_cjt__torneos.html#aa6e15e879932fdb8da263e9769cecfcf">Cjt_torneos::baja_torneo</a></div><div class="ttdeci">void baja_torneo(string nombre, Cjt_jugadores &amp;j)</div><div class="ttdoc">Elimina un torneo del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00038">Cjt_torneos.cc:38</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_aba6d57df308bdbfa173578c108e19b82"><div class="ttname"><a href="class_cjt__torneos.html#aba6d57df308bdbfa173578c108e19b82">Cjt_torneos::num_torneos</a></div><div class="ttdeci">int num_torneos() const</div><div class="ttdoc">Comprueba el nombre de torneos del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00029">Cjt_torneos.cc:29</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_ae2f7998d6771a04591d226299966551b"><div class="ttname"><a href="class_cjt__torneos.html#ae2f7998d6771a04591d226299966551b">Cjt_torneos::listar_torneos</a></div><div class="ttdeci">void listar_torneos(Cjt_categorias &amp;c)</div><div class="ttdoc">Consulta e imprime los torneos en orden creciente lexicográfico.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00015">Cjt_torneos.cc:15</a></div></div>
+<div class="ttc" id="aclass_cjt__torneos_html_ae576ba30f80d7492a8a13c7ab25b6823"><div class="ttname"><a href="class_cjt__torneos.html#ae576ba30f80d7492a8a13c7ab25b6823">Cjt_torneos::finalizar_torneo</a></div><div class="ttdeci">void finalizar_torneo(string nombre, const Cjt_categorias &amp;c, Cjt_jugadores &amp;j)</div><div class="ttdoc">finaliza un torneo</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__torneos_8cc_source.html#l00058">Cjt_torneos.cc:58</a></div></div>
+<div class="ttc" id="aprogram_8cc_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">programa principal para la practica Gestión de torneos de tenis</div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00039">program.cc:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

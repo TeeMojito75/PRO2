@@ -11,23 +11,30 @@ Las clases diseñadas para realizar la práctica a partir de la especificación 
 </ul>
 */
 
-#include "Cjt_jugadores.hh"
-#include "Cjt_torneos.hh"
-#include "Cjt_categorias.hh"
+/** @file program.cc
+    @brief programa principal para la práctica <em>Gestión de torneos de tenis</em>
+*/ 
+
+#ifndef NO_DIAGRAM
+#include <iostream>
+#endif
 
 /** @file program.cc
     @brief programa principal para la práctica <em>Gestión de torneos de tenis</em>
- */ 
+*/ 
 
-// inclusion de clases (redundantes, únicamente para la mejor visualización del diagrama modular)
 #ifndef NO_DIAGRAM
 #include <iostream>
 #endif
 
 using namespace std;
 
-/** @brief programa principal para la practica <em>Circuito de torneos de tenis</em>
- */
+#include "Cjt_jugadores.hh"
+#include "Cjt_torneos.hh"
+#include "Cjt_categorias.hh"
+
+/** @brief programa principal para la practica <em>Gestión de torneos de tenis</em>
+*/
 
 int main() {	
 	Cjt_categorias c;

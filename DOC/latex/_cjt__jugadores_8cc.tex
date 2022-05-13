@@ -2,3 +2,29 @@
 \label{_cjt__jugadores_8cc}\index{Cjt\_jugadores.cc@{Cjt\_jugadores.cc}}
 Dependencia gráfica adjunta para Cjt\+\_\+jugadores.\+cc\+:
 % FIG 0
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_cjt__jugadores_8cc_aae7b55150fddbb927dd8e45467df3046}{cmp}} (map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$\+::iterator \&it, map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$\+::iterator \&it2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{_cjt__jugadores_8cc_aae7b55150fddbb927dd8e45467df3046}\label{_cjt__jugadores_8cc_aae7b55150fddbb927dd8e45467df3046}} 
+\index{Cjt\_jugadores.cc@{Cjt\_jugadores.cc}!cmp@{cmp}}
+\index{cmp@{cmp}!Cjt\_jugadores.cc@{Cjt\_jugadores.cc}}
+\doxysubsubsection{\texorpdfstring{cmp()}{cmp()}}
+{\footnotesize\ttfamily bool cmp (\begin{DoxyParamCaption}\item[{map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$\+::iterator \&}]{it,  }\item[{map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$\+::iterator \&}]{it2 }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 78 del archivo Cjt\+\_\+jugadores.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                                                \{}
+\DoxyCodeLine{79     \textcolor{keywordflow}{if} (it-\/>second.consultar\_puntos() == it2-\/>second.consultar\_puntos()) \textcolor{keywordflow}{return} it-\/>second.consultar\_pos() < it2-\/>second.consultar\_pos();}
+\DoxyCodeLine{80     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return}  it-\/>second.consultar\_puntos() > it2-\/>second.consultar\_puntos();}
+\DoxyCodeLine{81 \}}
+
+\end{DoxyCode}

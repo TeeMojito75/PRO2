@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Laboratorio de PRO2. Ejercicio &#39;Gestión de Ranking de tenis&#39;.
-   &#160;<span id="projectnumber">version 1 17-abr-2022, Joan Carles Veny</span>
+   &#160;<span id="projectnumber">version 12.0 13-mayo-2022, Joan Carles Veny</span>
    </div>
   </td>
  </tr>
@@ -65,8 +65,17 @@ $(function() {
 <div class="textblock">Lista de todos los campos de clases con enlaces a las classes a que pertenecen:</div>
 
 <h3><a id="index_a"></a>- a -</h3><ul>
+<li>actu_stats()
+: <a class="el" href="class_jugador.html#acb9c3c861f8b6ceb5906837b785b66dc">Jugador</a>
+</li>
 <li>actualizar_enfrentamientos()
-: <a class="el" href="class_torneo.html#aa86e800af418fdbe3b6efe64482416c6">Torneo</a>
+: <a class="el" href="class_torneo.html#a1e8934653d38fb4973de851d56b44c04">Torneo</a>
+</li>
+<li>actualizar_jugadores()
+: <a class="el" href="class_torneo.html#a452950d3882b8b579778ee467f313f21">Torneo</a>
+</li>
+<li>actualizar_ranking()
+: <a class="el" href="class_cjt__jugadores.html#ac7930b74caf759755a254e0badafc0d3">Cjt_jugadores</a>
 </li>
 <li>ampliar_participantes()
 : <a class="el" href="class_torneo.html#a8e6b0d35b348318bc05ff35f3f87a67b">Torneo</a>
@@ -76,7 +85,7 @@ $(function() {
 
 <h3><a id="index_b"></a>- b -</h3><ul>
 <li>baja_torneo()
-: <a class="el" href="class_cjt__torneos.html#a532eeac74840116f304de3d3c7d291f9">Cjt_torneos</a>
+: <a class="el" href="class_cjt__torneos.html#aa6e15e879932fdb8da263e9769cecfcf">Cjt_torneos</a>
 </li>
 </ul>
 
@@ -94,6 +103,9 @@ $(function() {
 <li>consultar_categoria()
 : <a class="el" href="class_cjt__categorias.html#ae2edee3077dcf1c01e04416718ac3927">Cjt_categorias</a>
 </li>
+<li>consultar_conjunto()
+: <a class="el" href="class_cjt__jugadores.html#a1bf856d7e6a1c135707e4fc7b2a61767">Cjt_jugadores</a>
+</li>
 <li>consultar_jugador()
 : <a class="el" href="class_cjt__jugadores.html#a23969ba6da580f24438765ed7fb047b3">Cjt_jugadores</a>
 </li>
@@ -103,10 +115,16 @@ $(function() {
 <li>consultar_pos()
 : <a class="el" href="class_jugador.html#a69ab40db4a82c1b656895631b9949cbc">Jugador</a>
 </li>
+<li>consultar_puntos()
+: <a class="el" href="class_jugador.html#a472bb412a7ae132929c7c023319fc829">Jugador</a>
+</li>
 </ul>
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>eliminar_ediciones()
+: <a class="el" href="class_cjt__torneos.html#a27f53c81cfcd2f366e034d808e966577">Cjt_torneos</a>
+</li>
 <li>eliminar_jugador()
 : <a class="el" href="class_cjt__jugadores.html#a0b5b1c8cedc5529a25f3d11ae9fa3695">Cjt_jugadores</a>
 </li>
@@ -115,6 +133,9 @@ $(function() {
 </li>
 <li>escribir_categoria()
 : <a class="el" href="class_torneo.html#af59ca01aafd56eb6ddb0b4174d8274e8">Torneo</a>
+</li>
+<li>escribir_puntos()
+: <a class="el" href="class_torneo.html#afd4eee9ac830bf0857623c6c163c7277">Torneo</a>
 </li>
 <li>escribir_resultados()
 : <a class="el" href="class_torneo.html#a58e1db25a2b28a7cd60d3ce098cb9c6a">Torneo</a>
@@ -129,7 +150,7 @@ $(function() {
 : <a class="el" href="class_cjt__categorias.html#a9bad7f93c577ec23524e41a8f39e5277">Cjt_categorias</a>
 </li>
 <li>existe_jugador()
-: <a class="el" href="class_cjt__jugadores.html#aaa376294996c85170b3ff500b91f61a0">Cjt_jugadores</a>
+: <a class="el" href="class_cjt__jugadores.html#a43fba38b9205ac64c778aa0a8d8e8180">Cjt_jugadores</a>
 </li>
 <li>existe_torneo()
 : <a class="el" href="class_cjt__torneos.html#a7b24f0ba21e27803bbbe0839e55ff933">Cjt_torneos</a>
@@ -139,7 +160,7 @@ $(function() {
 
 <h3><a id="index_f"></a>- f -</h3><ul>
 <li>finalizar_torneo()
-: <a class="el" href="class_cjt__torneos.html#ab4588af14860837599d5121108ab61b2">Cjt_torneos</a>
+: <a class="el" href="class_cjt__torneos.html#ae576ba30f80d7492a8a13c7ab25b6823">Cjt_torneos</a>
 </li>
 </ul>
 
@@ -219,38 +240,14 @@ $(function() {
 <li>match
 : <a class="el" href="struct_participantes.html#a7498e1fe34a6cd1e1b3f6f252c2020ec">Participantes</a>
 </li>
-<li>modificar_game()
-: <a class="el" href="class_torneo.html#a81bb004fe50926ddd504a995d8f72ad4">Torneo</a>
-</li>
-<li>modificar_juegos()
-: <a class="el" href="class_jugador.html#a3a2baa9319934bc62792ec756c90a1f6">Jugador</a>
-</li>
-<li>modificar_match()
-: <a class="el" href="class_torneo.html#ae406914159af62f2dc61631a02293169">Torneo</a>
-</li>
 <li>modificar_npart()
 : <a class="el" href="class_torneo.html#a27ff3b8789d67d2044b2fb8174c3c8b9">Torneo</a>
-</li>
-<li>modificar_partidos()
-: <a class="el" href="class_jugador.html#a77d85fbd65a6c83cfc0cb08c1e0de255">Jugador</a>
 </li>
 <li>modificar_posicion()
 : <a class="el" href="class_jugador.html#aec10fcab3d358d1a903ef76dfde35c23">Jugador</a>
 </li>
-<li>modificar_pts()
-: <a class="el" href="class_torneo.html#aae307bec20cfbc90fb252f5f22912e34">Torneo</a>
-</li>
-<li>modificar_puntuacion()
-: <a class="el" href="class_jugador.html#a5f21f458b30ed497c191884b3bdecb17">Jugador</a>
-</li>
-<li>modificar_set()
-: <a class="el" href="class_torneo.html#a07764365cf31526c1349d3f89eee1ee0">Torneo</a>
-</li>
-<li>modificar_sets()
-: <a class="el" href="class_jugador.html#a585edabe7b5009fc1a8cff1c5b689778">Jugador</a>
-</li>
-<li>modificar_torneosd()
-: <a class="el" href="class_jugador.html#a0f1e0095d63371bfe04838d671e1a14f">Jugador</a>
+<li>modificar_puntos()
+: <a class="el" href="class_jugador.html#a422516525af1c28803156d1d4dd30aa8">Jugador</a>
 </li>
 </ul>
 
@@ -288,12 +285,23 @@ $(function() {
 <li>posicion
 : <a class="el" href="class_jugador.html#a0c0f3be497388acec0e2c890dcd46850">Jugador</a>
 </li>
-<li>puntos
-: <a class="el" href="class_jugador.html#a4e264d857d5a3f1a68cbb13e4b88930f">Jugador</a>
+<li>puntos()
+: <a class="el" href="class_cjt__categorias.html#ab171dd65b607883a194caf1c231466e6">Cjt_categorias</a>
+, <a class="el" href="class_jugador.html#a4e264d857d5a3f1a68cbb13e4b88930f">Jugador</a>
 , <a class="el" href="struct_participantes.html#ab6a3a89886cb9fc065103cf781285992">Participantes</a>
+</li>
+<li>puntos_0()
+: <a class="el" href="class_torneo.html#ab25fa0b6dbdd6327749f5344c851c66f">Torneo</a>
 </li>
 <li>puntuaciones
 : <a class="el" href="structcategoria.html#a724663dbe9302a7c7329037e954c09c4">categoria</a>
+</li>
+</ul>
+
+
+<h3><a id="index_q"></a>- q -</h3><ul>
+<li>quitar_puntos()
+: <a class="el" href="class_torneo.html#a4e555b4e564592f3b6b848467e33235d">Torneo</a>
 </li>
 </ul>
 
@@ -306,7 +314,7 @@ $(function() {
 : <a class="el" href="class_torneo.html#adb0ae255d28e1df379cb0484a5cdaf4f">Torneo</a>
 </li>
 <li>results()
-: <a class="el" href="class_torneo.html#a14672a14a9f09f9a42ba750d3505e5f8">Torneo</a>
+: <a class="el" href="class_torneo.html#ac3a1207a7d22feb41c1c4ebc9a917d11">Torneo</a>
 </li>
 </ul>
 
@@ -336,7 +344,7 @@ $(function() {
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>ultima_ed
-: <a class="el" href="class_torneo.html#aebaa7aca8c5ca997f4130a034b07d030">Torneo</a>
+: <a class="el" href="class_torneo.html#ad253ad97ab917a206bb03bb1553a0c91">Torneo</a>
 </li>
 </ul>
 </div><!-- contents -->

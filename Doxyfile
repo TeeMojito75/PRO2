@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = utf-8
 PROJECT_NAME           = "Laboratorio de PRO2. Ejercicio 'Gestión de Ranking de tenis'."
-PROJECT_NUMBER         = "version 1 17-abr-2022, Joan Carles Veny"
+PROJECT_NUMBER         = "version 12.0 13-mayo-2022, Joan Carles Veny"
 OUTPUT_DIRECTORY       = "./DOC"
 CREATE_SUBDIRS         = NO
 OUTPUT_LANGUAGE        = Spanish
@@ -95,11 +95,11 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 INPUT                  = "."
 INPUT_ENCODING         = utf-8
-FILE_PATTERNS          = *.cc , *.hh
+FILE_PATTERNS          = *.cc, *.hh, *.hpp, main*.cpp, program*.cc, pro2*.cpp, pro2*.cc
 RECURSIVE              = NO
 EXCLUDE                = *~ , readbool.hh , *.o , BinTree.hh
 EXCLUDE_SYMLINKS       = NO
-EXCLUDE_PATTERNS       = *~
+EXCLUDE_PATTERNS       = *~ 
 EXCLUDE_SYMBOLS        = 
 EXAMPLE_PATH           = 
 EXAMPLE_PATTERNS       = *
@@ -230,7 +230,7 @@ HIDE_UNDOC_RELATIONS   = YES
 HAVE_DOT               = YES
 DOT_FONTNAME           = FreeSans
 DOT_FONTPATH           = 
-CLASS_GRAPH            = YES
+CLASS_GRAPH            = NO
 COLLABORATION_GRAPH    = NO
 GROUP_GRAPHS           = NO
 UML_LOOK               = NO

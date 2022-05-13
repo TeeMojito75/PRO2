@@ -15,4 +15,5 @@ digraph "Cjt_torneos.cc"
   Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
   Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
   Node6 [label="Cjt_categorias.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt__categorias_8hh.html",tooltip="Especificación de la clase Cjt_categorias."];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
 }

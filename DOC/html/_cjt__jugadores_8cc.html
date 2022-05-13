@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Laboratorio de PRO2. Ejercicio &#39;Gestión de Ranking de tenis&#39;.
-   &#160;<span id="projectnumber">version 1 17-abr-2022, Joan Carles Veny</span>
+   &#160;<span id="projectnumber">version 12.0 13-mayo-2022, Joan Carles Veny</span>
    </div>
   </td>
  </tr>
@@ -62,6 +62,8 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
   <div class="headertitle">
 <div class="title">Referencia del Archivo Cjt_jugadores.cc</div>  </div>
 </div><!--header-->
@@ -73,6 +75,47 @@ Dependencia gráfica adjunta para Cjt_jugadores.cc:</div>
 </div>
 </div>
 <p><a href="_cjt__jugadores_8cc_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aae7b55150fddbb927dd8e45467df3046"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_cjt__jugadores_8cc.html#aae7b55150fddbb927dd8e45467df3046">cmp</a> (map&lt; string, <a class="el" href="class_jugador.html">Jugador</a> &gt;::iterator &amp;it, map&lt; string, <a class="el" href="class_jugador.html">Jugador</a> &gt;::iterator &amp;it2)</td></tr>
+<tr class="separator:aae7b55150fddbb927dd8e45467df3046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="aae7b55150fddbb927dd8e45467df3046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae7b55150fddbb927dd8e45467df3046">&#9670;&nbsp;</a></span>cmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cmp </td>
+          <td>(</td>
+          <td class="paramtype">map&lt; string, <a class="el" href="class_jugador.html">Jugador</a> &gt;::iterator &amp;&#160;</td>
+          <td class="paramname"><em>it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, <a class="el" href="class_jugador.html">Jugador</a> &gt;::iterator &amp;&#160;</td>
+          <td class="paramname"><em>it2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_cjt__jugadores_8cc_source.html#l00078">78</a> del archivo <a class="el" href="_cjt__jugadores_8cc_source.html">Cjt_jugadores.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                                                               {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (it-&gt;second.consultar_puntos() == it2-&gt;second.consultar_puntos()) <span class="keywordflow">return</span> it-&gt;second.consultar_pos() &lt; it2-&gt;second.consultar_pos();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span>  it-&gt;second.consultar_puntos() &gt; it2-&gt;second.consultar_puntos();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

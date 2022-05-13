@@ -1,6 +1,5 @@
 #include "Torneo.hh"
-#include "Cjt_categorias.hh"
-#include "Cjt_jugadores.hh"
+
 using namespace std;
 
 Torneo::Torneo(string nom, int c) {

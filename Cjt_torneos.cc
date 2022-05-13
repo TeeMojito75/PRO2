@@ -1,5 +1,5 @@
-#include "Cjt_torneos.hh"
 using namespace std;
+#include "Cjt_torneos.hh"
 
 void Cjt_torneos::lectura_ini_tor() {
     int n;

@@ -12,17 +12,19 @@ Representa el conjunto de categorías de los torneos.
 \begin{DoxyCompactList}\small\item\em Constructora por defecto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__categorias_a14842f3c922d4dd130224f57ead4f3cb}{listar\+\_\+categorias}} ()
 \begin{DoxyCompactList}\small\item\em Imprime las categorías en orden creciente de identificador. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_cjt__categorias_a9bad7f93c577ec23524e41a8f39e5277}{existe\+\_\+categoria}} (int cat)
-\begin{DoxyCompactList}\small\item\em Comprueba si la categoría existe ya en el conjunto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__categorias_abd4602a61de779b1185c40fb87865598}{lectura\+\_\+ini\+\_\+cat}} ()
 \begin{DoxyCompactList}\small\item\em Lee por consola los datos iniciales de las categorías y los almacena en un vector$<$categoria$>$ categorias. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt__categorias_a9bad7f93c577ec23524e41a8f39e5277}{existe\+\_\+categoria}} (int cat)
+\begin{DoxyCompactList}\small\item\em Comprueba si la categoría existe ya en el conjunto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__categorias_ae2edee3077dcf1c01e04416718ac3927}{consultar\+\_\+categoria}} (int cat)
-\begin{DoxyCompactList}\small\item\em Consulta la categoría pasando su posición. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Consulta la categoría pasando su posición. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}} (int cat, int nivel) const
+\begin{DoxyCompactList}\small\item\em Devuelve la puntuación por nivel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ \mbox{\hyperlink{structcategoria}{categoria}} $>$ \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}
-\begin{DoxyCompactList}\small\item\em Vector de categorias, usado para trabajar con el conjunto de estas. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Vector de categorias, usado para trabajar con el conjunto de estas y un entero k que representa el número máximo de niveles. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}}
 \end{DoxyCompactItemize}
 
@@ -30,9 +32,7 @@ int \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}
 \doxysubsection{Descripción detallada}
 Representa el conjunto de categorías de los torneos. 
 
-Dispone de atributos que definen las categorias 
-
-Definición en la línea 29 del archivo Cjt\+\_\+categorias.\+hh.
+Definición en la línea 27 del archivo Cjt\+\_\+categorias.\+hh.
 
 
 
@@ -48,7 +48,7 @@ Definición en la línea 29 del archivo Cjt\+\_\+categorias.\+hh.
 Constructora por defecto. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
+{\itshape Cierto} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Se ha creado el conjunto de categorías 
@@ -79,7 +79,7 @@ Definición en la línea 4 del archivo Cjt\+\_\+categorias.\+cc.
 Imprime las categorías en orden creciente de identificador. 
 
 \begin{DoxyPrecond}{Precondición}
-Existe un conjunto de categorías 
+{\itshape Cierto} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Se ha impreso el conjunto con sus identificadores, el nombre y la tabla de puntos 
@@ -101,6 +101,45 @@ Definición en la línea 29 del archivo Cjt\+\_\+categorias.\+cc.
 \DoxyCodeLine{37 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__categorias_abd4602a61de779b1185c40fb87865598}\label{class_cjt__categorias_abd4602a61de779b1185c40fb87865598}} 
+\index{Cjt\_categorias@{Cjt\_categorias}!lectura\_ini\_cat@{lectura\_ini\_cat}}
+\index{lectura\_ini\_cat@{lectura\_ini\_cat}!Cjt\_categorias@{Cjt\_categorias}}
+\doxysubsubsection{\texorpdfstring{lectura\_ini\_cat()}{lectura\_ini\_cat()}}
+{\footnotesize\ttfamily void Cjt\+\_\+categorias\+::lectura\+\_\+ini\+\_\+cat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lee por consola los datos iniciales de las categorías y los almacena en un vector$<$categoria$>$ categorias. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha guardado el vector privado vector$<$categoria$>$ categorias con los elementos deseados ~\newline
+ 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Cjt\+\_\+categorias.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                                      \{}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} cats, \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}};}
+\DoxyCodeLine{11     cin >> cats >> \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}};}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} = \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}};}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}} = vector<categoria> (cats);}
+\DoxyCodeLine{14     }
+\DoxyCodeLine{15     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < cats; ++i) \{}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].puntuaciones = vector<int> (\mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}});}
+\DoxyCodeLine{17         cin >> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].nombre;}
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < cats; ++j) \{}
+\DoxyCodeLine{20         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} = 0; k < puntos; ++k) cin >> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[j].puntuaciones[\mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}}];}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__categorias_a9bad7f93c577ec23524e41a8f39e5277}\label{class_cjt__categorias_a9bad7f93c577ec23524e41a8f39e5277}} 
 \index{Cjt\_categorias@{Cjt\_categorias}!existe\_categoria@{existe\_categoria}}
 \index{existe\_categoria@{existe\_categoria}!Cjt\_categorias@{Cjt\_categorias}}
@@ -112,10 +151,10 @@ Definición en la línea 29 del archivo Cjt\+\_\+categorias.\+cc.
 Comprueba si la categoría existe ya en el conjunto. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape nombre} es el nombre de una categoría 
+{\itshape cat} es el entero que representa el nivel de una categoría 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-1 si la categoría ya existe, 0 en caso contrario 
+Devuelve 1 si la categoría ya existe, 0 en caso contrario 
 \end{DoxyPostcond}
 
 
@@ -129,45 +168,6 @@ Definición en la línea 24 del archivo Cjt\+\_\+categorias.\+cc.
 \DoxyCodeLine{27 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_cjt__categorias_abd4602a61de779b1185c40fb87865598}\label{class_cjt__categorias_abd4602a61de779b1185c40fb87865598}} 
-\index{Cjt\_categorias@{Cjt\_categorias}!lectura\_ini\_cat@{lectura\_ini\_cat}}
-\index{lectura\_ini\_cat@{lectura\_ini\_cat}!Cjt\_categorias@{Cjt\_categorias}}
-\doxysubsubsection{\texorpdfstring{lectura\_ini\_cat()}{lectura\_ini\_cat()}}
-{\footnotesize\ttfamily void Cjt\+\_\+categorias\+::lectura\+\_\+ini\+\_\+cat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Lee por consola los datos iniciales de las categorías y los almacena en un vector$<$categoria$>$ categorias. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se ha guardado el vector privado vector$<$categoria$>$ categorias con los elementos deseados ~\newline
- 
-\end{DoxyPostcond}
-
-
-Definición en la línea 9 del archivo Cjt\+\_\+categorias.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{9                                      \{}
-\DoxyCodeLine{10     \textcolor{keywordtype}{int} cats, puntos;}
-\DoxyCodeLine{11     cin >> cats >> puntos;}
-\DoxyCodeLine{12     \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} = puntos;}
-\DoxyCodeLine{13     \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}} = vector<categoria> (cats);}
-\DoxyCodeLine{14     }
-\DoxyCodeLine{15     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < cats; ++i) \{}
-\DoxyCodeLine{16         \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].puntuaciones = vector<int> (puntos);}
-\DoxyCodeLine{17         cin >> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].nombre;}
-\DoxyCodeLine{18     \}}
-\DoxyCodeLine{19     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < cats; ++j) \{}
-\DoxyCodeLine{20         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} = 0; k < puntos; ++k) cin >> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[j].puntuaciones[\mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}}];}
-\DoxyCodeLine{21     \}}
-\DoxyCodeLine{22 \}}
-
-\end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__categorias_ae2edee3077dcf1c01e04416718ac3927}\label{class_cjt__categorias_ae2edee3077dcf1c01e04416718ac3927}} 
 \index{Cjt\_categorias@{Cjt\_categorias}!consultar\_categoria@{consultar\_categoria}}
 \index{consultar\_categoria@{consultar\_categoria}!Cjt\_categorias@{Cjt\_categorias}}
@@ -179,7 +179,7 @@ Definición en la línea 9 del archivo Cjt\+\_\+categorias.\+cc.
 Consulta la categoría pasando su posición. 
 
 \begin{DoxyPrecond}{Precondición}
-cat $>$= 0 
+{\itshape cat} es el entero que representa el nivel de una categoría 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Se ha devuelto el nombre de la categoría 
@@ -195,6 +195,33 @@ Definición en la línea 39 del archivo Cjt\+\_\+categorias.\+cc.
 \DoxyCodeLine{41 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}\label{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}} 
+\index{Cjt\_categorias@{Cjt\_categorias}!puntos@{puntos}}
+\index{puntos@{puntos}!Cjt\_categorias@{Cjt\_categorias}}
+\doxysubsubsection{\texorpdfstring{puntos()}{puntos()}}
+{\footnotesize\ttfamily int Cjt\+\_\+categorias\+::puntos (\begin{DoxyParamCaption}\item[{int}]{cat,  }\item[{int}]{nivel }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la puntuación por nivel. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cat} identificador de una categoria y {\itshape nivel} los diferentes niveles de puntos 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto la puntuación correspondiente 
+\end{DoxyPostcond}
+
+
+Definición en la línea 43 del archivo Cjt\+\_\+categorias.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                    \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[cat-\/1].puntuaciones[nivel];}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Documentación de los datos miembro}
@@ -206,11 +233,11 @@ Definición en la línea 39 del archivo Cjt\+\_\+categorias.\+cc.
 
 
 
-Vector de categorias, usado para trabajar con el conjunto de estas. 
+Vector de categorias, usado para trabajar con el conjunto de estas y un entero k que representa el número máximo de niveles. 
 
 
 
-Definición en la línea 34 del archivo Cjt\+\_\+categorias.\+hh.
+Definición en la línea 33 del archivo Cjt\+\_\+categorias.\+hh.
 
 \mbox{\Hypertarget{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}\label{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}} 
 \index{Cjt\_categorias@{Cjt\_categorias}!k@{k}}
@@ -220,7 +247,7 @@ Definición en la línea 34 del archivo Cjt\+\_\+categorias.\+hh.
 
 
 
-Definición en la línea 35 del archivo Cjt\+\_\+categorias.\+hh.
+Definición en la línea 34 del archivo Cjt\+\_\+categorias.\+hh.
 
 
 
