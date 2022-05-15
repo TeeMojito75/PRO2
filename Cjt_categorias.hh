@@ -15,23 +15,22 @@ using namespace std;
 /** @brief Estructura que define una categoria
     Cada categoría presenta un nombre y un vector con las puntuaciones
 */
-struct categoria {
-    string nombre;
-    vector<int> puntuaciones;
+struct categoria 
+{
+    string nombre; //!< Nombre de la categoría
+    vector<int> puntuaciones; //!< Vector que almacena las puntuaciones por nivel
 };
 
 /** @class Cjt_categorias
     @brief Representa el conjunto de categorías de los torneos
 */
 
-class Cjt_categorias {
+class Cjt_categorias 
+{
 
     private:
-	/** @brief Vector de categorias, usado para trabajar con el conjunto de estas
-	 * 	y un entero k que representa el número máximo de niveles
-	 */	
-	vector<categoria> categorias;
-	int k;
+	vector<categoria> categorias; //!< Vector de categorías
+	int k; //!< Número máximo de niveles
 
     public:
 	//constructora
@@ -43,7 +42,7 @@ class Cjt_categorias {
 
 	//escritura y lectura inicial
 	/** @brief Imprime las categorías en orden creciente de identificador
-	    \pre <em>Cierto</em>
+	    \pre <em>Cierto</em>, ya que se garantiza la existencia de un conjunto de categorías
 	    \post Se ha impreso el conjunto con sus identificadores, el nombre y la tabla de puntos
 	*/
 	void listar_categorias();
@@ -59,13 +58,13 @@ class Cjt_categorias {
 	    \pre <em>cat</em> es el entero que representa el nivel de una categoría
 	    \post Devuelve 1 si la categoría ya existe, 0 en caso contrario
 	*/ 
-	bool existe_categoria(int cat);
+	bool existe_categoria(int cat) const;
 
 	/** @brief Consulta la categoría pasando su posición
 	  	\pre <em>cat</em> es el entero que representa el nivel de una categoría
 	  	\post Se ha devuelto el nombre de la categoría
 	*/
-	void consultar_categoria(int cat);
+	void consultar_categoria(int cat) const;
 
 	/** @brief Devuelve la puntuación por nivel
 	  	\pre <em>cat</em> identificador de una categoria y <em>nivel</em> los diferentes niveles de puntos

@@ -77,41 +77,43 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcategoria.html">   18</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcategoria.html">categoria</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structcategoria.html#a7a146c6f2e3726627cee04f756647ae5">   19</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structcategoria.html#a7a146c6f2e3726627cee04f756647ae5">nombre</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structcategoria.html#a724663dbe9302a7c7329037e954c09c4">   20</a></span>&#160;    vector&lt;int&gt; <a class="code" href="structcategoria.html#a724663dbe9302a7c7329037e954c09c4">puntuaciones</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__categorias.html">Cjt_categorias</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html#ace3fcdca1dd9fc59c0d5f2892d21ad34">   33</a></span>&#160;  vector&lt;categoria&gt; <a class="code" href="class_cjt__categorias.html#ace3fcdca1dd9fc59c0d5f2892d21ad34">categorias</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html#a0ca5ed2e908d6c8e35f1a8a040ffdd6b">   34</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_cjt__categorias.html#a0ca5ed2e908d6c8e35f1a8a040ffdd6b">k</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">//constructora</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span>  <a class="code" href="class_cjt__categorias.html">Cjt_categorias</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">//escritura y lectura inicial</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> listar_categorias();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> lectura_ini_cat();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">//consultoras</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>  <span class="keywordtype">bool</span> existe_categoria(<span class="keywordtype">int</span> cat);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">void</span> consultar_categoria(<span class="keywordtype">int</span> cat);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">int</span> puntos(<span class="keywordtype">int</span> cat, <span class="keywordtype">int</span> nivel) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="ttc" id="aclass_cjt__categorias_html"><div class="ttname"><a href="class_cjt__categorias.html">Cjt_categorias</a></div><div class="ttdoc">Representa el conjunto de categorías de los torneos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00027">Cjt_categorias.hh:27</a></div></div>
-<div class="ttc" id="aclass_cjt__categorias_html_a0ca5ed2e908d6c8e35f1a8a040ffdd6b"><div class="ttname"><a href="class_cjt__categorias.html#a0ca5ed2e908d6c8e35f1a8a040ffdd6b">Cjt_categorias::k</a></div><div class="ttdeci">int k</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00034">Cjt_categorias.hh:34</a></div></div>
-<div class="ttc" id="aclass_cjt__categorias_html_ace3fcdca1dd9fc59c0d5f2892d21ad34"><div class="ttname"><a href="class_cjt__categorias.html#ace3fcdca1dd9fc59c0d5f2892d21ad34">Cjt_categorias::categorias</a></div><div class="ttdeci">vector&lt; categoria &gt; categorias</div><div class="ttdoc">Vector de categorias, usado para trabajar con el conjunto de estas y un entero k que representa el nú...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00033">Cjt_categorias.hh:33</a></div></div>
-<div class="ttc" id="astructcategoria_html"><div class="ttname"><a href="structcategoria.html">categoria</a></div><div class="ttdoc">Estructura que define una categoria Cada categoría presenta un nombre y un vector con las puntuacione...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00018">Cjt_categorias.hh:18</a></div></div>
-<div class="ttc" id="astructcategoria_html_a724663dbe9302a7c7329037e954c09c4"><div class="ttname"><a href="structcategoria.html#a724663dbe9302a7c7329037e954c09c4">categoria::puntuaciones</a></div><div class="ttdeci">vector&lt; int &gt; puntuaciones</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00020">Cjt_categorias.hh:20</a></div></div>
-<div class="ttc" id="astructcategoria_html_a7a146c6f2e3726627cee04f756647ae5"><div class="ttname"><a href="structcategoria.html#a7a146c6f2e3726627cee04f756647ae5">categoria::nombre</a></div><div class="ttdeci">string nombre</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00019">Cjt_categorias.hh:19</a></div></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcategoria.html">   18</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcategoria.html">categoria</a> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structcategoria.html#a7a146c6f2e3726627cee04f756647ae5">   20</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structcategoria.html#a7a146c6f2e3726627cee04f756647ae5">nombre</a>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structcategoria.html#a724663dbe9302a7c7329037e954c09c4">   21</a></span>&#160;    vector&lt;int&gt; <a class="code" href="structcategoria.html#a724663dbe9302a7c7329037e954c09c4">puntuaciones</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__categorias.html">Cjt_categorias</a> </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html#ace3fcdca1dd9fc59c0d5f2892d21ad34">   32</a></span>&#160;  vector&lt;categoria&gt; <a class="code" href="class_cjt__categorias.html#ace3fcdca1dd9fc59c0d5f2892d21ad34">categorias</a>; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_cjt__categorias.html#a0ca5ed2e908d6c8e35f1a8a040ffdd6b">   33</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_cjt__categorias.html#a0ca5ed2e908d6c8e35f1a8a040ffdd6b">k</a>; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">//constructora</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span>  <a class="code" href="class_cjt__categorias.html">Cjt_categorias</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">//escritura y lectura inicial</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> listar_categorias();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> lectura_ini_cat();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">//consultoras</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>  <span class="keywordtype">bool</span> existe_categoria(<span class="keywordtype">int</span> cat) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> consultar_categoria(<span class="keywordtype">int</span> cat) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">int</span> puntos(<span class="keywordtype">int</span> cat, <span class="keywordtype">int</span> nivel) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="ttc" id="aclass_cjt__categorias_html"><div class="ttname"><a href="class_cjt__categorias.html">Cjt_categorias</a></div><div class="ttdoc">Representa el conjunto de categorías de los torneos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00028">Cjt_categorias.hh:29</a></div></div>
+<div class="ttc" id="aclass_cjt__categorias_html_a0ca5ed2e908d6c8e35f1a8a040ffdd6b"><div class="ttname"><a href="class_cjt__categorias.html#a0ca5ed2e908d6c8e35f1a8a040ffdd6b">Cjt_categorias::k</a></div><div class="ttdeci">int k</div><div class="ttdoc">Número máximo de niveles.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00033">Cjt_categorias.hh:33</a></div></div>
+<div class="ttc" id="aclass_cjt__categorias_html_ace3fcdca1dd9fc59c0d5f2892d21ad34"><div class="ttname"><a href="class_cjt__categorias.html#ace3fcdca1dd9fc59c0d5f2892d21ad34">Cjt_categorias::categorias</a></div><div class="ttdeci">vector&lt; categoria &gt; categorias</div><div class="ttdoc">Vector de categorías.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00032">Cjt_categorias.hh:32</a></div></div>
+<div class="ttc" id="astructcategoria_html"><div class="ttname"><a href="structcategoria.html">categoria</a></div><div class="ttdoc">Estructura que define una categoria Cada categoría presenta un nombre y un vector con las puntuacione...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00018">Cjt_categorias.hh:19</a></div></div>
+<div class="ttc" id="astructcategoria_html_a724663dbe9302a7c7329037e954c09c4"><div class="ttname"><a href="structcategoria.html#a724663dbe9302a7c7329037e954c09c4">categoria::puntuaciones</a></div><div class="ttdeci">vector&lt; int &gt; puntuaciones</div><div class="ttdoc">Vector que almacena las puntuaciones por nivel.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00021">Cjt_categorias.hh:21</a></div></div>
+<div class="ttc" id="astructcategoria_html_a7a146c6f2e3726627cee04f756647ae5"><div class="ttname"><a href="structcategoria.html#a7a146c6f2e3726627cee04f756647ae5">categoria::nombre</a></div><div class="ttdeci">string nombre</div><div class="ttdoc">Nombre de la categoría.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categorias_8hh_source.html#l00020">Cjt_categorias.hh:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

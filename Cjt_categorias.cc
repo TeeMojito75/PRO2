@@ -1,12 +1,13 @@
 #include "Cjt_categorias.hh"
 using namespace std;
 
-Cjt_categorias::Cjt_categorias() {
+Cjt_categorias::Cjt_categorias() 
+{
     vector<categoria> categorias(0);
-
 }
 
-void Cjt_categorias::lectura_ini_cat() {
+void Cjt_categorias::lectura_ini_cat() 
+{
     int cats, puntos;
     cin >> cats >> puntos;
     k = puntos;
@@ -21,12 +22,24 @@ void Cjt_categorias::lectura_ini_cat() {
     }
 }
 
-bool Cjt_categorias::existe_categoria(int cat) {
+bool Cjt_categorias::existe_categoria(int cat) const
+{
     if (cat > categorias.size() or cat <= 0) return false;
     else return true;
 }
 
-void Cjt_categorias::listar_categorias() {
+void Cjt_categorias::consultar_categoria(int cat) const
+{
+    cout << categorias[cat-1].nombre << endl;
+}
+
+int Cjt_categorias::puntos(int cat, int nivel) const 
+{
+    return categorias[cat-1].puntuaciones[nivel];
+}
+
+void Cjt_categorias::listar_categorias() 
+{
     int n = categorias.size();
     cout << n << ' ' << k << endl;
     for (int i = 0; i < n; ++i) {
@@ -34,12 +47,4 @@ void Cjt_categorias::listar_categorias() {
         for (int j = 0; j < k; ++j) cout << ' ' <<  categorias[i].puntuaciones[j];
         cout << endl;
     }
-}
-
-void Cjt_categorias::consultar_categoria(int cat) {
-    cout << categorias[cat-1].nombre << endl;
-}
-
-int Cjt_categorias::puntos(int cat, int nivel) const {
-    return categorias[cat-1].puntuaciones[nivel];
 }

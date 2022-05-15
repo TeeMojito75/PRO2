@@ -14,14 +14,16 @@ int \mbox{\hyperlink{class_torneo_a531716795208cd139642f599be82c6d9}{num\+\_\+ju
 \begin{DoxyCompactList}\small\item\em Da el numero de jugadores en un torneo. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneo_a27ff3b8789d67d2044b2fb8174c3c8b9}{modificar\+\_\+npart}} (int n)
 \begin{DoxyCompactList}\small\item\em Modifica el valor del número de participantes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneo_a1e8934653d38fb4973de851d56b44c04}{actualizar\+\_\+enfrentamientos}} (const Bin\+Tree$<$ string $>$ \&R, Bin\+Tree$<$ int $>$ \&T, int nivel, const \mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} \&c)
+\begin{DoxyCompactList}\small\item\em Actualiza el Bin\+Tree de enfrnetamientos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneo_a452950d3882b8b579778ee467f313f21}{actualizar\+\_\+jugadores}} (const vector$<$ \mbox{\hyperlink{struct_participantes}{Participantes}} $>$ \&v, \mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}} \&j)
+\begin{DoxyCompactList}\small\item\em Actualiza los jugadores con los puntos ganados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneo_a8e6b0d35b348318bc05ff35f3f87a67b}{ampliar\+\_\+participantes}} (\mbox{\hyperlink{struct_participantes}{Participantes}} part)
+\begin{DoxyCompactList}\small\item\em Función usada para añadir los participantes al vector jug desde el conjunto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneo_a4e555b4e564592f3b6b848467e33235d}{quitar\+\_\+puntos}} (\mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}} \&j)
 \begin{DoxyCompactList}\small\item\em Elimina los puntos de la edición anterior. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneo_ab25fa0b6dbdd6327749f5344c851c66f}{puntos\+\_\+0}} (const string \&\mbox{\hyperlink{class_torneo_a07a49e6996e995b550d2b803c86638ba}{nombre}})
 \begin{DoxyCompactList}\small\item\em Pone los puntos a 0 en caso de eliminar jugadores. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_torneo_af59ca01aafd56eb6ddb0b4174d8274e8}{escribir\+\_\+categoria}} (\mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} \&c)
-\begin{DoxyCompactList}\small\item\em Escribe el nombre de la categoría. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_torneo_a8e6b0d35b348318bc05ff35f3f87a67b}{ampliar\+\_\+participantes}} (\mbox{\hyperlink{struct_participantes}{Participantes}} part)
-\begin{DoxyCompactList}\small\item\em Función usada para añadir los participantes al vector jug desde el conjunto. \end{DoxyCompactList}\item 
 Bin\+Tree$<$ int $>$ \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\+\_\+t}} (int nodos, int n, int pos)
 \begin{DoxyCompactList}\small\item\em Crea el arbol de inscripciones. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneo_abcd9605fb301989364fef836ef3069a9}{inscripciones}} (int n)
@@ -34,33 +36,31 @@ void \mbox{\hyperlink{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}{escribir\+
 \begin{DoxyCompactList}\small\item\em Imprime los resultados del torneo. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneo_afd4eee9ac830bf0857623c6c163c7277}{escribir\+\_\+puntos}} ()
 \begin{DoxyCompactList}\small\item\em Se imprimen los jugadores con los puntos ganados y se añaden al map de última edición. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_torneo_a1e8934653d38fb4973de851d56b44c04}{actualizar\+\_\+enfrentamientos}} (const Bin\+Tree$<$ string $>$ \&R, Bin\+Tree$<$ int $>$ \&T, int nivel, const \mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} \&c)
-\begin{DoxyCompactList}\small\item\em Actualiza el Bin\+Tree de enfrnetamientos. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_torneo_a452950d3882b8b579778ee467f313f21}{actualizar\+\_\+jugadores}} (const vector$<$ \mbox{\hyperlink{struct_participantes}{Participantes}} $>$ \&v, \mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}} \&j)
-\begin{DoxyCompactList}\small\item\em Actualiza los jugadores con los puntos ganados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_torneo_af59ca01aafd56eb6ddb0b4174d8274e8}{escribir\+\_\+categoria}} (\mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} \&c)
+\begin{DoxyCompactList}\small\item\em Escribe el nombre de la categoría. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{class_torneo_a07a49e6996e995b550d2b803c86638ba}{nombre}}
-\item 
+\begin{DoxyCompactList}\small\item\em Identificador de cada torneo. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}}
-\item 
+\begin{DoxyCompactList}\small\item\em Entero que representa la categoría del torneo. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_torneo_a3c124117c113604177778d95db2204b7}{n\+\_\+participantes}}
-\item 
+\begin{DoxyCompactList}\small\item\em Número de participantes del torneo. \end{DoxyCompactList}\item 
 vector$<$ \mbox{\hyperlink{struct_participantes}{Participantes}} $>$ \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}
-\item 
+\begin{DoxyCompactList}\small\item\em Vector con el conjuntode participantes del torneo. \end{DoxyCompactList}\item 
 map$<$ string, int $>$ \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\+\_\+ed}}
-\item 
+\begin{DoxyCompactList}\small\item\em Diccionario que almacena los jugadores y los puntos del último torneo disputado. \end{DoxyCompactList}\item 
 Bin\+Tree$<$ int $>$ \mbox{\hyperlink{class_torneo_abb8a79a6205d5e7ff35f59bf285a49ab}{enfrentamientos}}
-\item 
+\begin{DoxyCompactList}\small\item\em Árbol con los enfrentamientos al iniciar torneo. \end{DoxyCompactList}\item 
 Bin\+Tree$<$ string $>$ \mbox{\hyperlink{class_torneo_adb0ae255d28e1df379cb0484a5cdaf4f}{resultados}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Árbol con los resultados de los partidos de los torneos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
 Representa un torneo del circuito. 
 
-Definición en la línea 36 del archivo Torneo.\+hh.
+Definición en la línea 37 del archivo Torneo.\+hh.
 
 
 
@@ -83,11 +83,11 @@ Creadora por defecto.
 \end{DoxyPostcond}
 
 
-Definición en la línea 5 del archivo Torneo.\+cc.
+Definición en la línea 4 del archivo Torneo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{5                                 \{}
+\DoxyCodeLine{5 \{}
 \DoxyCodeLine{6     \mbox{\hyperlink{class_torneo_a07a49e6996e995b550d2b803c86638ba}{nombre}} = nom;}
 \DoxyCodeLine{7     \mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}} = c;  }
 \DoxyCodeLine{8     \mbox{\hyperlink{class_torneo_a3c124117c113604177778d95db2204b7}{n\_participantes}} = 0;}
@@ -119,9 +119,9 @@ Definición en la línea 11 del archivo Torneo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11                           \{}
-\DoxyCodeLine{12     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_torneo_a3c124117c113604177778d95db2204b7}{n\_participantes}};}
-\DoxyCodeLine{13 \}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_torneo_a3c124117c113604177778d95db2204b7}{n\_participantes}};}
+\DoxyCodeLine{14 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_torneo_a27ff3b8789d67d2044b2fb8174c3c8b9}\label{class_torneo_a27ff3b8789d67d2044b2fb8174c3c8b9}} 
@@ -142,336 +142,13 @@ Se ha modificado el parámetro implícito
 \end{DoxyPostcond}
 
 
-Definición en la línea 15 del archivo Torneo.\+cc.
+Definición en la línea 16 del archivo Torneo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{15                                   \{}
-\DoxyCodeLine{16     \mbox{\hyperlink{class_torneo_a3c124117c113604177778d95db2204b7}{n\_participantes}} = n;}
-\DoxyCodeLine{17 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_a4e555b4e564592f3b6b848467e33235d}\label{class_torneo_a4e555b4e564592f3b6b848467e33235d}} 
-\index{Torneo@{Torneo}!quitar\_puntos@{quitar\_puntos}}
-\index{quitar\_puntos@{quitar\_puntos}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{quitar\_puntos()}{quitar\_puntos()}}
-{\footnotesize\ttfamily void Torneo\+::quitar\+\_\+puntos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}} \&}]{j }\end{DoxyParamCaption})}
-
-
-
-Elimina los puntos de la edición anterior. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape \mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}}} es el conjunto no vacío de jugadores 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se han eliminado los puntos de la edición de la edición anterior 
-\end{DoxyPostcond}
-
-
-Definición en la línea 188 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{188                                            \{}
-\DoxyCodeLine{189     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.empty()) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{190     \textcolor{keywordflow}{for} (map<string, int>::iterator it = \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.begin(); it != \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.end(); ++it) \{}
-\DoxyCodeLine{191         \textcolor{keywordflow}{if} (j.\mbox{\hyperlink{class_cjt__jugadores_a43fba38b9205ac64c778aa0a8d8e8180}{existe\_jugador}}(it-\/>first)) \{}
-\DoxyCodeLine{192         map<string, Jugador>::iterator it2 = j.\mbox{\hyperlink{class_cjt__jugadores_a1bf856d7e6a1c135707e4fc7b2a61767}{consultar\_conjunto}}(it-\/>first);}
-\DoxyCodeLine{193         it2-\/>second.modificar\_puntos(it-\/>second);}
-\DoxyCodeLine{194         \}}
-\DoxyCodeLine{195     \}}
-\DoxyCodeLine{196 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_ab25fa0b6dbdd6327749f5344c851c66f}\label{class_torneo_ab25fa0b6dbdd6327749f5344c851c66f}} 
-\index{Torneo@{Torneo}!puntos\_0@{puntos\_0}}
-\index{puntos\_0@{puntos\_0}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{puntos\_0()}{puntos\_0()}}
-{\footnotesize\ttfamily void Torneo\+::puntos\+\_\+0 (\begin{DoxyParamCaption}\item[{const string \&}]{nombre }\end{DoxyParamCaption})}
-
-
-
-Pone los puntos a 0 en caso de eliminar jugadores. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape nombre} es el nombre de un presunto jugador 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se han puesto los puntos a cero del jugador (en caso de que existe) 
-\end{DoxyPostcond}
-
-
-Definición en la línea 198 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{198                                           \{}
-\DoxyCodeLine{199     map<string, int>::iterator it = \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.find(\mbox{\hyperlink{class_torneo_a07a49e6996e995b550d2b803c86638ba}{nombre}});}
-\DoxyCodeLine{200     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.end()) it-\/>second = 0;}
-\DoxyCodeLine{201 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_af59ca01aafd56eb6ddb0b4174d8274e8}\label{class_torneo_af59ca01aafd56eb6ddb0b4174d8274e8}} 
-\index{Torneo@{Torneo}!escribir\_categoria@{escribir\_categoria}}
-\index{escribir\_categoria@{escribir\_categoria}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{escribir\_categoria()}{escribir\_categoria()}}
-{\footnotesize\ttfamily void Torneo\+::escribir\+\_\+categoria (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} \&}]{c }\end{DoxyParamCaption})}
-
-
-
-Escribe el nombre de la categoría. 
-
-\begin{DoxyPrecond}{Precondición}
-\mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} es un conjunto no vacío 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se ha escrito el nombre de la categoría 
-\end{DoxyPostcond}
-
-
-Definición en la línea 19 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{19                                                  \{}
-\DoxyCodeLine{20     c.\mbox{\hyperlink{class_cjt__categorias_ae2edee3077dcf1c01e04416718ac3927}{consultar\_categoria}}(\mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}});}
-\DoxyCodeLine{21 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_a8e6b0d35b348318bc05ff35f3f87a67b}\label{class_torneo_a8e6b0d35b348318bc05ff35f3f87a67b}} 
-\index{Torneo@{Torneo}!ampliar\_participantes@{ampliar\_participantes}}
-\index{ampliar\_participantes@{ampliar\_participantes}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{ampliar\_participantes()}{ampliar\_participantes()}}
-{\footnotesize\ttfamily void Torneo\+::ampliar\+\_\+participantes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_participantes}{Participantes}}}]{part }\end{DoxyParamCaption})}
-
-
-
-Función usada para añadir los participantes al vector jug desde el conjunto. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape part} es uno de los participantes del torneo 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se ha añadido al participante en el vector 
-\end{DoxyPostcond}
-
-
-Definición en la línea 23 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{23                                                      \{}
-\DoxyCodeLine{24     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}.push\_back(part);}
-\DoxyCodeLine{25 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}\label{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}} 
-\index{Torneo@{Torneo}!inscripciones\_t@{inscripciones\_t}}
-\index{inscripciones\_t@{inscripciones\_t}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{inscripciones\_t()}{inscripciones\_t()}}
-{\footnotesize\ttfamily Bin\+Tree$<$ int $>$ Torneo\+::inscripciones\+\_\+t (\begin{DoxyParamCaption}\item[{int}]{nodos,  }\item[{int}]{n,  }\item[{int}]{pos }\end{DoxyParamCaption})}
-
-
-
-Crea el arbol de inscripciones. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se ha creado el árbol con los valores de los jugadores inscritos 
-\end{DoxyPostcond}
-
-
-Definición en la línea 27 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{27                                                               \{}
-\DoxyCodeLine{28     \textcolor{keywordflow}{if} (n <= nodos) \{}
-\DoxyCodeLine{29         cout << pos << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[pos -\/ 1].nombre;}
-\DoxyCodeLine{30         \textcolor{keywordflow}{return} BinTree<int>(pos);}
-\DoxyCodeLine{31         }
-\DoxyCodeLine{32     \}}
-\DoxyCodeLine{33     nodos *= 2;}
-\DoxyCodeLine{34     \textcolor{keywordflow}{if} ((nodos > n) and (nodos -\/ n >= pos)) \{}
-\DoxyCodeLine{35         cout << pos << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[pos -\/ 1].nombre;}
-\DoxyCodeLine{36         \textcolor{keywordflow}{return} BinTree<int>(pos);}
-\DoxyCodeLine{37     \}}
-\DoxyCodeLine{38     BinTree<int> iz, der;}
-\DoxyCodeLine{39     cout << \textcolor{stringliteral}{"{}("{}};}
-\DoxyCodeLine{40     iz = \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\_t}}(nodos, n, pos);}
-\DoxyCodeLine{41     cout << \textcolor{charliteral}{' '};}
-\DoxyCodeLine{42     der = \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\_t}}(nodos, n, nodos + 1 -\/ pos);}
-\DoxyCodeLine{43     cout << \textcolor{charliteral}{')'};}
-\DoxyCodeLine{44     \textcolor{keywordflow}{return} BinTree<int>(pos, iz, der);}
-\DoxyCodeLine{45 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_abcd9605fb301989364fef836ef3069a9}\label{class_torneo_abcd9605fb301989364fef836ef3069a9}} 
-\index{Torneo@{Torneo}!inscripciones@{inscripciones}}
-\index{inscripciones@{inscripciones}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{inscripciones()}{inscripciones()}}
-{\footnotesize\ttfamily void Torneo\+::inscripciones (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
-
-
-
-Carga los enfrentamientos al árbol implícito del torneo. 
-
-\begin{DoxyPrecond}{Precondición}
-Existe un torneo con un conjunto de participantes 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se ha creado el árbol con el orden de esos enfrentamientos y se ha impreso el mismo 
-\end{DoxyPostcond}
-
-
-Definición en la línea 47 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{47                                 \{}
-\DoxyCodeLine{48     \mbox{\hyperlink{class_torneo_abb8a79a6205d5e7ff35f59bf285a49ab}{enfrentamientos}} = \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\_t}}(1, n, 1);}
-\DoxyCodeLine{49     cout << endl;}
-\DoxyCodeLine{50 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_ac3a1207a7d22feb41c1c4ebc9a917d11}\label{class_torneo_ac3a1207a7d22feb41c1c4ebc9a917d11}} 
-\index{Torneo@{Torneo}!results@{results}}
-\index{results@{results}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{results()}{results()}}
-{\footnotesize\ttfamily void Torneo\+::results (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} \&}]{c,  }\item[{\mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}} \&}]{j }\end{DoxyParamCaption})}
-
-
-
-Carga los resultados de los partidos del torneo. 
-
-\begin{DoxyPrecond}{Precondición}
-Existe un torneo ya iniciado 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se han modificado los arboles y printeado los resultados 
-\end{DoxyPostcond}
-
-
-Definición en la línea 52 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{52                                                               \{}
-\DoxyCodeLine{53     \mbox{\hyperlink{class_torneo_adb0ae255d28e1df379cb0484a5cdaf4f}{resultados}} = \mbox{\hyperlink{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}{i\_results}}();}
-\DoxyCodeLine{54     \mbox{\hyperlink{class_torneo_a1e8934653d38fb4973de851d56b44c04}{actualizar\_enfrentamientos}}(\mbox{\hyperlink{class_torneo_adb0ae255d28e1df379cb0484a5cdaf4f}{resultados}}, \mbox{\hyperlink{class_torneo_abb8a79a6205d5e7ff35f59bf285a49ab}{enfrentamientos}}, 1, c);}
-\DoxyCodeLine{55     \mbox{\hyperlink{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}{escribir\_resultados}}(\mbox{\hyperlink{class_torneo_adb0ae255d28e1df379cb0484a5cdaf4f}{resultados}}, \mbox{\hyperlink{class_torneo_abb8a79a6205d5e7ff35f59bf285a49ab}{enfrentamientos}});}
-\DoxyCodeLine{56     cout << endl;}
-\DoxyCodeLine{57     \mbox{\hyperlink{class_torneo_a4e555b4e564592f3b6b848467e33235d}{quitar\_puntos}}(j);}
-\DoxyCodeLine{58     \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.clear();}
-\DoxyCodeLine{59     \mbox{\hyperlink{class_torneo_afd4eee9ac830bf0857623c6c163c7277}{escribir\_puntos}}();}
-\DoxyCodeLine{60     \mbox{\hyperlink{class_torneo_a452950d3882b8b579778ee467f313f21}{actualizar\_jugadores}}(\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}, j); }
-\DoxyCodeLine{61     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}} = vector<Participantes>(0);}
-\DoxyCodeLine{62 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}\label{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}} 
-\index{Torneo@{Torneo}!i\_results@{i\_results}}
-\index{i\_results@{i\_results}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{i\_results()}{i\_results()}}
-{\footnotesize\ttfamily Bin\+Tree$<$ string $>$ Torneo\+::i\+\_\+results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Crea el arbol de resultados. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape Cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se ha creado el arbol con los sets de los partidos 
-\end{DoxyPostcond}
-
-
-Definición en la línea 64 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{64                                   \{}
-\DoxyCodeLine{65     \textcolor{keywordtype}{string} partido;}
-\DoxyCodeLine{66     cin >> partido;}
-\DoxyCodeLine{67 }
-\DoxyCodeLine{68     \textcolor{keywordflow}{if} (partido != \textcolor{stringliteral}{"{}0"{}}) \{}
-\DoxyCodeLine{69         BinTree<string> e, d;}
-\DoxyCodeLine{70         e = \mbox{\hyperlink{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}{i\_results}}();}
-\DoxyCodeLine{71         d = \mbox{\hyperlink{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}{i\_results}}();}
-\DoxyCodeLine{72         \textcolor{keywordflow}{return} BinTree<string>(partido, e, d);}
-\DoxyCodeLine{73     \}}
-\DoxyCodeLine{74        \textcolor{keywordflow}{return} BinTree<string> ();}
-\DoxyCodeLine{75 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}\label{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}} 
-\index{Torneo@{Torneo}!escribir\_resultados@{escribir\_resultados}}
-\index{escribir\_resultados@{escribir\_resultados}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{escribir\_resultados()}{escribir\_resultados()}}
-{\footnotesize\ttfamily void Torneo\+::escribir\+\_\+resultados (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{R,  }\item[{const Bin\+Tree$<$ int $>$ \&}]{T }\end{DoxyParamCaption})}
-
-
-
-Imprime los resultados del torneo. 
-
-\begin{DoxyPrecond}{Precondición}
-Existe el susodicho torneo, con su arbol de emparejamientos y resultados 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se han impreso tanto los enfrentamientos como los ganadores de puntos 
-\end{DoxyPostcond}
-
-
-Definición en la línea 78 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{78                                                                                 \{}
-\DoxyCodeLine{79     \textcolor{keywordflow}{if} (not R.empty()) \{}
-\DoxyCodeLine{80         cout << \textcolor{charliteral}{'('};}
-\DoxyCodeLine{81         cout << T.left().value() << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[T.left().value()-\/1].nombre;}
-\DoxyCodeLine{82         cout << \textcolor{stringliteral}{"{} vs "{}};}
-\DoxyCodeLine{83         cout << T.right().value() << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[T.right().value()-\/1].nombre;}
-\DoxyCodeLine{84         cout << \textcolor{charliteral}{' '} << R.value();}
-\DoxyCodeLine{85         \mbox{\hyperlink{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}{escribir\_resultados}}(R.left(), T.left());}
-\DoxyCodeLine{86         \mbox{\hyperlink{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}{escribir\_resultados}}(R.right(), T.right());}
-\DoxyCodeLine{87         cout << \textcolor{charliteral}{')'};}
-\DoxyCodeLine{88     \}}
-\DoxyCodeLine{89 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneo_afd4eee9ac830bf0857623c6c163c7277}\label{class_torneo_afd4eee9ac830bf0857623c6c163c7277}} 
-\index{Torneo@{Torneo}!escribir\_puntos@{escribir\_puntos}}
-\index{escribir\_puntos@{escribir\_puntos}!Torneo@{Torneo}}
-\doxysubsubsection{\texorpdfstring{escribir\_puntos()}{escribir\_puntos()}}
-{\footnotesize\ttfamily void Torneo\+::escribir\+\_\+puntos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Se imprimen los jugadores con los puntos ganados y se añaden al map de última edición. 
-
-\begin{DoxyPrecond}{Precondición}
-Se ha finalizado un torneo 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se han impreso los jugadores con sus puntuajes y se han añadido a la última edición 
-\end{DoxyPostcond}
-
-
-Definición en la línea 91 del archivo Torneo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{91                              \{}
-\DoxyCodeLine{92     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}.size(); ++i) \{}
-\DoxyCodeLine{93         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].puntos != 0) cout << i+1 << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].nombre << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].puntos << endl;}
-\DoxyCodeLine{94         \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.insert(make\_pair(\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].\mbox{\hyperlink{class_torneo_a07a49e6996e995b550d2b803c86638ba}{nombre}}, \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].puntos));}
-\DoxyCodeLine{95     \}}
-\DoxyCodeLine{96 \}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_torneo_a3c124117c113604177778d95db2204b7}{n\_participantes}} = n;}
+\DoxyCodeLine{19 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_torneo_a1e8934653d38fb4973de851d56b44c04}\label{class_torneo_a1e8934653d38fb4973de851d56b44c04}} 
@@ -492,91 +169,90 @@ Se han actualizado los nodos del arbol de la forma solicitada
 \end{DoxyPostcond}
 
 
-Definición en la línea 98 del archivo Torneo.\+cc.
+Definición en la línea 21 del archivo Torneo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{98                                                                                                                      \{}
-\DoxyCodeLine{99     \textcolor{keywordflow}{if} (T.empty()) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{100     BinTree<int> e, d;}
-\DoxyCodeLine{101     e = T.left();}
-\DoxyCodeLine{102     d = T.right();}
-\DoxyCodeLine{103     }
-\DoxyCodeLine{104     \textcolor{keywordflow}{if} (not R.left().empty()) \mbox{\hyperlink{class_torneo_a1e8934653d38fb4973de851d56b44c04}{actualizar\_enfrentamientos}}(R.left(), e, nivel+1, c);}
-\DoxyCodeLine{105     \textcolor{keywordflow}{if} (not R.right().empty()) \mbox{\hyperlink{class_torneo_a1e8934653d38fb4973de851d56b44c04}{actualizar\_enfrentamientos}}(R.right(), d, nivel+1, c);}
-\DoxyCodeLine{106 }
-\DoxyCodeLine{107     \textcolor{keywordtype}{int} win;}
-\DoxyCodeLine{108     \textcolor{keywordtype}{int} jleft = 0; \textcolor{keywordtype}{int} jright = 0;}
-\DoxyCodeLine{109     \textcolor{keywordtype}{int} sleft = 0; \textcolor{keywordtype}{int} sright = 0;}
-\DoxyCodeLine{110     \textcolor{keywordtype}{int} mleft = 0; \textcolor{keywordtype}{int} mright = 0;}
-\DoxyCodeLine{111 }
-\DoxyCodeLine{112     \textcolor{keywordflow}{if} (R.value().size() == 3) \{}
-\DoxyCodeLine{113         \textcolor{keywordflow}{if} (R.value()[0] == \textcolor{charliteral}{'1'}) \{}
-\DoxyCodeLine{114             win = e.value();}
-\DoxyCodeLine{115             mleft += 1;}
-\DoxyCodeLine{116         \}}
-\DoxyCodeLine{117         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{118             win = d.value();}
-\DoxyCodeLine{119             mright += 1;}
-\DoxyCodeLine{120         \} }
-\DoxyCodeLine{121     \}}
-\DoxyCodeLine{122     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (R.value().size() == 7) \{}
-\DoxyCodeLine{123         \textcolor{keywordflow}{if} (R.value()[4] > R.value()[6]) \{}
-\DoxyCodeLine{124             win = e.value();}
-\DoxyCodeLine{125             jleft = (R.value()[0]-\/\textcolor{charliteral}{'0'}) + (R.value()[4]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{126             jright = (R.value()[2]-\/\textcolor{charliteral}{'0'}) + (R.value()[6]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{127             sleft += 2;}
-\DoxyCodeLine{128             mleft += 1;}
-\DoxyCodeLine{129         \}}
-\DoxyCodeLine{130         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{131             win = d.value();}
-\DoxyCodeLine{132             jleft = (R.value()[0]-\/\textcolor{charliteral}{'0'}) + (R.value()[4]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{133             jright = (R.value()[2]-\/\textcolor{charliteral}{'0'}) + (R.value()[6]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{134             sright += 2; }
-\DoxyCodeLine{135             mright += 1;}
-\DoxyCodeLine{136         \}}
-\DoxyCodeLine{137     \}}
-\DoxyCodeLine{138     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{139         \textcolor{keywordflow}{if} (R.value()[8] > R.value()[10]) \{}
-\DoxyCodeLine{140             win = e.value();}
-\DoxyCodeLine{141             jleft = (R.value()[0]-\/\textcolor{charliteral}{'0'}) + (R.value()[4]-\/\textcolor{charliteral}{'0'}) + (R.value()[8]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{142             jright = (R.value()[2]-\/\textcolor{charliteral}{'0'}) + (R.value()[6]-\/\textcolor{charliteral}{'0'}) + (R.value()[10]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{143             sright += 1;}
-\DoxyCodeLine{144             sleft += 2;}
-\DoxyCodeLine{145             mleft += 1;}
-\DoxyCodeLine{146         \}}
-\DoxyCodeLine{147         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{148             win = d.value();}
-\DoxyCodeLine{149             jleft = (R.value()[0]-\/\textcolor{charliteral}{'0'}) + (R.value()[4]-\/\textcolor{charliteral}{'0'}) + (R.value()[8]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{150             jright = (R.value()[2]-\/\textcolor{charliteral}{'0'}) + (R.value()[6]-\/\textcolor{charliteral}{'0'}) + (R.value()[10]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{151             sright += 2;}
-\DoxyCodeLine{152             sleft  += 1;}
-\DoxyCodeLine{153             mright += 1;}
-\DoxyCodeLine{154         \}}
-\DoxyCodeLine{155     \}}
-\DoxyCodeLine{156     }
-\DoxyCodeLine{157     T = BinTree<int>(win, e, d);}
-\DoxyCodeLine{158 }
-\DoxyCodeLine{159     \textcolor{comment}{//Actualización de las estadísticas de participantes}}
-\DoxyCodeLine{160     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].game.first += jleft;}
-\DoxyCodeLine{161     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].game.second += jright; }
-\DoxyCodeLine{162     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].game.first += jright;}
-\DoxyCodeLine{163     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].game.second += jleft; }
-\DoxyCodeLine{164    }
-\DoxyCodeLine{165     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].set.first += sleft;}
-\DoxyCodeLine{166     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].set.second += sright;}
-\DoxyCodeLine{167     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].set.first += sright;}
-\DoxyCodeLine{168     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].set.second += sleft;}
-\DoxyCodeLine{169     }
-\DoxyCodeLine{170     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].match.first += mleft;}
-\DoxyCodeLine{171     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].match.second += mright;}
-\DoxyCodeLine{172     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].match.first += mright;}
-\DoxyCodeLine{173     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].match.second += mleft;}
-\DoxyCodeLine{174 }
-\DoxyCodeLine{175     \textcolor{keywordflow}{if} (e.value() != win) \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].puntos =  c.\mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}}(\mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}}, nivel);}
-\DoxyCodeLine{176     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (d.value() != win) \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].puntos = c.\mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}}(\mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}}, nivel);}
-\DoxyCodeLine{177     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[T.value()-\/1].puntos = c.\mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}}(\mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}}, 0);}
-\DoxyCodeLine{178 \}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \textcolor{keywordflow}{if} (T.empty()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{24     BinTree<int> e, d;}
+\DoxyCodeLine{25     e = T.left();}
+\DoxyCodeLine{26     d = T.right();}
+\DoxyCodeLine{27     }
+\DoxyCodeLine{28     \textcolor{keywordflow}{if} (not R.left().empty()) \mbox{\hyperlink{class_torneo_a1e8934653d38fb4973de851d56b44c04}{actualizar\_enfrentamientos}}(R.left(), e, nivel+1, c);}
+\DoxyCodeLine{29     \textcolor{keywordflow}{if} (not R.right().empty()) \mbox{\hyperlink{class_torneo_a1e8934653d38fb4973de851d56b44c04}{actualizar\_enfrentamientos}}(R.right(), d, nivel+1, c);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} win;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} jleft = 0; \textcolor{keywordtype}{int} jright = 0;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} sleft = 0; \textcolor{keywordtype}{int} sright = 0;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} mleft = 0; \textcolor{keywordtype}{int} mright = 0;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordflow}{if} (R.value().size() == 3) \{}
+\DoxyCodeLine{37         \textcolor{keywordflow}{if} (R.value()[0] == \textcolor{charliteral}{'1'}) \{}
+\DoxyCodeLine{38             win = e.value();}
+\DoxyCodeLine{39             mleft += 1;}
+\DoxyCodeLine{40         \}}
+\DoxyCodeLine{41         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{42             win = d.value();}
+\DoxyCodeLine{43             mright += 1;}
+\DoxyCodeLine{44         \} }
+\DoxyCodeLine{45     \}}
+\DoxyCodeLine{46     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (R.value().size() == 7) \{}
+\DoxyCodeLine{47         \textcolor{keywordflow}{if} (R.value()[4] > R.value()[6]) \{}
+\DoxyCodeLine{48             win = e.value();}
+\DoxyCodeLine{49             jleft = (R.value()[0]-\/\textcolor{charliteral}{'0'}) + (R.value()[4]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{50             jright = (R.value()[2]-\/\textcolor{charliteral}{'0'}) + (R.value()[6]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{51             sleft += 2;}
+\DoxyCodeLine{52             mleft += 1;}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{55             win = d.value();}
+\DoxyCodeLine{56             jleft = (R.value()[0]-\/\textcolor{charliteral}{'0'}) + (R.value()[4]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{57             jright = (R.value()[2]-\/\textcolor{charliteral}{'0'}) + (R.value()[6]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{58             sright += 2; }
+\DoxyCodeLine{59             mright += 1;}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{63         \textcolor{keywordflow}{if} (R.value()[8] > R.value()[10]) \{}
+\DoxyCodeLine{64             win = e.value();}
+\DoxyCodeLine{65             jleft = (R.value()[0]-\/\textcolor{charliteral}{'0'}) + (R.value()[4]-\/\textcolor{charliteral}{'0'}) + (R.value()[8]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{66             jright = (R.value()[2]-\/\textcolor{charliteral}{'0'}) + (R.value()[6]-\/\textcolor{charliteral}{'0'}) + (R.value()[10]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{67             sright += 1;}
+\DoxyCodeLine{68             sleft += 2;}
+\DoxyCodeLine{69             mleft += 1;}
+\DoxyCodeLine{70         \}}
+\DoxyCodeLine{71         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{72             win = d.value();}
+\DoxyCodeLine{73             jleft = (R.value()[0]-\/\textcolor{charliteral}{'0'}) + (R.value()[4]-\/\textcolor{charliteral}{'0'}) + (R.value()[8]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{74             jright = (R.value()[2]-\/\textcolor{charliteral}{'0'}) + (R.value()[6]-\/\textcolor{charliteral}{'0'}) + (R.value()[10]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{75             sright += 2;}
+\DoxyCodeLine{76             sleft  += 1;}
+\DoxyCodeLine{77             mright += 1;}
+\DoxyCodeLine{78         \}}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80     }
+\DoxyCodeLine{81     T = BinTree<int>(win, e, d);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].game.first += jleft;}
+\DoxyCodeLine{84     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].game.second += jright; }
+\DoxyCodeLine{85     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].game.first += jright;}
+\DoxyCodeLine{86     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].game.second += jleft; }
+\DoxyCodeLine{87    }
+\DoxyCodeLine{88     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].set.first += sleft;}
+\DoxyCodeLine{89     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].set.second += sright;}
+\DoxyCodeLine{90     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].set.first += sright;}
+\DoxyCodeLine{91     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].set.second += sleft;}
+\DoxyCodeLine{92     }
+\DoxyCodeLine{93     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].match.first += mleft;}
+\DoxyCodeLine{94     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].match.second += mright;}
+\DoxyCodeLine{95     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].match.first += mright;}
+\DoxyCodeLine{96     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].match.second += mleft;}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     \textcolor{keywordflow}{if} (e.value() != win) \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[e.value()-\/1].puntos =  c.\mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}}(\mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}}, nivel);}
+\DoxyCodeLine{99     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (d.value() != win) \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[d.value()-\/1].puntos = c.\mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}}(\mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}}, nivel);}
+\DoxyCodeLine{100     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[T.value()-\/1].puntos = c.\mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}}(\mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}}, 0);}
+\DoxyCodeLine{101 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_torneo_a452950d3882b8b579778ee467f313f21}\label{class_torneo_a452950d3882b8b579778ee467f313f21}} 
@@ -597,17 +273,340 @@ Se han actualizado los parámetros del conjunto de jugadores
 \end{DoxyPostcond}
 
 
-Definición en la línea 180 del archivo Torneo.\+cc.
+Definición en la línea 103 del archivo Torneo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{180                                                                                   \{}
-\DoxyCodeLine{181     map<string, Jugador>::iterator it;}
-\DoxyCodeLine{182     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < v.size(); ++i) \{}
-\DoxyCodeLine{183         it = j.\mbox{\hyperlink{class_cjt__jugadores_a1bf856d7e6a1c135707e4fc7b2a61767}{consultar\_conjunto}}(\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].\mbox{\hyperlink{class_torneo_a07a49e6996e995b550d2b803c86638ba}{nombre}});}
-\DoxyCodeLine{184         it-\/>second.actu\_stats(\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].game, \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].set, \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].match, \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].puntos);}
-\DoxyCodeLine{185     \}}
-\DoxyCodeLine{186 \}}
+\DoxyCodeLine{104 \{}
+\DoxyCodeLine{105     map<string, Jugador>::iterator it;}
+\DoxyCodeLine{106     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < v.size(); ++i) \{}
+\DoxyCodeLine{107         it = j.\mbox{\hyperlink{class_cjt__jugadores_a1bf856d7e6a1c135707e4fc7b2a61767}{consultar\_conjunto}}(\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].\mbox{\hyperlink{class_torneo_a07a49e6996e995b550d2b803c86638ba}{nombre}});}
+\DoxyCodeLine{108         it-\/>second.actu\_stats(\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].game, \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].set, \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].match, \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].puntos);}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_a8e6b0d35b348318bc05ff35f3f87a67b}\label{class_torneo_a8e6b0d35b348318bc05ff35f3f87a67b}} 
+\index{Torneo@{Torneo}!ampliar\_participantes@{ampliar\_participantes}}
+\index{ampliar\_participantes@{ampliar\_participantes}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{ampliar\_participantes()}{ampliar\_participantes()}}
+{\footnotesize\ttfamily void Torneo\+::ampliar\+\_\+participantes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_participantes}{Participantes}}}]{part }\end{DoxyParamCaption})}
+
+
+
+Función usada para añadir los participantes al vector jug desde el conjunto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape part} es uno de los participantes del torneo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha añadido al participante en el vector 
+\end{DoxyPostcond}
+
+
+Definición en la línea 112 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{113 \{}
+\DoxyCodeLine{114     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}.push\_back(part);}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_a4e555b4e564592f3b6b848467e33235d}\label{class_torneo_a4e555b4e564592f3b6b848467e33235d}} 
+\index{Torneo@{Torneo}!quitar\_puntos@{quitar\_puntos}}
+\index{quitar\_puntos@{quitar\_puntos}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{quitar\_puntos()}{quitar\_puntos()}}
+{\footnotesize\ttfamily void Torneo\+::quitar\+\_\+puntos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}} \&}]{j }\end{DoxyParamCaption})}
+
+
+
+Elimina los puntos de la edición anterior. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape \mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}}} es el conjunto no vacío de jugadores 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han eliminado los puntos de la edición de la edición anterior 
+\end{DoxyPostcond}
+
+
+Definición en la línea 117 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{118 \{}
+\DoxyCodeLine{119     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.empty()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{120     \textcolor{keywordflow}{for} (map<string, int>::iterator it = \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.begin(); it != \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.end(); ++it) \{}
+\DoxyCodeLine{121         \textcolor{keywordflow}{if} (j.\mbox{\hyperlink{class_cjt__jugadores_a43fba38b9205ac64c778aa0a8d8e8180}{existe\_jugador}}(it-\/>first)) \{}
+\DoxyCodeLine{122         map<string, Jugador>::iterator it2 = j.\mbox{\hyperlink{class_cjt__jugadores_a1bf856d7e6a1c135707e4fc7b2a61767}{consultar\_conjunto}}(it-\/>first);}
+\DoxyCodeLine{123         it2-\/>second.modificar\_puntos(it-\/>second);}
+\DoxyCodeLine{124         \}}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_ab25fa0b6dbdd6327749f5344c851c66f}\label{class_torneo_ab25fa0b6dbdd6327749f5344c851c66f}} 
+\index{Torneo@{Torneo}!puntos\_0@{puntos\_0}}
+\index{puntos\_0@{puntos\_0}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{puntos\_0()}{puntos\_0()}}
+{\footnotesize\ttfamily void Torneo\+::puntos\+\_\+0 (\begin{DoxyParamCaption}\item[{const string \&}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Pone los puntos a 0 en caso de eliminar jugadores. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape nombre} es el nombre de un presunto jugador 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han puesto los puntos a cero del jugador (en caso de que existe) 
+\end{DoxyPostcond}
+
+
+Definición en la línea 128 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129 \{}
+\DoxyCodeLine{130     map<string, int>::iterator it = \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.find(\mbox{\hyperlink{class_torneo_a07a49e6996e995b550d2b803c86638ba}{nombre}});}
+\DoxyCodeLine{131     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.end()) it-\/>second = 0;}
+\DoxyCodeLine{132 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}\label{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}} 
+\index{Torneo@{Torneo}!inscripciones\_t@{inscripciones\_t}}
+\index{inscripciones\_t@{inscripciones\_t}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{inscripciones\_t()}{inscripciones\_t()}}
+{\footnotesize\ttfamily Bin\+Tree$<$ int $>$ Torneo\+::inscripciones\+\_\+t (\begin{DoxyParamCaption}\item[{int}]{nodos,  }\item[{int}]{n,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Crea el arbol de inscripciones. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha creado el árbol con los valores de los jugadores inscritos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 134 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{135 \{}
+\DoxyCodeLine{136     \textcolor{keywordflow}{if} (n <= nodos) \{}
+\DoxyCodeLine{137         cout << pos << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[pos -\/ 1].nombre;}
+\DoxyCodeLine{138         \textcolor{keywordflow}{return} BinTree<int>(pos);}
+\DoxyCodeLine{139         }
+\DoxyCodeLine{140     \}}
+\DoxyCodeLine{141     nodos *= 2;}
+\DoxyCodeLine{142     \textcolor{keywordflow}{if} ((nodos > n) and (nodos -\/ n >= pos)) \{}
+\DoxyCodeLine{143         cout << pos << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[pos -\/ 1].nombre;}
+\DoxyCodeLine{144         \textcolor{keywordflow}{return} BinTree<int>(pos);}
+\DoxyCodeLine{145     \}}
+\DoxyCodeLine{146     BinTree<int> iz, der;}
+\DoxyCodeLine{147     cout << \textcolor{stringliteral}{"{}("{}};}
+\DoxyCodeLine{148     iz = \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\_t}}(nodos, n, pos);}
+\DoxyCodeLine{149     cout << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{150     der = \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\_t}}(nodos, n, nodos + 1 -\/ pos);}
+\DoxyCodeLine{151     cout << \textcolor{charliteral}{')'};}
+\DoxyCodeLine{152     \textcolor{keywordflow}{return} BinTree<int>(pos, iz, der);}
+\DoxyCodeLine{153 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_abcd9605fb301989364fef836ef3069a9}\label{class_torneo_abcd9605fb301989364fef836ef3069a9}} 
+\index{Torneo@{Torneo}!inscripciones@{inscripciones}}
+\index{inscripciones@{inscripciones}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{inscripciones()}{inscripciones()}}
+{\footnotesize\ttfamily void Torneo\+::inscripciones (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Carga los enfrentamientos al árbol implícito del torneo. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un torneo con un conjunto de participantes 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha creado el árbol con el orden de esos enfrentamientos y se ha impreso el mismo 
+\end{DoxyPostcond}
+
+
+Definición en la línea 155 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{155                                 \{}
+\DoxyCodeLine{156     \mbox{\hyperlink{class_torneo_abb8a79a6205d5e7ff35f59bf285a49ab}{enfrentamientos}} = \mbox{\hyperlink{class_torneo_a9032a395eece6293cfb1902fcdbe73c7}{inscripciones\_t}}(1, n, 1);}
+\DoxyCodeLine{157     cout << endl;}
+\DoxyCodeLine{158 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_ac3a1207a7d22feb41c1c4ebc9a917d11}\label{class_torneo_ac3a1207a7d22feb41c1c4ebc9a917d11}} 
+\index{Torneo@{Torneo}!results@{results}}
+\index{results@{results}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{results()}{results()}}
+{\footnotesize\ttfamily void Torneo\+::results (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} \&}]{c,  }\item[{\mbox{\hyperlink{class_cjt__jugadores}{Cjt\+\_\+jugadores}} \&}]{j }\end{DoxyParamCaption})}
+
+
+
+Carga los resultados de los partidos del torneo. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un torneo ya iniciado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han modificado los arboles y printeado los resultados 
+\end{DoxyPostcond}
+
+
+Definición en la línea 160 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{161 \{}
+\DoxyCodeLine{162     \mbox{\hyperlink{class_torneo_adb0ae255d28e1df379cb0484a5cdaf4f}{resultados}} = \mbox{\hyperlink{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}{i\_results}}();}
+\DoxyCodeLine{163     \mbox{\hyperlink{class_torneo_a1e8934653d38fb4973de851d56b44c04}{actualizar\_enfrentamientos}}(\mbox{\hyperlink{class_torneo_adb0ae255d28e1df379cb0484a5cdaf4f}{resultados}}, \mbox{\hyperlink{class_torneo_abb8a79a6205d5e7ff35f59bf285a49ab}{enfrentamientos}}, 1, c);}
+\DoxyCodeLine{164     \mbox{\hyperlink{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}{escribir\_resultados}}(\mbox{\hyperlink{class_torneo_adb0ae255d28e1df379cb0484a5cdaf4f}{resultados}}, \mbox{\hyperlink{class_torneo_abb8a79a6205d5e7ff35f59bf285a49ab}{enfrentamientos}});}
+\DoxyCodeLine{165     cout << endl;}
+\DoxyCodeLine{166     \mbox{\hyperlink{class_torneo_a4e555b4e564592f3b6b848467e33235d}{quitar\_puntos}}(j);}
+\DoxyCodeLine{167     \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.clear();}
+\DoxyCodeLine{168     \mbox{\hyperlink{class_torneo_afd4eee9ac830bf0857623c6c163c7277}{escribir\_puntos}}();}
+\DoxyCodeLine{169     \mbox{\hyperlink{class_torneo_a452950d3882b8b579778ee467f313f21}{actualizar\_jugadores}}(\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}, j); }
+\DoxyCodeLine{170     \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}} = vector<Participantes>(0);}
+\DoxyCodeLine{171 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}\label{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}} 
+\index{Torneo@{Torneo}!i\_results@{i\_results}}
+\index{i\_results@{i\_results}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{i\_results()}{i\_results()}}
+{\footnotesize\ttfamily Bin\+Tree$<$ string $>$ Torneo\+::i\+\_\+results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea el arbol de resultados. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha creado el arbol con los sets de los partidos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 173 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{174 \{}
+\DoxyCodeLine{175     \textcolor{keywordtype}{string} partido;}
+\DoxyCodeLine{176     cin >> partido;}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178     \textcolor{keywordflow}{if} (partido != \textcolor{stringliteral}{"{}0"{}}) \{}
+\DoxyCodeLine{179         BinTree<string> e, d;}
+\DoxyCodeLine{180         e = \mbox{\hyperlink{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}{i\_results}}();}
+\DoxyCodeLine{181         d = \mbox{\hyperlink{class_torneo_a6acedacc9b7cea00978c4a3f72a320f0}{i\_results}}();}
+\DoxyCodeLine{182         \textcolor{keywordflow}{return} BinTree<string>(partido, e, d);}
+\DoxyCodeLine{183     \}}
+\DoxyCodeLine{184        \textcolor{keywordflow}{return} BinTree<string> ();}
+\DoxyCodeLine{185 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}\label{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}} 
+\index{Torneo@{Torneo}!escribir\_resultados@{escribir\_resultados}}
+\index{escribir\_resultados@{escribir\_resultados}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{escribir\_resultados()}{escribir\_resultados()}}
+{\footnotesize\ttfamily void Torneo\+::escribir\+\_\+resultados (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{R,  }\item[{const Bin\+Tree$<$ int $>$ \&}]{T }\end{DoxyParamCaption})}
+
+
+
+Imprime los resultados del torneo. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el susodicho torneo, con su arbol de emparejamientos y resultados 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han impreso tanto los enfrentamientos como los ganadores de puntos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 187 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{188 \{}
+\DoxyCodeLine{189     \textcolor{keywordflow}{if} (not R.empty()) \{}
+\DoxyCodeLine{190         cout << \textcolor{charliteral}{'('};}
+\DoxyCodeLine{191         cout << T.left().value() << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[T.left().value()-\/1].nombre;}
+\DoxyCodeLine{192         cout << \textcolor{stringliteral}{"{} vs "{}};}
+\DoxyCodeLine{193         cout << T.right().value() << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[T.right().value()-\/1].nombre;}
+\DoxyCodeLine{194         cout << \textcolor{charliteral}{' '} << R.value();}
+\DoxyCodeLine{195         \mbox{\hyperlink{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}{escribir\_resultados}}(R.left(), T.left());}
+\DoxyCodeLine{196         \mbox{\hyperlink{class_torneo_a58e1db25a2b28a7cd60d3ce098cb9c6a}{escribir\_resultados}}(R.right(), T.right());}
+\DoxyCodeLine{197         cout << \textcolor{charliteral}{')'};}
+\DoxyCodeLine{198     \}}
+\DoxyCodeLine{199 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_afd4eee9ac830bf0857623c6c163c7277}\label{class_torneo_afd4eee9ac830bf0857623c6c163c7277}} 
+\index{Torneo@{Torneo}!escribir\_puntos@{escribir\_puntos}}
+\index{escribir\_puntos@{escribir\_puntos}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{escribir\_puntos()}{escribir\_puntos()}}
+{\footnotesize\ttfamily void Torneo\+::escribir\+\_\+puntos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se imprimen los jugadores con los puntos ganados y se añaden al map de última edición. 
+
+\begin{DoxyPrecond}{Precondición}
+Se ha finalizado un torneo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han impreso los jugadores con sus puntuajes y se han añadido a la última edición 
+\end{DoxyPostcond}
+
+
+Definición en la línea 201 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{202 \{}
+\DoxyCodeLine{203     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}.size(); ++i) \{}
+\DoxyCodeLine{204         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].puntos != 0) cout << i+1 << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].nombre << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].puntos << endl;}
+\DoxyCodeLine{205         \mbox{\hyperlink{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}{ultima\_ed}}.insert(make\_pair(\mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].\mbox{\hyperlink{class_torneo_a07a49e6996e995b550d2b803c86638ba}{nombre}}, \mbox{\hyperlink{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}{jug}}[i].puntos));}
+\DoxyCodeLine{206     \}}
+\DoxyCodeLine{207 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneo_af59ca01aafd56eb6ddb0b4174d8274e8}\label{class_torneo_af59ca01aafd56eb6ddb0b4174d8274e8}} 
+\index{Torneo@{Torneo}!escribir\_categoria@{escribir\_categoria}}
+\index{escribir\_categoria@{escribir\_categoria}!Torneo@{Torneo}}
+\doxysubsubsection{\texorpdfstring{escribir\_categoria()}{escribir\_categoria()}}
+{\footnotesize\ttfamily void Torneo\+::escribir\+\_\+categoria (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Escribe el nombre de la categoría. 
+
+\begin{DoxyPrecond}{Precondición}
+\mbox{\hyperlink{class_cjt__categorias}{Cjt\+\_\+categorias}} es un conjunto no vacío 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito el nombre de la categoría 
+\end{DoxyPostcond}
+
+
+Definición en la línea 209 del archivo Torneo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{210 \{}
+\DoxyCodeLine{211     c.\mbox{\hyperlink{class_cjt__categorias_a1ed1da2f7641e3ba2554eb13f69b68c9}{consultar\_categoria}}(\mbox{\hyperlink{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}{cat}});}
+\DoxyCodeLine{212 \}}
 
 \end{DoxyCode}
 
@@ -621,7 +620,11 @@ Definición en la línea 180 del archivo Torneo.\+cc.
 
 
 
-Definición en la línea 39 del archivo Torneo.\+hh.
+Identificador de cada torneo. 
+
+
+
+Definición en la línea 40 del archivo Torneo.\+hh.
 
 \mbox{\Hypertarget{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}\label{class_torneo_a1a93990b1100448d418b2b8ae4ff1068}} 
 \index{Torneo@{Torneo}!cat@{cat}}
@@ -631,7 +634,11 @@ Definición en la línea 39 del archivo Torneo.\+hh.
 
 
 
-Definición en la línea 40 del archivo Torneo.\+hh.
+Entero que representa la categoría del torneo. 
+
+
+
+Definición en la línea 41 del archivo Torneo.\+hh.
 
 \mbox{\Hypertarget{class_torneo_a3c124117c113604177778d95db2204b7}\label{class_torneo_a3c124117c113604177778d95db2204b7}} 
 \index{Torneo@{Torneo}!n\_participantes@{n\_participantes}}
@@ -641,7 +648,11 @@ Definición en la línea 40 del archivo Torneo.\+hh.
 
 
 
-Definición en la línea 41 del archivo Torneo.\+hh.
+Número de participantes del torneo. 
+
+
+
+Definición en la línea 42 del archivo Torneo.\+hh.
 
 \mbox{\Hypertarget{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}\label{class_torneo_a928a3b1409b9f30ee4ef2d76329d6e0f}} 
 \index{Torneo@{Torneo}!jug@{jug}}
@@ -651,7 +662,11 @@ Definición en la línea 41 del archivo Torneo.\+hh.
 
 
 
-Definición en la línea 42 del archivo Torneo.\+hh.
+Vector con el conjuntode participantes del torneo. 
+
+
+
+Definición en la línea 43 del archivo Torneo.\+hh.
 
 \mbox{\Hypertarget{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}\label{class_torneo_ad253ad97ab917a206bb03bb1553a0c91}} 
 \index{Torneo@{Torneo}!ultima\_ed@{ultima\_ed}}
@@ -661,7 +676,11 @@ Definición en la línea 42 del archivo Torneo.\+hh.
 
 
 
-Definición en la línea 43 del archivo Torneo.\+hh.
+Diccionario que almacena los jugadores y los puntos del último torneo disputado. 
+
+
+
+Definición en la línea 44 del archivo Torneo.\+hh.
 
 \mbox{\Hypertarget{class_torneo_abb8a79a6205d5e7ff35f59bf285a49ab}\label{class_torneo_abb8a79a6205d5e7ff35f59bf285a49ab}} 
 \index{Torneo@{Torneo}!enfrentamientos@{enfrentamientos}}
@@ -671,7 +690,11 @@ Definición en la línea 43 del archivo Torneo.\+hh.
 
 
 
-Definición en la línea 44 del archivo Torneo.\+hh.
+Árbol con los enfrentamientos al iniciar torneo. 
+
+
+
+Definición en la línea 45 del archivo Torneo.\+hh.
 
 \mbox{\Hypertarget{class_torneo_adb0ae255d28e1df379cb0484a5cdaf4f}\label{class_torneo_adb0ae255d28e1df379cb0484a5cdaf4f}} 
 \index{Torneo@{Torneo}!resultados@{resultados}}
@@ -681,7 +704,11 @@ Definición en la línea 44 del archivo Torneo.\+hh.
 
 
 
-Definición en la línea 45 del archivo Torneo.\+hh.
+Árbol con los resultados de los partidos de los torneos. 
+
+
+
+Definición en la línea 46 del archivo Torneo.\+hh.
 
 
 

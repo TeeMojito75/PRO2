@@ -14,9 +14,9 @@ void \mbox{\hyperlink{class_cjt__categorias_a14842f3c922d4dd130224f57ead4f3cb}{l
 \begin{DoxyCompactList}\small\item\em Imprime las categorías en orden creciente de identificador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__categorias_abd4602a61de779b1185c40fb87865598}{lectura\+\_\+ini\+\_\+cat}} ()
 \begin{DoxyCompactList}\small\item\em Lee por consola los datos iniciales de las categorías y los almacena en un vector$<$categoria$>$ categorias. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_cjt__categorias_a9bad7f93c577ec23524e41a8f39e5277}{existe\+\_\+categoria}} (int cat)
+bool \mbox{\hyperlink{class_cjt__categorias_a62e6f1c422f186f99f5720086c9d7b07}{existe\+\_\+categoria}} (int cat) const
 \begin{DoxyCompactList}\small\item\em Comprueba si la categoría existe ya en el conjunto. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cjt__categorias_ae2edee3077dcf1c01e04416718ac3927}{consultar\+\_\+categoria}} (int cat)
+void \mbox{\hyperlink{class_cjt__categorias_a1ed1da2f7641e3ba2554eb13f69b68c9}{consultar\+\_\+categoria}} (int cat) const
 \begin{DoxyCompactList}\small\item\em Consulta la categoría pasando su posición. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}} (int cat, int nivel) const
 \begin{DoxyCompactList}\small\item\em Devuelve la puntuación por nivel. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -24,15 +24,15 @@ int \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{pu
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ \mbox{\hyperlink{structcategoria}{categoria}} $>$ \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}
-\begin{DoxyCompactList}\small\item\em Vector de categorias, usado para trabajar con el conjunto de estas y un entero k que representa el número máximo de niveles. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Vector de categorías. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Número máximo de niveles. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
 Representa el conjunto de categorías de los torneos. 
 
-Definición en la línea 27 del archivo Cjt\+\_\+categorias.\+hh.
+Definición en la línea 28 del archivo Cjt\+\_\+categorias.\+hh.
 
 
 
@@ -59,9 +59,8 @@ Definición en la línea 4 del archivo Cjt\+\_\+categorias.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{4                                \{}
-\DoxyCodeLine{5     vector<categoria> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}(0);}
-\DoxyCodeLine{6 }
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     vector<categoria> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}(0);}
 \DoxyCodeLine{7 \}}
 
 \end{DoxyCode}
@@ -79,26 +78,26 @@ Definición en la línea 4 del archivo Cjt\+\_\+categorias.\+cc.
 Imprime las categorías en orden creciente de identificador. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto} 
+{\itshape Cierto}, ya que se garantiza la existencia de un conjunto de categorías 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Se ha impreso el conjunto con sus identificadores, el nombre y la tabla de puntos 
 \end{DoxyPostcond}
 
 
-Definición en la línea 29 del archivo Cjt\+\_\+categorias.\+cc.
+Definición en la línea 41 del archivo Cjt\+\_\+categorias.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29                                        \{}
-\DoxyCodeLine{30     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}.size();}
-\DoxyCodeLine{31     cout << n << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} << endl;}
-\DoxyCodeLine{32     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
-\DoxyCodeLine{33         cout << \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].nombre;}
-\DoxyCodeLine{34         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}}; ++j) cout << \textcolor{charliteral}{' '} <<  \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].puntuaciones[j];}
-\DoxyCodeLine{35         cout << endl;}
-\DoxyCodeLine{36     \}}
-\DoxyCodeLine{37 \}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}.size();}
+\DoxyCodeLine{44     cout << n << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} << endl;}
+\DoxyCodeLine{45     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{46         cout << \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].nombre;}
+\DoxyCodeLine{47         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}}; ++j) cout << \textcolor{charliteral}{' '} <<  \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].puntuaciones[j];}
+\DoxyCodeLine{48         cout << endl;}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__categorias_abd4602a61de779b1185c40fb87865598}\label{class_cjt__categorias_abd4602a61de779b1185c40fb87865598}} 
@@ -124,27 +123,27 @@ Definición en la línea 9 del archivo Cjt\+\_\+categorias.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{9                                      \{}
-\DoxyCodeLine{10     \textcolor{keywordtype}{int} cats, \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}};}
-\DoxyCodeLine{11     cin >> cats >> \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}};}
-\DoxyCodeLine{12     \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} = \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}};}
-\DoxyCodeLine{13     \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}} = vector<categoria> (cats);}
-\DoxyCodeLine{14     }
-\DoxyCodeLine{15     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < cats; ++i) \{}
-\DoxyCodeLine{16         \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].puntuaciones = vector<int> (\mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}});}
-\DoxyCodeLine{17         cin >> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].nombre;}
-\DoxyCodeLine{18     \}}
-\DoxyCodeLine{19     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < cats; ++j) \{}
-\DoxyCodeLine{20         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} = 0; k < puntos; ++k) cin >> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[j].puntuaciones[\mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}}];}
-\DoxyCodeLine{21     \}}
-\DoxyCodeLine{22 \}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} cats, \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}};}
+\DoxyCodeLine{12     cin >> cats >> \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}};}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} = \mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}};}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}} = vector<categoria> (cats);}
+\DoxyCodeLine{15     }
+\DoxyCodeLine{16     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < cats; ++i) \{}
+\DoxyCodeLine{17         \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].puntuaciones = vector<int> (\mbox{\hyperlink{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}{puntos}});}
+\DoxyCodeLine{18         cin >> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[i].nombre;}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < cats; ++j) \{}
+\DoxyCodeLine{21         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}} = 0; k < puntos; ++k) cin >> \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[j].puntuaciones[\mbox{\hyperlink{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}{k}}];}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_cjt__categorias_a9bad7f93c577ec23524e41a8f39e5277}\label{class_cjt__categorias_a9bad7f93c577ec23524e41a8f39e5277}} 
+\mbox{\Hypertarget{class_cjt__categorias_a62e6f1c422f186f99f5720086c9d7b07}\label{class_cjt__categorias_a62e6f1c422f186f99f5720086c9d7b07}} 
 \index{Cjt\_categorias@{Cjt\_categorias}!existe\_categoria@{existe\_categoria}}
 \index{existe\_categoria@{existe\_categoria}!Cjt\_categorias@{Cjt\_categorias}}
 \doxysubsubsection{\texorpdfstring{existe\_categoria()}{existe\_categoria()}}
-{\footnotesize\ttfamily bool Cjt\+\_\+categorias\+::existe\+\_\+categoria (\begin{DoxyParamCaption}\item[{int}]{cat }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Cjt\+\_\+categorias\+::existe\+\_\+categoria (\begin{DoxyParamCaption}\item[{int}]{cat }\end{DoxyParamCaption}) const}
 
 
 
@@ -158,21 +157,21 @@ Devuelve 1 si la categoría ya existe, 0 en caso contrario
 \end{DoxyPostcond}
 
 
-Definición en la línea 24 del archivo Cjt\+\_\+categorias.\+cc.
+Definición en la línea 25 del archivo Cjt\+\_\+categorias.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{24                                              \{}
-\DoxyCodeLine{25     \textcolor{keywordflow}{if} (cat > \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}.size() or cat <= 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{26     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{27 \}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{keywordflow}{if} (cat > \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}.size() or cat <= 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{28     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{29 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_cjt__categorias_ae2edee3077dcf1c01e04416718ac3927}\label{class_cjt__categorias_ae2edee3077dcf1c01e04416718ac3927}} 
+\mbox{\Hypertarget{class_cjt__categorias_a1ed1da2f7641e3ba2554eb13f69b68c9}\label{class_cjt__categorias_a1ed1da2f7641e3ba2554eb13f69b68c9}} 
 \index{Cjt\_categorias@{Cjt\_categorias}!consultar\_categoria@{consultar\_categoria}}
 \index{consultar\_categoria@{consultar\_categoria}!Cjt\_categorias@{Cjt\_categorias}}
 \doxysubsubsection{\texorpdfstring{consultar\_categoria()}{consultar\_categoria()}}
-{\footnotesize\ttfamily void Cjt\+\_\+categorias\+::consultar\+\_\+categoria (\begin{DoxyParamCaption}\item[{int}]{cat }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Cjt\+\_\+categorias\+::consultar\+\_\+categoria (\begin{DoxyParamCaption}\item[{int}]{cat }\end{DoxyParamCaption}) const}
 
 
 
@@ -186,13 +185,13 @@ Se ha devuelto el nombre de la categoría
 \end{DoxyPostcond}
 
 
-Definición en la línea 39 del archivo Cjt\+\_\+categorias.\+cc.
+Definición en la línea 31 del archivo Cjt\+\_\+categorias.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{39                                                 \{}
-\DoxyCodeLine{40     cout << \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[cat-\/1].nombre << endl;}
-\DoxyCodeLine{41 \}}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     cout << \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[cat-\/1].nombre << endl;}
+\DoxyCodeLine{34 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}\label{class_cjt__categorias_ab171dd65b607883a194caf1c231466e6}} 
@@ -213,13 +212,13 @@ Se ha devuelto la puntuación correspondiente
 \end{DoxyPostcond}
 
 
-Definición en la línea 43 del archivo Cjt\+\_\+categorias.\+cc.
+Definición en la línea 36 del archivo Cjt\+\_\+categorias.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{43                                                    \{}
-\DoxyCodeLine{44     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[cat-\/1].puntuaciones[nivel];}
-\DoxyCodeLine{45 \}}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__categorias_ace3fcdca1dd9fc59c0d5f2892d21ad34}{categorias}}[cat-\/1].puntuaciones[nivel];}
+\DoxyCodeLine{39 \}}
 
 \end{DoxyCode}
 
@@ -233,11 +232,11 @@ Definición en la línea 43 del archivo Cjt\+\_\+categorias.\+cc.
 
 
 
-Vector de categorias, usado para trabajar con el conjunto de estas y un entero k que representa el número máximo de niveles. 
+Vector de categorías. 
 
 
 
-Definición en la línea 33 del archivo Cjt\+\_\+categorias.\+hh.
+Definición en la línea 32 del archivo Cjt\+\_\+categorias.\+hh.
 
 \mbox{\Hypertarget{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}\label{class_cjt__categorias_a0ca5ed2e908d6c8e35f1a8a040ffdd6b}} 
 \index{Cjt\_categorias@{Cjt\_categorias}!k@{k}}
@@ -247,7 +246,11 @@ Definición en la línea 33 del archivo Cjt\+\_\+categorias.\+hh.
 
 
 
-Definición en la línea 34 del archivo Cjt\+\_\+categorias.\+hh.
+Número máximo de niveles. 
+
+
+
+Definición en la línea 33 del archivo Cjt\+\_\+categorias.\+hh.
 
 
 

@@ -1,14 +1,14 @@
-# Doxyfile sesion 8
+# Doxyfile PRO2
 
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = utf-8
-PROJECT_NAME           = "Laboratorio de PRO2. Ejercicio 'Gestión de Ranking de tenis'."
-PROJECT_NUMBER         = "version 12.0 13-mayo-2022, Joan Carles Veny"
+PROJECT_NAME           = "Práctica PRO2: Circuito de torneos de tenis"
+PROJECT_NUMBER         = "Autor: Joan Carles Veny"
 OUTPUT_DIRECTORY       = "./DOC"
 CREATE_SUBDIRS         = NO
-OUTPUT_LANGUAGE        = Spanish
+OUTPUT_LANGUAGE        = Spanish 
 BRIEF_MEMBER_DESC      = YES
 REPEAT_BRIEF           = YES
 ABBREVIATE_BRIEF       = "The $name class" \
@@ -51,7 +51,7 @@ TYPEDEF_HIDES_STRUCT   = NO
 # Build related configuration options
 #---------------------------------------------------------------------------
 EXTRACT_ALL            = YES
-EXTRACT_PRIVATE        = YES
+EXTRACT_PRIVATE        = YES #para que los elementos privados aparezcan en la documentacion
 EXTRACT_STATIC         = NO
 EXTRACT_LOCAL_CLASSES  = YES
 EXTRACT_LOCAL_METHODS  = NO
@@ -95,11 +95,13 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 INPUT                  = "."
 INPUT_ENCODING         = utf-8
-FILE_PATTERNS          = *.cc, *.hh, *.hpp, main*.cpp, program*.cc, pro2*.cpp, pro2*.cc
+FILE_PATTERNS          = *.hh \
+												 *.cc #para que todos los ficheros c++ intervengan en la documentacion
 RECURSIVE              = NO
-EXCLUDE                = *~ , readbool.hh , *.o , BinTree.hh
+EXCLUDE                = *~ \
+                         BinTree.hh #se excluye BinTree.hh
 EXCLUDE_SYMLINKS       = NO
-EXCLUDE_PATTERNS       = *~ 
+EXCLUDE_PATTERNS       = *~
 EXCLUDE_SYMBOLS        = 
 EXAMPLE_PATH           = 
 EXAMPLE_PATTERNS       = *

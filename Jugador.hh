@@ -14,27 +14,20 @@ using namespace std;
 
 /** @class Jugador
     @brief Representa un jugador del Ranking
-    
-    Cada jugador presenta los siguientes parámetros:
-    - Un string como identificador
-    - Un entero representando los torneos disputados
-    - Una pareja de enteros para los partidos, sets y juegos ganados y perdidos
-    - Un entero para la posición y puntos, respectivamente    
 */
 
-class Jugador {
-    
+class Jugador 
+{
     private:
-	string nombre;
-	int torneos_disputados;
-	pair<int, int> partidos;
-	pair<int, int> sets;
-	pair<int, int> juegos;
-	int posicion;
-	int puntos;
+	string nombre; //!< Nombre de cada jugador
+	int torneos_disputados; //!< Número de torneos disputados
+	pair<int, int> partidos; //!< Pareja de partidos ganados/perdidos
+	pair<int, int> sets; //!< Pareja de sets ganados/perdidos
+	pair<int, int> juegos; //!< Pareja de juegos ganados/perdidos
+	int posicion; //!< Posición en el ranking
+	int puntos; //!< Puntos de cada jugador
 		    
     public:
-
     //constructora
     /** @brief Creadora por defecto
     	\pre <em>Cierto</em>
@@ -82,7 +75,7 @@ class Jugador {
 
     //Consultora
     /** @brief Devuelve el valor de la posición en ranking
-        \pre posicion >= 0;
+        \pre <em>Cierto</em>, se garantiza la existencia del jugador con un int posición
         \post Se ha devuelto el valor posición del jugador
     */
     int consultar_pos() const;

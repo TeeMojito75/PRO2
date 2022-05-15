@@ -5,7 +5,6 @@
 #ifndef CJT_TORNEOS_HH
 #define CJT_TORNEOS_HH
 
-#include "Cjt_jugadores.hh"
 #include "Torneo.hh"
 
 #ifndef NO_DIAGRAM
@@ -23,7 +22,7 @@ using namespace std;
 class Cjt_torneos{
 
     private:
-    map<string, Torneo> torneos;
+    map<string, Torneo> torneos; //!< Conjunto de los torneos
 
     public:
     //Modificadoras

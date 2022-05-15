@@ -1,6 +1,6 @@
 /**  @mainpage Circuito de Torneos de Tenis con Ranking.
 
-El programa principal se encuentra en el modulo <em>main.cc</em>
+El programa principal se encuentra en el modulo <em>program.cc</em>
 Las clases diseñadas para realizar la práctica a partir de la especificación son las siguientes:
 <ul>
    <li>Torneo</li>
@@ -10,14 +10,6 @@ Las clases diseñadas para realizar la práctica a partir de la especificación 
    <li>Jugador</li>
 </ul>
 */
-
-/** @file program.cc
-    @brief programa principal para la práctica <em>Gestión de torneos de tenis</em>
-*/ 
-
-#ifndef NO_DIAGRAM
-#include <iostream>
-#endif
 
 /** @file program.cc
     @brief programa principal para la práctica <em>Gestión de torneos de tenis</em>
@@ -47,9 +39,11 @@ int main() {
 
     string cm;
     cin >> cm;
-    while (cm != "fin") {
+    while (cm != "fin") 
+	{
 	
-	    if (cm == "nuevo_jugador" or cm == "nj") {
+	    if (cm == "nuevo_jugador" or cm == "nj") 
+		{
 			cout << '#' << cm;
 			string nombre;
 			cin >> nombre;
@@ -60,7 +54,8 @@ int main() {
 			}
 		} 
 
-		else if (cm == "nuevo_torneo" or cm == "nt") {
+		else if (cm == "nuevo_torneo" or cm == "nt") 
+		{
 			string nombre;
 			int cat;
 			cin >> nombre >> cat;
@@ -74,7 +69,8 @@ int main() {
 		
 		}
           
-		else if (cm == "baja_jugador" or cm == "bj") {
+		else if (cm == "baja_jugador" or cm == "bj") 
+		{
 			string nombre;
 			cin >> nombre;
 			cout << '#' << cm << ' ' << nombre << endl;
@@ -86,7 +82,8 @@ int main() {
 	 	   }
 		}
 
-		else if (cm == "baja_torneo" or cm == "bt") {
+		else if (cm == "baja_torneo" or cm == "bt") 
+		{
 			string nombre;
 			cin >> nombre;
 			cout << '#' << cm << ' ' << nombre << endl;
@@ -97,30 +94,36 @@ int main() {
 	    	}
 		}
 	
-		else if (cm == "iniciar_torneo" or cm == "it") { 
+		else if (cm == "iniciar_torneo" or cm == "it") 
+		{ 
 			string nombre;
 			cin >> nombre;
 		 	cout << '#' << cm << ' ' << nombre << endl; 
 			t.iniciar_torneo(nombre, j);
 		}
-		else if (cm == "finalizar_torneo" or cm == "ft") {
+
+		else if (cm == "finalizar_torneo" or cm == "ft") 
+		{
 			string nombre;
 			cin >> nombre;
 			cout << '#' << cm << ' ' << nombre << endl;
 			t.finalizar_torneo(nombre, c, j); 
 		}
 	
-		else if (cm == "listar_ranking" or cm == "lr") {
+		else if (cm == "listar_ranking" or cm == "lr") 
+		{
 			cout << '#' << cm << endl;
 		    j.listar_ranking();
 		}
 		
-		else if (cm == "listar_jugadores" or cm == "lj") {
+		else if (cm == "listar_jugadores" or cm == "lj")
+		{
 			cout << '#' << cm << endl;
 		    j.listar_jugadores();
 		}
 		
-		else if (cm == "consultar_jugador" or cm == "cj") {
+		else if (cm == "consultar_jugador" or cm == "cj") 
+		{
 			string nombre;
 			cin >> nombre;
 			cout << '#' << cm << ' ' << nombre << endl;
@@ -128,12 +131,14 @@ int main() {
 	 		else j.consultar_jugador(nombre);
 		}
 		
-		else if (cm == "listar_torneos" or cm == "lt") {
+		else if (cm == "listar_torneos" or cm == "lt") 
+		{
 			cout << '#' << cm << endl;
 		    t.listar_torneos(c);
 		}
 		
-		else if (cm == "listar_categorias" or cm == "lc") {
+		else if (cm == "listar_categorias" or cm == "lc") 
+		{
 			cout << '#' << cm << endl;
 		    c.listar_categorias();
 		}

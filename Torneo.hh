@@ -1,13 +1,10 @@
 /** @file Torneo.hh
     @brief Especificación de la clase Torneo
-  */
-
-
+*/
 
 #ifndef TORNEO_HH
 #define TORNEO_HH
 
-#include "Jugador.hh"
 #include "Cjt_categorias.hh"
 #include "Cjt_jugadores.hh"
 
@@ -21,28 +18,32 @@
 /** @brief Estructura que representa los participantes de un torneo
     Cada participante presenta los mismos parámetros que un jugador del conjunto  
 */
-struct Participantes {
-	string nombre;
-	int puntos;
-	pair<int, int> match;
-	pair<int, int> set;
-	pair<int, int> game;
+struct Participantes 
+{
+	// Struct usada para separar el conjunto de jugadores con los jugadores de cada torneo.
+	// Se usan funciones para pasar los puntos al conjunto
+
+	string nombre; //!< Identificador de cada participante
+	int puntos; //!< Puntos que ha ganado el participante en el torneo
+	pair<int, int> match; //!< Par de partidos ganados/perdidos
+	pair<int, int> set; //!< Par de sets ganados/perdidos
+	pair<int, int> game; //!< Par de juegos ganados/perdidos
 };
 
 /** @class Torneo
     @brief Representa un torneo del circuito
 */ 
 
-class Torneo {
-
+class Torneo 
+{
     private:
-	string nombre;
-	int cat;
-	int n_participantes;
-	vector<Participantes> jug;	
-	map<string, int> ultima_ed;
-	BinTree<int> enfrentamientos;
-	BinTree<string> resultados;
+	string nombre; //!< Identificador de cada torneo
+	int cat; //!< Entero que representa la categoría del torneo
+	int n_participantes; //!< Número de participantes del torneo
+	vector<Participantes> jug; //!< Vector con el conjuntode participantes del torneo
+	map<string, int> ultima_ed; //!< Diccionario que almacena los jugadores y los puntos del último torneo disputado
+	BinTree<int> enfrentamientos; //!< Árbol con los enfrentamientos al iniciar torneo
+	BinTree<string> resultados; //!< Árbol con los resultados de los partidos de los torneos
 
     public:
 	//constructor 
@@ -66,6 +67,24 @@ class Torneo {
 	*/
 	void modificar_npart(int n);
 
+	/** @brief Actualiza el BinTree de enfrnetamientos
+		\pre Existe un torneo iniciado con un arbol de enfrentamientos
+		\post Se han actualizado los nodos del arbol de la forma solicitada
+    */
+    void actualizar_enfrentamientos(const BinTree<string>& R, BinTree<int>& T, int nivel, const Cjt_categorias& c);
+   
+    /** @brief Actualiza los jugadores con los puntos ganados
+		\pre <em>j</em> es un conjunto no vacio de jugadores y <em>jug</em> es el vector de participantes del torneo
+		\post Se han actualizado los parámetros del conjunto de jugadores
+	*/
+	void actualizar_jugadores(const vector<Participantes>& v, Cjt_jugadores& j);
+
+	/** @brief Función usada para añadir los participantes al vector jug desde el conjunto
+	   	\pre <em>part</em> es uno de los participantes del torneo
+	   	\post Se ha añadido al participante en el vector
+	*/
+	void ampliar_participantes(Participantes part);
+
 	/** @brief Elimina los puntos de la edición anterior
 	  	\pre <em>Cjt_jugadores</em> es el conjunto no vacío de jugadores
 	   	\post Se han eliminado los puntos de la edición de la edición anterior
@@ -77,19 +96,8 @@ class Torneo {
 	   	\post Se han puesto los puntos a cero del jugador (en caso de que existe)
 	*/
 	void puntos_0(const string& nombre);
-
-	/** @brief Escribe el nombre de la categoría
-	 	\pre Cjt_categorias es un conjunto no vacío
-	 	\post Se ha escrito el nombre de la categoría
-	*/
-	void escribir_categoria(Cjt_categorias& c);
-
-	/** @brief Función usada para añadir los participantes al vector jug desde el conjunto
-	   	\pre <em>part</em> es uno de los participantes del torneo
-	   	\post Se ha añadido al participante en el vector
-	*/
-	void ampliar_participantes(Participantes part);
 	
+	//Creación de los árboles
 	/** @brief Crea el arbol de inscripciones
 	   	\pre <em>cierto</em>
 	   	\post Se ha creado el árbol con los valores de los jugadores inscritos
@@ -114,6 +122,7 @@ class Torneo {
 	*/
 	BinTree<string> i_results();
 
+	//Funciones de escritura
 	/** @brief Imprime los resultados del torneo
         \pre Existe el susodicho torneo, con su arbol de emparejamientos y resultados
         \post Se han impreso tanto los enfrentamientos como los ganadores de puntos
@@ -126,16 +135,11 @@ class Torneo {
 	*/
 	void escribir_puntos();
 
-	/** @brief Actualiza el BinTree de enfrnetamientos
-		\pre Existe un torneo iniciado con un arbol de enfrentamientos
-		\post Se han actualizado los nodos del arbol de la forma solicitada
-    */
-    void actualizar_enfrentamientos(const BinTree<string>& R, BinTree<int>& T, int nivel, const Cjt_categorias& c);
-   
-    /** @brief Actualiza los jugadores con los puntos ganados
-		\pre <em>j</em> es un conjunto no vacio de jugadores y <em>jug</em> es el vector de participantes del torneo
-		\post Se han actualizado los parámetros del conjunto de jugadores
+	/** @brief Escribe el nombre de la categoría
+	 	\pre Cjt_categorias es un conjunto no vacío
+	 	\post Se ha escrito el nombre de la categoría
 	*/
-	void actualizar_jugadores(const vector<Participantes>& v, Cjt_jugadores& j);
+	void escribir_categoria(Cjt_categorias& c);
+	
 };		
 #endif

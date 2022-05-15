@@ -5,23 +5,23 @@
 #ifndef CJT_JUG_HH
 #define CJT_JUG_HH
 
-#include "Jugador.hh"
-
 #ifndef NO_DIAGRAM
 #include <iostream>
 #include <vector>
 #include <map>
 #endif
 
+#include "Jugador.hh"
+
 /** @class Cjt_jugadores
     @brief Representa el conjunto de jugadores del circuito
 */ 
 
-class Cjt_jugadores {
-
+class Cjt_jugadores 
+{
     private:
-    map<string, Jugador> jugadores;
-    vector<map<string, Jugador>::iterator> ranking;
+    map<string, Jugador> jugadores; //!< Diccionario para guardar el conjunto de jugadores en orden creciente por nombre
+    vector<map<string, Jugador>::iterator> ranking; //!< Vector de iteradores que representa el ranking
 
     public:
     //Modificadoras del conjunto
@@ -33,12 +33,12 @@ class Cjt_jugadores {
 
     /** @brief Elimina un jugador del conjunto
     	\pre <em>nombre</em> es un nombre de jugador
-	    \post El conjunto tiene n-1 jugadores, se ha actualizado el orden de la struct
+	    \post El conjunto tiene n-1 jugadores, se ha actualizado el orden del conjunto y del ranking
     */ 
     void eliminar_jugador(string& nombre);
 
-     /** @brief Actualiza las posiciones del ranking de jugadores
-        \pre Existe un vector de iteradores no vacios
+    /** @brief Actualiza las posiciones del ranking de jugadores
+        \pre <em>Cierto</em>, existe un vector de iteradores no vacio
         \post Se han actualizado las posiciones del ranking de acuerdo a la puntuación de los jugadores
     */
     void actualizar_ranking();
@@ -50,6 +50,7 @@ class Cjt_jugadores {
     */
     void lectura_ini_jug();
     
+    // Funciones de escritura
     /** @brief Lista por orden lexicográfico a los jugadores con sus estadísticas
 	    \pre Existe un conjunto no vacío de jugadores con sus atributos
 	    \post Se ha escrito por el canal de salida el listado de jugadores
@@ -66,8 +67,8 @@ class Cjt_jugadores {
     /** @brief Devuelve la suma de jugadores del circuito
     	\pre Existe un conjunto no vacío de jugadores
     	\post Se ha devuelto el nombre total de jugadores del conjunto
-     */ 
-    int num_jugadores();
+    */ 
+    int num_jugadores() const;
 
     /** @brief Comprueba si el jugador existe en el conjunto
 	    \pre <em>nombre</em> es el nombre de un jugador

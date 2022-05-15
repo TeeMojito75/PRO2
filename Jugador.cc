@@ -2,7 +2,8 @@
 #include <iostream>
 using namespace std;
 
-Jugador::Jugador() {
+Jugador::Jugador() 
+{
     nombre = "null";
     torneos_disputados = 0;
     partidos.first = 0;
@@ -15,7 +16,8 @@ Jugador::Jugador() {
     juegos.second = 0;
 }
 
-Jugador::Jugador(string nombre) {
+Jugador::Jugador(string nombre) 
+{
     this->nombre = nombre;
     torneos_disputados = 0;
     partidos.first = 0;
@@ -28,7 +30,8 @@ Jugador::Jugador(string nombre) {
     juegos.second = 0;
 }
 
-void Jugador::actu_stats(pair<int, int>& j, pair<int, int>& s, pair<int, int>& p, int punt) {
+void Jugador::actu_stats(pair<int, int>& j, pair<int, int>& s, pair<int, int>& p, int punt) 
+{
     this->juegos.first += j.first;
     this->juegos.second += j.second;
     this->partidos.first += p.first;
@@ -39,30 +42,35 @@ void Jugador::actu_stats(pair<int, int>& j, pair<int, int>& s, pair<int, int>& p
     this->torneos_disputados += 1;
 }
 
-void Jugador::modificar_posicion(const int pos) {
+void Jugador::modificar_posicion(const int pos) 
+{
     posicion = pos;
 }
 
-void Jugador::modificar_puntos(const int punt) {
+void Jugador::modificar_puntos(const int punt) 
+{
     puntos = puntos - punt;
 }
 
-
-void Jugador::escriure_jug() {
+void Jugador::escriure_jug() 
+{
     cout << nombre << ' ' << "Rk:" << posicion << ' ' << "Ps:" << puntos << ' ' << "Ts:" << torneos_disputados << ' ';
     cout << "WM:" << partidos.first << ' ' << "LM:" << partidos.second << ' ';
     cout << "WS:" << sets.first << ' ' << "LS:" << sets.second << ' ';
     cout << "WG:" << juegos.first << ' ' << "LG:" << juegos.second << endl;
 }
 
-void Jugador::escriure_rank() {
+void Jugador::escriure_rank() 
+{
     cout << posicion << ' ' << nombre << ' ' << puntos << endl;
 }
 
-int Jugador::consultar_pos() const{
+int Jugador::consultar_pos() const
+{
     return posicion;
 }
 
-int Jugador::consultar_puntos() const {
+int Jugador::consultar_puntos() const 
+{
     return puntos;
 }
