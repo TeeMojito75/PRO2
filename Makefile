@@ -23,7 +23,7 @@ Torneo.o: Torneo.cc Torneo.hh Cjt_categorias.hh Cjt_jugadores.hh
 
 
 tar:
-	tar -cvf practica.tar *.hh *.cc Makefile
+	tar -cvf practica.tar *.hh *.cc *.zip Makefile
 
 clean:
 	rm *.o

@@ -15,7 +15,7 @@
 #include "BinTree.hh"
 #endif
 
-/** @brief Estructura que representa los participantes de un torneo
+/** @brief Estructura que representa los participantes de un torneo.
     Cada participante presenta los mismos parámetros que un jugador del conjunto  
 */
 struct Participantes 

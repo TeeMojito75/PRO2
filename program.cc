@@ -28,7 +28,8 @@ using namespace std;
 /** @brief programa principal para la practica <em>Gestión de torneos de tenis</em>
 */
 
-int main() {	
+int main() 
+{	
 	Cjt_categorias c;
     Cjt_torneos t;
     Cjt_jugadores j;
@@ -39,8 +40,7 @@ int main() {
 
     string cm;
     cin >> cm;
-    while (cm != "fin") 
-	{
+    while (cm != "fin") {
 	
 	    if (cm == "nuevo_jugador" or cm == "nj") 
 		{
@@ -143,7 +143,5 @@ int main() {
 		    c.listar_categorias();
 		}
 		cin >> cm;
-    }
-
-	
+    }	
 }

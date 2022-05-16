@@ -1,4 +1,4 @@
-Joc de Proves, Competència Transversal
+//Joc de Proves Joan Carles Veny, grup 21 lab, Competència Transversal
 
 //////////////////////////////
 ///// #input_comentat ///////
@@ -448,9 +448,382 @@ lr
 fin
 
 
-################
-### SORTIDES ###
-################
+#########################
+### SORTIDA COMENTADA ###
+#########################
+//Les primeres sortides comproven que s'hagi fet la lectura inicial correctament
+#listar_categorias
+4 8
+Pure_Vessel 10000 5000 2500 1500 500 250 125 0
+Demon_King_Grimm 5000 2500 1350 600 300 100 0 0
+The_Radiant 2500 1200 700 200 100 0 0 0
+Hollow_kinght 1000 0 0 0 0 0 0 0
+
+#listar_ranking
+1 Zote 0
+2 Pale_king 0
+3 Zverev 0
+4 Nadal 0
+5 Cornifer 0
+6 Alcaraz 0
+7 Quempape 0
+8 Berrettini 0
+9 Auger_Aliassime 0
+10 Ruud 0
+11 White_lady 0
+12 Hurkacz 0
+13 Sinner 0
+14 Fritz 0
+15 Blasphemia 0
+16 Shapovalov 0
+17 Silksongnt 0
+18 Requiem 0
+19 Bautista 0
+20 Midir 0
+21 Iselda 0
+22 Sly 0
+23 Paches 0
+24 Khachanov 0
+25 Basilashvili 0
+26 Salubra 0
+27 Isner 0
+28 Sonego 0
+29 Davidovich 0
+30 Korda 0
+31 Kecmanovic 0
+32 Van_De_Zandschulp 0
+33 Mark_Evans 0
+34 Axel_Blaze 0
+35 Jude_Sharp 0
+36 Sheo 0
+37 Baez 0
+38 Brooksby 0
+39 Delbonis 0
+40 Portero 0
+41 Bublik 0
+42 Nodskov_Rune 0
+43 Ramos_Vinolas 0
+44 Humbert 0
+45 Garin 0
+46 Federer 0
+47 Molcan 0
+48 Goffin 0
+49 Cerundolo 0
+50 Ivashka 0
+51 Musetti 0
+52 Fucsovics 0
+53 McDonald 0
+54 Krajinovic 0
+55 Coria 0
+56 Otome 0
+57 Onii_chan 0
+58 Onee_chan 0
+59 Oba_san 0
+
+//El torneig de 32 jugadors és per comprovar que les funcions d'arbre s'han fet correctament
+#it Panteon_Artista
+(((((1.Zote 32.Van_De_Zandschulp) (16.Shapovalov 17.Silksongnt)) ((8.Berrettini 25.Basilashvili) (9.Auger_Aliassime 24.Khachanov))) (((4.Nadal 29.Davidovich) (13.Sinner 20.Midir)) ((5.Cornifer 28.Sonego) (12.Hurkacz 21.Iselda)))) ((((2.Pale_king 31.Kecmanovic) (15.Blasphemia 18.Requiem)) ((7.Quempape 26.Salubra) (10.Ruud 23.Paches))) (((3.Zverev 30.Korda) (14.Fritz 19.Bautista)) ((6.Alcaraz 27.Isner) (11.White_lady 22.Sly)))))
+
+#finalizar_torneo Panteon_Artista
+(1.Zote vs 31.Kecmanovic 6-0,6-0(1.Zote vs 4.Nadal 6-7,7-6,7-6(1.Zote vs 9.Auger_Aliassime 6-2,6-4(1.Zote vs 17.Silksongnt 6-3,6-1(1.Zote vs 32.Van_De_Zandschulp 6-0,6-1)(16.Shapovalov vs 17.Silksongnt 0-1))(8.Berrettini vs 9.Auger_Aliassime 6-3,6-7,6-7(8.Berrettini vs 25.Basilashvili 6-4,6-4)(9.Auger_Aliassime vs 24.Khachanov 6-7,6-2,6-2)))(4.Nadal vs 28.Sonego 1-0(4.Nadal vs 20.Midir 7-5,7-5(4.Nadal vs 29.Davidovich 6-1,6-2)(13.Sinner vs 20.Midir 5-7,3-6))(28.Sonego vs 21.Iselda 7-5,3-6,6-3(5.Cornifer vs 28.Sonego 4-6,5-7)(12.Hurkacz vs 21.Iselda 5-7,3-6))))(31.Kecmanovic vs 3.Zverev 7-6,7-6(31.Kecmanovic vs 7.Quempape 6-3,5-7,6-3(31.Kecmanovic vs 18.Requiem 1-0(2.Pale_king vs 31.Kecmanovic 6-2,5-7,4-6)(15.Blasphemia vs 18.Requiem 0-1))(7.Quempape vs 23.Paches 6-0,6-4(7.Quempape vs 26.Salubra 6-1,6-1)(10.Ruud vs 23.Paches 5-7,3-6)))(3.Zverev vs 27.Isner 5-7,6-3,6-0(3.Zverev vs 19.Bautista 6-4,7-6(3.Zverev vs 30.Korda 6-0,6-0)(14.Fritz vs 19.Bautista 6-4,5-7,3-6))(27.Isner vs 11.White_lady 6-0,7-6(6.Alcaraz vs 27.Isner 0-1)(11.White_lady vs 22.Sly 6-4,6-1)))))
+1.Zote 2500
+3.Zverev 700
+4.Nadal 700
+7.Quempape 200
+8.Berrettini 100
+9.Auger_Aliassime 200
+11.White_lady 100
+17.Silksongnt 100
+18.Requiem 100
+19.Bautista 100
+20.Midir 100
+21.Iselda 100
+23.Paches 100
+27.Isner 200
+28.Sonego 200
+31.Kecmanovic 1200
+
+//Es llegeixen alguns jugadors per comprovar la funcionalitat de les funcions de puntuatge
+#cj Zote
+Zote Rk:1 Ps:2500 Ts:1 WM:5 LM:0 WS:10 LS:1 WG:68 LG:30
+#consultar_jugador Nadal
+Nadal Rk:4 Ps:700 Ts:1 WM:3 LM:1 WS:5 LS:2 WG:45 LG:33
+#cj Paco
+error: el jugador no existe
+
+//Es modifiquen els conjunts de jugadors i torneigs
+#nuevo_jugador Ornstein
+60
+#nj Smough
+61
+#baja_jugador Nadal
+60
+#bj McDonald
+59
+
+#nuevo_torneo Coliseo 4
+5
+#nt Las_Palmas -8
+error: la categoria no existe
+#nt Mallorca 4
+6
+#baja_torneo Roland_Garros
+error: el torneo no existe
+#bt Panteon_Sabio
+5
+#nt Wimbeldon 1
+6
+
+#lr
+1 Zote 2500
+2 Kecmanovic 1200
+3 Zverev 700
+4 Quempape 200
+5 Auger_Aliassime 200
+6 Isner 200
+7 Sonego 200
+8 Berrettini 100
+9 White_lady 100
+10 Silksongnt 100
+11 Requiem 100
+12 Bautista 100
+13 Midir 100
+14 Iselda 100
+15 Paches 100
+16 Pale_king 0
+17 Cornifer 0
+18 Alcaraz 0
+19 Ruud 0
+20 Hurkacz 0
+21 Sinner 0
+22 Fritz 0
+23 Blasphemia 0
+24 Shapovalov 0
+25 Sly 0
+26 Khachanov 0
+27 Basilashvili 0
+28 Salubra 0
+29 Davidovich 0
+30 Korda 0
+31 Van_De_Zandschulp 0
+32 Mark_Evans 0
+33 Axel_Blaze 0
+34 Jude_Sharp 0
+35 Sheo 0
+36 Baez 0
+37 Brooksby 0
+38 Delbonis 0
+39 Portero 0
+40 Bublik 0
+41 Nodskov_Rune 0
+42 Ramos_Vinolas 0
+43 Humbert 0
+44 Garin 0
+45 Federer 0
+46 Molcan 0
+47 Goffin 0
+48 Cerundolo 0
+49 Ivashka 0
+50 Musetti 0
+51 Fucsovics 0
+52 Krajinovic 0
+53 Coria 0
+54 Otome 0
+55 Onii_chan 0
+56 Onee_chan 0
+57 Oba_san 0
+58 Ornstein 0
+59 Smough 0
+
+#lt
+6
+Coliseo Hollow_kinght
+Mallorca Hollow_kinght
+Panteon_Artista The_Radiant
+Panteon_Hallownest Pure_Vessel
+Panteon_Maestro Demon_King_Grimm
+Wimbeldon Pure_Vessel
+
+//En aquest darrer cas es comprova que la persona ha programat correctament la situació de següent edició
+#it Panteon_Hallownest
+(((1.Kecmanovic 8.Alcaraz) (4.Silksongnt 5.Bautista)) ((2.Quempape 7.Pale_king) (3.Berrettini 6.Iselda)))
+
+#ft Panteon_Hallownest
+(4.Silksongnt vs 7.Pale_king 6-0,0-6,6-0(8.Alcaraz vs 4.Silksongnt 0-1(1.Kecmanovic vs 8.Alcaraz 4-6,4-6)(4.Silksongnt vs 5.Bautista 7-5,6-7,7-6))(7.Pale_king vs 3.Berrettini 7-6,7-6(2.Quempape vs 7.Pale_king 0-1)(3.Berrettini vs 6.Iselda 4-6,6-4,7-6)))
+1.Kecmanovic 1500
+2.Quempape 1500
+3.Berrettini 2500
+4.Silksongnt 10000
+5.Bautista 1500
+6.Iselda 1500
+7.Pale_king 5000
+8.Alcaraz 2500
+
+#bj Iselda
+58
+#bj Kecmanovic
+57
+#bj Quempape
+56
+#bj Bautista
+55
+bj Berrettini
+54
+#nj Iselda
+55
+#nj Kecmanovic
+56
+#nj Quempape
+57
+#nj Bautista
+58
+#nj Berrettini
+59
+
+#lr
+1 Silksongnt 10100
+2 Pale_king 5000
+3 Zote 2500
+4 Alcaraz 2500
+5 Zverev 700
+6 Auger_Aliassime 200
+7 Isner 200
+8 Sonego 200
+9 White_lady 100
+10 Requiem 100
+11 Midir 100
+12 Paches 100
+13 Cornifer 0
+14 Ruud 0
+15 Hurkacz 0
+16 Sinner 0
+17 Fritz 0
+18 Blasphemia 0
+19 Shapovalov 0
+20 Sly 0
+21 Khachanov 0
+22 Basilashvili 0
+23 Salubra 0
+24 Davidovich 0
+25 Korda 0
+26 Van_De_Zandschulp 0
+27 Mark_Evans 0
+28 Axel_Blaze 0
+29 Jude_Sharp 0
+30 Sheo 0
+31 Baez 0
+32 Brooksby 0
+33 Delbonis 0
+34 Portero 0
+35 Bublik 0
+36 Nodskov_Rune 0
+37 Ramos_Vinolas 0
+38 Humbert 0
+39 Garin 0
+40 Federer 0
+41 Molcan 0
+42 Goffin 0
+43 Cerundolo 0
+44 Ivashka 0
+45 Musetti 0
+46 Fucsovics 0
+47 Krajinovic 0
+48 Coria 0
+49 Otome 0
+50 Onii_chan 0
+51 Onee_chan 0
+52 Oba_san 0
+53 Ornstein 0
+54 Smough 0
+55 Iselda 0
+56 Kecmanovic 0
+57 Quempape 0
+58 Bautista 0
+59 Berrettini 0
+
+#it Panteon_Hallownest
+(((1.Silksongnt 8.Berrettini) (4.Cornifer 5.Kecmanovic)) ((2.Pale_king 7.Bautista) (3.Requiem 6.Quempape)))
+
+#ft Panteon_Hallownest
+(4.Cornifer vs 7.Bautista 6-0,0-6,6-0(8.Berrettini vs 4.Cornifer 0-1(1.Silksongnt vs 8.Berrettini 4-6,4-6)(4.Cornifer vs 5.Kecmanovic 7-5,6-7,7-6))(7.Bautista vs 3.Requiem 7-6,7-6(2.Pale_king vs 7.Bautista 0-1)(3.Requiem vs 6.Quempape 4-6,6-4,7-6)))
+1.Silksongnt 1500
+2.Pale_king 1500
+3.Requiem 2500
+4.Cornifer 10000
+5.Kecmanovic 1500
+6.Quempape 1500
+7.Bautista 5000
+8.Berrettini 2500
+
+#cj Silksongnt
+Silksongnt Rk:6 Ps:1600 Ts:3 WM:4 LM:2 WS:4 LS:6 WG:44 LG:48
+#cj Kecmanovic
+Kecmanovic Rk:8 Ps:1500 Ts:1 WM:0 LM:1 WS:1 LS:2 WG:18 LG:20
+
+#lr
+1 Cornifer 10000
+2 Bautista 5000
+3 Requiem 2600
+4 Zote 2500
+5 Berrettini 2500
+6 Silksongnt 1600
+7 Pale_king 1500
+8 Kecmanovic 1500
+9 Quempape 1500
+10 Zverev 700
+11 Auger_Aliassime 200
+12 Isner 200
+13 Sonego 200
+14 White_lady 100
+15 Midir 100
+16 Paches 100
+17 Alcaraz 0
+18 Ruud 0
+19 Hurkacz 0
+20 Sinner 0
+21 Fritz 0
+22 Blasphemia 0
+23 Shapovalov 0
+24 Sly 0
+25 Khachanov 0
+26 Basilashvili 0
+27 Salubra 0
+28 Davidovich 0
+29 Korda 0
+30 Van_De_Zandschulp 0
+31 Mark_Evans 0
+32 Axel_Blaze 0
+33 Jude_Sharp 0
+34 Sheo 0
+35 Baez 0
+36 Brooksby 0
+37 Delbonis 0
+38 Portero 0
+39 Bublik 0
+40 Nodskov_Rune 0
+41 Ramos_Vinolas 0
+42 Humbert 0
+43 Garin 0
+44 Federer 0
+45 Molcan 0
+46 Goffin 0
+47 Cerundolo 0
+48 Ivashka 0
+49 Musetti 0
+50 Fucsovics 0
+51 Krajinovic 0
+52 Coria 0
+53 Otome 0
+54 Onii_chan 0
+55 Onee_chan 0
+56 Oba_san 0
+57 Ornstein 0
+58 Smough 0
+59 Iselda 0
+
+##############################
+### SORTIDA SENSE COMENTAR ###
+##############################
 
 #listar_categorias
 4 8
@@ -816,9 +1189,6 @@ Kecmanovic Rk:8 Ps:1500 Ts:1 WM:0 LM:1 WS:1 LS:2 WG:18 LG:20
 57 Ornstein 0
 58 Smough 0
 59 Iselda 0
-
-
-
 
 
 

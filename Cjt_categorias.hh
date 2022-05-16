@@ -12,7 +12,7 @@
 
 using namespace std;
 
-/** @brief Estructura que define una categoria
+/** @brief Estructura que define una categoria.
     Cada categoría presenta un nombre y un vector con las puntuaciones
 */
 struct categoria 
